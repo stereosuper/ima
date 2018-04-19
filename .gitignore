@@ -1,0 +1,31 @@
+/*
+!.gitignore
+!/web/
+!readme.md
+!.gitlab-ci.yml
+!ci
+
+
+# Excusion de tout web
+/web/*
+
+# Sauf de /web/wp-content/
+!/web/wp-content/
+
+# Exclusion de tout wp-content
+/web/wp-content/*
+
+# Sauf les thèmes
+!/web/wp-content/themes/
+
+
+# Exclusion de tous les thèmes
+/web/wp-content/themes/*
+
+# Sauf le thème
+!/web/wp-content/themes/IMA
+
+# Exclusion du cache de compass
+.sass-cache
+.DS_Store
+node_modules
