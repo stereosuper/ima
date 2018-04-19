@@ -55,7 +55,6 @@ $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 								</div>
 
 								<ul class="partage">
-									<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
 									<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
 									<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
 									<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
@@ -81,7 +80,6 @@ $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 										</div>
 
 										<ul class="partage">
-											<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
 											<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
 											<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
 											<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>

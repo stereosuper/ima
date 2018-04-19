@@ -29,8 +29,8 @@ get_header('rh'); ?>
 					<div class="ribbon-content" style="height: 31px; width: 403px;"></div>
 				</div>
 
-				<?php 
-					$ID = get_the_ID(); 
+				<?php
+					$ID = get_the_ID();
 					$current = get_permalink( $ID );
 				?>
 
@@ -46,7 +46,7 @@ get_header('rh'); ?>
 				</div>
 
 				<div class="bloc-content bloc-single" id="bloc-actus">
-					
+
 					<div class="date-categ-actu">Le <span class="date-actu"><?php echo get_the_date(); ?></span></div>
 					<h2><?php the_title(); ?></h2>
 					<div class="content-single">
@@ -72,19 +72,18 @@ get_header('rh'); ?>
 							</div>
 
 							<ul class="partage">
-								<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
 								<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
 								<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
 								<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
 							</ul>
 						</div>
-						
+
 				</div>
 
 				<?php endwhile; ?>
 
 				<?php else : ?>
-					
+
 						<div class="ribbon ribbon-bleu">
 							<div class="fond-ribbon"></div>
 							<div class="ribbon-content">
@@ -116,9 +115,9 @@ get_header('rh'); ?>
 
 </div>
 
-<section id="content-right">	
-	<?php $pages = get_posts(array( 'post_type' => 'page', 'meta_key' => '_wp_page_template', 'meta_value' => 'postuler.php' )); 
-		foreach($pages as $page){ 
+<section id="content-right">
+	<?php $pages = get_posts(array( 'post_type' => 'page', 'meta_key' => '_wp_page_template', 'meta_value' => 'postuler.php' ));
+		foreach($pages as $page){
 	?>
 
 		<?php if( get_field('interlocuteur_nom', $page->ID) ){ ?>
@@ -157,15 +156,15 @@ get_header('rh'); ?>
 
 </section>
 
-				<div id="bloc-fond-visu">					
+				<div id="bloc-fond-visu">
 					<div id="fond-couleur-bloc-visu"></div>
 					<div class="container" id="container-bloc-visu-content"><div class="bloc-content bloc-visu-content"><div id="fond-bloc-visu"></div></div></div>
 				</div>
 
 				<?php include('includes/sitemap.php'); ?>
-				
-				<?php $pages = get_posts(array( 'post_type' => 'page', 'meta_key' => '_wp_page_template', 'meta_value' => 'postuler.php' )); 
-					foreach($pages as $page){ 
+
+				<?php $pages = get_posts(array( 'post_type' => 'page', 'meta_key' => '_wp_page_template', 'meta_value' => 'postuler.php' ));
+					foreach($pages as $page){
 				?>
 
 					<?php if( get_field('interlocuteur_nom', $page->ID) ){ ?>

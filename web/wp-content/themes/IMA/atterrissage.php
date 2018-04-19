@@ -13,15 +13,15 @@ get_header(); ?>
 				<div class="ribbon ribbon-bleu">
 					<div class="fond-ribbon"></div>
 					<div class="ribbon-content">
-						<?php 
-							if ( function_exists('yoast_breadcrumb') ) { 
+						<?php
+							if ( function_exists('yoast_breadcrumb') ) {
 								$breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
 								$cleanBreadcrumbs = str_replace('<span prefix="v: http://rdf.data-vocabulary.org/#">', ' ', $breadcrumbs);
 								str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
 								$breadLi = str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
 								$breadSpan = str_replace( '<span typeof="v:Breadcrumb">', ' ', str_replace( '</span>', ' ', $breadLi ) );
 								echo str_replace( 'strong', 'h1', $breadSpan );
-							} 
+							}
 						?>
 					</div>
 				</div>
@@ -33,17 +33,17 @@ get_header(); ?>
 				<div class="fond-bloc"></div>
 
 				<div class="bloc-content" id="bloc-actus">
-					
+
 						<h2><?php the_field('titre-contenu'); ?></h2>
 						<?php the_field('first_line'); ?>
-						
+
 						<?php if($post->post_content != "") { ?>
 							<div class="suite-bloc">
 								<?php the_content(); ?>
-								
-								<?php 
-								if( get_field('partage') == true) { 
-									$ID = get_the_ID(); 
+
+								<?php
+								if( get_field('partage') == true) {
+									$ID = get_the_ID();
 									$current = get_permalink( $ID );
 								?>
 									<div class="bloc-partage">
@@ -55,7 +55,6 @@ get_header(); ?>
 										</div>
 
 										<ul class="partage">
-											<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
 											<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
 											<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
 											<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
@@ -85,22 +84,22 @@ get_header(); ?>
 								<span class="txt-reduire-btn-bloc">Réduire</span>
 							</a>
 						<?php } ?>
-						
+
 				</div>
 
 		</div>
-		
+
 		<?php $blocs = get_field('blocs');
 
 			if( $blocs ): ?>
 
 				<div class="zone-blocs" id="zone-blocs-accueil">
 					<?php foreach( $blocs as $p ): ?>
-							<a href="<?php if( get_field( 'lien', $p->ID ) == 'externe'){ 
-												echo get_field( 'lien_externe', $p->ID); 
-											}else if( get_field( 'lien', $p->ID ) == 'interne' ){ 
-												echo get_field( 'lien_interne', $p->ID); 
-												$lienMedia = get_field('id_bloc_media', $p->ID); 
+							<a href="<?php if( get_field( 'lien', $p->ID ) == 'externe'){
+												echo get_field( 'lien_externe', $p->ID);
+											}else if( get_field( 'lien', $p->ID ) == 'interne' ){
+												echo get_field( 'lien_interne', $p->ID);
+												$lienMedia = get_field('id_bloc_media', $p->ID);
 												if( $lienMedia ){
 													if(get_field('calameo_media', $lienMedia->ID)){
 														echo '#calameo#'. get_field('calameo_media', $lienMedia->ID);

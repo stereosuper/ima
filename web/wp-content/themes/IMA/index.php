@@ -4,7 +4,7 @@
  *
  */
 
-get_header(); 
+get_header();
 
 if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embed = false; }
 ?>
@@ -17,15 +17,15 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 				<div class="ribbon ribbon-bleu">
 					<div class="fond-ribbon"></div>
 					<div class="ribbon-content">
-						<?php 
-							if ( function_exists('yoast_breadcrumb') ) { 
+						<?php
+							if ( function_exists('yoast_breadcrumb') ) {
 								$breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
 								$cleanBreadcrumbs = str_replace('<span prefix="v: http://rdf.data-vocabulary.org/#">', ' ', $breadcrumbs);
 								str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
 								$breadLi = str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
 								$breadSpan = str_replace( '<span typeof="v:Breadcrumb">', ' ', str_replace( '</span>', ' ', $breadLi ) );
 								echo str_replace( 'strong', 'h1', $breadSpan );
-							} 
+							}
 						?>
 					</div>
 				</div>
@@ -37,13 +37,13 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 				<div class="fond-bloc"></div>
 
 				<div class="bloc-content" id="bloc-actus">
-					
+
 						<h2><?php the_field('titre-contenu'); ?></h2>
 						<?php the_field('first_line'); ?>
 
-						<?php 
-						if($post->post_content == "" && get_field('partage') == true) { 
-							$ID = get_the_ID(); 
+						<?php
+						if($post->post_content == "" && get_field('partage') == true) {
+							$ID = get_the_ID();
 							$current = get_permalink( $ID );
 						?>
 							<div class="bloc-partage">
@@ -55,21 +55,20 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 								</div>
 
 								<ul class="partage">
-									<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
 									<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
 									<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
 									<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
 								</ul>
 							</div>
 						<?php } ?>
-						
+
 						<?php if($post->post_content != "") { ?>
 							<div class="suite-bloc">
 								<?php the_content(); ?>
-								
-								<?php 
-								if( get_field('partage') == true) { 
-									$ID = get_the_ID(); 
+
+								<?php
+								if( get_field('partage') == true) {
+									$ID = get_the_ID();
 									$current = get_permalink( $ID );
 								?>
 									<div class="bloc-partage">
@@ -81,7 +80,6 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 										</div>
 
 										<ul class="partage">
-											<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
 											<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
 											<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
 											<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
@@ -93,7 +91,7 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 						<?php } ?>
 
 						<?php $int = get_field('interlocuteur');
-						if( $int ){ 
+						if( $int ){
 							foreach($int as $i) :?>
 
 							<a href="#" class="btn-interlocuteur <?php if( get_field('interlocuteur_img', $i->ID) ) { echo 'has-photo'; }?>">
@@ -104,7 +102,7 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 								<span class="txt-btn-interlocuteur">Votre&nbsp;interlocuteur</span>
 							</a>
 
-							<?php endforeach; 
+							<?php endforeach;
 						} ?>
 
 						<?php if( get_field('lien-savoir-plus')) {?>
@@ -132,22 +130,22 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 								</a>
 							<?php } ?>
 						<?php } ?>
-						
+
 				</div>
 
 		</div>
-		
+
 		<?php $blocs = get_field('blocs');
 
 			if( $blocs ): ?>
 
 				<div class="zone-blocs" id="zone-blocs-accueil">
 					<?php foreach( $blocs as $p ): ?>
-							<a href="<?php if( get_field( 'lien', $p->ID ) == 'externe'){ 
-												echo get_field( 'lien_externe', $p->ID); 
-											}else if( get_field( 'lien', $p->ID ) == 'interne' ){ 
-												echo get_field( 'lien_interne', $p->ID); 
-												$lienMedia = get_field('id_bloc_media', $p->ID); 
+							<a href="<?php if( get_field( 'lien', $p->ID ) == 'externe'){
+												echo get_field( 'lien_externe', $p->ID);
+											}else if( get_field( 'lien', $p->ID ) == 'interne' ){
+												echo get_field( 'lien_interne', $p->ID);
+												$lienMedia = get_field('id_bloc_media', $p->ID);
 												if( $lienMedia ){
 													if(get_field('calameo_media', $lienMedia->ID)){
 														echo '#calameo#'. get_field('calameo_media', $lienMedia->ID);
@@ -189,7 +187,7 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 
 
 	<?php if($embed == false){ ?>
-	
+
 		<?php if( get_field('bloc_media')) {?>
 		<div class="bloc-content bloc-visu-content" id="visu-content">
 			<span class="shadow"></span>
@@ -219,7 +217,7 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 
 </div>
 </section>
-	
+
 	<?php if($embed == false){ ?>
 		<div id="bloc-fond-visu">
 			<?php if( get_field('bloc_media') ):
@@ -238,18 +236,18 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 					</div>
 
 			<?php endif; ?>
-			
+
 			<div id="fond-couleur-bloc-visu"></div>
 			<div class="container" id="container-bloc-visu-content">
 				<div class="bloc-content bloc-visu-content">
-					<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?> 
-													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat left top; background-size: auto 100%;" 
+					<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
+													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat left top; background-size: auto 100%;"
  											 <?php } ?>>
  					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<?php $medias = get_field('bloc_media');
 
 			if( count($medias) <= 1 ) echo '<div style="display:none;">' ?>
@@ -269,13 +267,13 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 											<a href="#" class="lien-autre-video">
 												<span class="container-fond-autre-video">
 													<span class="fond-autre-video"><img src="<?php echo get_field('image_video_media', $p->ID)['sizes']['medium']; ?>" alt="<?php echo get_field('image_video_media', $p->ID)['alt']; ?>" /></span>
-									
+
 									<?php } if(get_field('calameo_media', $p->ID)){ ?>
 										<li class="<?php if($p->ID == $idFirst){ echo 'active '; } echo 'has-calameo'; ?>" <?php echo 'data-id-calameo="'.get_field('calameo_media', $p->ID).'"'; ?>>
 											<a href="#" class="lien-autre-video">
 												<span class="container-fond-autre-video">
 													<span class="fond-autre-video"><img src="<?php echo get_field('image_calameo_media', $p->ID)['sizes']['medium']; ?>" alt="<?php echo get_field('image_calameo_media', $p->ID)['alt']; ?>" /></span>
-									
+
 									<?php } if(get_field('image_media', $p->ID)){ ?>
 										<li class="<?php if($p->ID == $idFirst){ echo 'active '; } echo 'has-image'; ?>" <?php echo 'data-image-name="'.get_field('image_media', $p->ID)['url'].'"'; ?>>
 											<a href="#" class="lien-autre-video">
@@ -304,7 +302,7 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 		<?php if( count($medias) <= 1 ) echo '</div>' ?>
 	<?php } ?>
 
-		<?php if( $int ){ 
+		<?php if( $int ){
 			foreach($int as $i) :?>
 
 				<div id="wrapper-interlocuteur-modal">
