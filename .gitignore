@@ -1,6 +1,8 @@
 /*
 !.gitignore
 !/web/
+!/src/
+!/config.codekit3
 !readme.md
 !.gitlab-ci.yml
 !ci

@@ -111,7 +111,10 @@ get_header('contact'); ?>
 						<fieldset class="<?php if($erreurMessage != '') echo 'error'; ?>">
 							<label for="message"><strong>Message</strong></label>
 							<textarea name="message" id="message"><?php echo $message; ?></textarea>
-						</fieldset><br/><br/>
+						</fieldset>
+                        <fieldset>
+                            <p class='under-form'><?php the_field('contact_under') ?></p>
+                        </fieldset><br/>
 						<button class="btn-form" name="submitted" <?php if($message_status == 'Demande envoyée'){ echo 'disabled';}?>>
 							<span class="container-fond-btn-form">
 								<span class="fond-btn-form"></span>

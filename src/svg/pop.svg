@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="../css/style.css" ?> 
+<svg id="pop" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="121.5 275.1 44.6 44.6" enable-background="new 121.5 275.1 44.6 44.6" xml:space="preserve">
+	<path class="branche" fill-rule="evenodd" clip-rule="evenodd" d="M135,292.9l-11.4-6.5l0.4-0.8l11.4,6.5C135.3,292.4,135.2,292.6,135,292.9z
+		 M151.1,301l12.9,7.3l-0.4,0.8l-12.9-7.3C150.9,301.5,151,301.3,151.1,301z"/>
+	<path class="branche" fill-rule="evenodd" clip-rule="evenodd" d="M134.4,300.4l-12.7,3.5l-0.2-0.9l12.7-3.5C134.3,299.8,134.3,300.1,134.4,300.4z
+		 M151.6,294.8l14.3-3.9l0.2,0.9l-14.3,3.9C151.8,295.3,151.7,295,151.6,294.8z"/>
+	<path class="branche" fill-rule="evenodd" clip-rule="evenodd" d="M139.3,306.1l-6.5,11.4l-0.8-0.4l6.5-11.4C138.8,305.8,139.1,306,139.3,306.1z
+		 M147.5,290l7.3-12.9l0.8,0.4l-7.3,12.9C148,290.3,147.7,290.1,147.5,290z"/>
+	<path class="branche" fill-rule="evenodd" clip-rule="evenodd" d="M146.8,306.7l3.5,12.7l-0.9,0.2L146,307C146.3,306.9,146.6,306.8,146.8,306.7z
+		 M141.2,289.6l-3.9-14.3l0.9-0.2l3.9,14.3C141.8,289.4,141.5,289.5,141.2,289.6z"/>
+</svg>

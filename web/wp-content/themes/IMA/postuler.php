@@ -222,7 +222,10 @@ get_header('rh'); ?>
 									<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 									<input type="file" name="cv" id="cv">
 								</div>
-							</fieldset><br/><br/>
+							</fieldset>
+                            <fieldset>
+                                <p class='under-form'><?php the_field('postuler_under') ?></p>
+                            </fieldset><br/>
 							<button class="btn-form" name="submitted">
 								<span class="container-fond-btn-form">
 									<span class="fond-btn-form"></span>
