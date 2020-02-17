@@ -1,6 +1,6 @@
 <?php
 
-define( 'IMA_VERSION', 1.0 );
+define( 'IMA_VERSION', 1.15 );
 
 /*-----------------------------------------------------------------------------------*/
 /* General
@@ -89,6 +89,7 @@ class Footer_Contact_Widget extends WP_Widget {
 
 		$twitter = esc_attr($instance['twitter']);
 		$linkedin = esc_attr($instance['linkedin']);
+		$instagram = esc_attr($instance['instagram']);
 		$viadeo = esc_attr($instance['viadeo']);
 		$scoopit = esc_attr($instance['scoopit']);
 
@@ -103,6 +104,8 @@ class Footer_Contact_Widget extends WP_Widget {
 				<p><titre for="<?php echo $this->get_field_id('linkedin'); ?>"><?php _e('Lien linkedin :'); ?> <input class="widefat" id="<?php echo $this->get_field_id('linkedin'); ?>" name="<?php echo $this->get_field_name('linkedin'); ?>" type="text" value="<?php echo $linkedin; ?>" /></label></p>
 				<p><titre for="<?php echo $this->get_field_id('viadeo'); ?>"><?php _e('Lien viadeo :'); ?> <input class="widefat" id="<?php echo $this->get_field_id('viadeo'); ?>" name="<?php echo $this->get_field_name('viadeo'); ?>" type="text" value="<?php echo $viadeo; ?>" /></label></p>
 				<p><titre for="<?php echo $this->get_field_id('scoopit'); ?>"><?php _e('Lien scoopit :'); ?> <input class="widefat" id="<?php echo $this->get_field_id('scoopit'); ?>" name="<?php echo $this->get_field_name('scoopit'); ?>" type="text" value="<?php echo $scoopit; ?>" /></label></p>
+				<p><titre for="<?php echo $this->get_field_id('instagram'); ?>"><?php _e('Lien instagram :'); ?> <input class="widefat" id="<?php echo $this->get_field_id('instagram'); ?>" name="<?php echo $this->get_field_name('instagram'); ?>" type="text" value="<?php echo $instagram; ?>" /></label></p>
+				
 		<?php
 	}
 	function update($new_instance, $old_instance) {
@@ -138,6 +141,11 @@ class Footer_Contact_Widget extends WP_Widget {
 				<?php if ($instance['viadeo'] != '') { ?>
 					<li class="viadeo">
 						<a href="<?php echo $instance['viadeo']; ?>" target="_blank"><span class="container-fond-social"><span class="fond-social"></span></span><span class="logo-footer icon-viadeo"></span></a>
+					</li>
+				<?php } ?>
+				<?php if ($instance['instagram'] != '') { ?>
+					<li class="instagram">
+						<a href="<?php echo $instance['instagram']; ?>" target="_blank"><span class="container-fond-social"><span class="fond-social"></span></span><span class="logo-footer icon-instagram"></span></a>
 					</li>
 				<?php } ?>
 				<?php if ($instance['scoopit'] != '') { ?>
@@ -358,7 +366,7 @@ add_filter( 'upload_mimes', 'ima_mime_types' );
 function ima_scripts(){
 	// get the theme directory style.css and link to it in the header
 	wp_enqueue_style( 'ima-norm', get_template_directory_uri() . '/css/libs/normalize.css', '10000', 'all' );
-	wp_enqueue_style( 'ima-style', get_template_directory_uri() . '/css/style.css', '10000', 'all' );
+	wp_enqueue_style( 'ima-style', get_template_directory_uri() . '/css/style.css', '10000', IMA_VERSION );
 	wp_enqueue_style( 'ima-videocss', get_template_directory_uri() . '/js/libs/videojs/video-js.css', '10000', 'all' );
 
 	// add theme scripts (header)
