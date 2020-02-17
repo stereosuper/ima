@@ -38,7 +38,7 @@ function remove_comment_author_class( $classes ){
 add_filter( 'comment_class' , 'remove_comment_author_class' );
 
 // remove login errors
-add_filter( 'login_errors', create_function('$a', "return null;") );
+add_filter( 'login_errors', function($a){ return null; } );
 
 /*-----------------------------------------------------------------------------------*/
 /* Register main menu for Wordpress use
@@ -79,8 +79,8 @@ add_action( 'widgets_init', 'ima_register_sidebars' );
 
 // widget footer
 class Footer_Contact_Widget extends WP_Widget {
-	function Footer_Contact_Widget() {
-		parent::WP_Widget(false, 'IMA - Footer contact');
+	public function __construct() {
+		parent::__construct(false, 'IMA - Footer contact');
 	}
 	function form($instance) {
 		$adresse = esc_attr($instance['adresse']);
