@@ -33,7 +33,7 @@ get_header(); ?>
 				</div>
 
 				<div class="bloc-content bloc-single" id="bloc-actus">
-
+					
 					<div class="date-categ-actu">Le <span class="date-actu"><?php echo get_the_date(); ?></span> dans <?php foreach((get_the_category()) as $cat) { ?><a href="<?php echo get_category_link($cat->term_id) . ' ';  ?>" class="categ-actu"><?php echo $cat->cat_name . ' ';  ?></a><?php } ?> </div>
 					<h2><?php the_title(); ?></h2>
 					<div class="content-single">
@@ -44,8 +44,8 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div>
 
-					<?php
-						$ID = get_the_ID();
+					<?php 
+						$ID = get_the_ID(); 
 						$current = get_permalink( $ID );
 					?>
 						<div class="bloc-partage">
@@ -57,18 +57,19 @@ get_header(); ?>
 							</div>
 
 							<ul class="partage">
+								<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
 								<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
 								<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
 								<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
 							</ul>
 						</div>
-
+						
 				</div>
 
 				<?php endwhile; ?>
 
 				<?php else : ?>
-
+					
 						<div class="ribbon ribbon-bleu">
 							<div class="fond-ribbon"></div>
 							<div class="ribbon-content">
@@ -92,7 +93,7 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-<?php
+<?php 				
 				global $post;
 				$page_for_posts_id = get_option('page_for_posts');
 				if ( $page_for_posts_id ) { $post = get_post($page_for_posts_id); }
@@ -125,18 +126,18 @@ get_header(); ?>
 					</div>
 
 			<?php endif; ?>
-
+			
 			<div id="fond-couleur-bloc-visu"></div>
 			<div class="container" id="container-bloc-visu-content">
 				<div class="bloc-content bloc-visu-content">
-					<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
-													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat left top; background-size: auto 100%;"
+					<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?> 
+													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat left top; background-size: auto 100%;" 
  											 <?php } ?>>
  					</div>
 				</div>
 			</div>
 		</div>
-
+		
 		<?php $medias = get_field('bloc_media');
 
 			if( count($medias) <= 1 ) echo '<div style="display:none;">' ?>
@@ -156,13 +157,13 @@ get_header(); ?>
 											<a href="#" class="lien-autre-video">
 												<span class="container-fond-autre-video">
 													<span class="fond-autre-video"><img src="<?php echo get_field('image_video_media', $p->ID)['sizes']['medium']; ?>" alt="<?php echo get_field('image_video_media', $p->ID)['alt']; ?>" /></span>
-
+									
 									<?php } if(get_field('calameo_media', $p->ID)){ ?>
 										<li class="<?php if($p->ID == $idFirst){ echo 'active '; } echo 'has-calameo'; ?>" <?php echo 'data-id-calameo="'.get_field('calameo_media', $p->ID).'"'; ?>>
 											<a href="#" class="lien-autre-video">
 												<span class="container-fond-autre-video">
 													<span class="fond-autre-video"><img src="<?php echo get_field('image_calameo_media', $p->ID)['sizes']['medium']; ?>" alt="<?php echo get_field('image_calameo_media', $p->ID)['alt']; ?>" /></span>
-
+									
 									<?php } if(get_field('image_media', $p->ID)){ ?>
 										<li class="<?php if($p->ID == $idFirst){ echo 'active '; } echo 'has-image'; ?>" <?php echo 'data-image-name="'.get_field('image_media', $p->ID)['url'].'"'; ?>>
 											<a href="#" class="lien-autre-video">
@@ -191,7 +192,7 @@ get_header(); ?>
 		<?php if( count($medias) <= 1 ) echo '</div>' ?>
 	<?php } ?>
 
-		<?php if( $int ){
+		<?php if( $int ){ 
 			foreach($int as $i) :?>
 
 				<div id="wrapper-interlocuteur-modal">

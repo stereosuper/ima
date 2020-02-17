@@ -8,7 +8,7 @@ get_header();
 
 if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embed = false; }
 ?>
-	<div class="wrapper-blocs">
+	<div class="wrapper-blocs titi">
 		<div class="bloc-full bloc-penche" id="zone-actus">
 			<?php if ( have_posts() ) : ?>
 

@@ -1,10 +1,11 @@
 <?php
 /*
-Template Name: Home
-*/
+Template Name: 20 ans
+ */
+
 
 get_header(); ?>
-	<div class="wrapper-blocs">
+	<div class="wrapper-blocs 20ans">
 		<div class="bloc-full bloc-penche <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">
 
 				<div class="ribbon">
@@ -184,9 +185,6 @@ get_header(); ?>
 						</span>
 						<span class="txt-btn-video">Vidéo</span>
 					</span>
-					<!--<span class="media-over m1">Vidéos</span>
-					<span class="media-over m2">Plaquettes</span>
-					<span class="media-over m3">Etc.</span>-->
 				</a>
 			</div>
 		</div>
