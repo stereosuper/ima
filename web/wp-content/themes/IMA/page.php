@@ -9,6 +9,11 @@ get_header();
 $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 ?>
 	<div class="wrapper-blocs">
+	<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true); ?>
+		style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat left top; background-size: auto 100%;"
+ 		<?php } ?>>
+ 	</div>
+
 			<div class="bloc-full bloc-penche <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">
 			<?php if ( have_posts() ) : ?>
 
@@ -119,65 +124,16 @@ $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 								</span>
 								<span class="know-more">Visiter le site</span>
 							</a>
-						<?php } else { ?>
-						<?php if($post->post_content != "") { ?>
-								<a href="#" class="btn-bloc">
-									<span class="container-fond-btn-bloc">
-										<span class="fond-btn-bloc"></span>
-									</span>
-									<span class="txt-btn-bloc">Lire la suite</span>
-									<span class="txt-reduire-btn-bloc">Réduire</span>
-								</a>
-							<?php } ?>
 						<?php } ?>
 				</div>
 
 		</div>
 
-		<?php $blocs = get_field('blocs');
-
-			if( $blocs ): ?>
-
-				<div class="zone-blocs" id="zone-blocs-accueil">
-					<?php foreach( $blocs as $p ): ?>
-							<a href="<?php if( get_field( 'lien', $p->ID ) == 'externe'){
-												echo get_field( 'lien_externe', $p->ID);
-											}else if( get_field( 'lien', $p->ID ) == 'interne' ){
-												echo get_field( 'lien_interne', $p->ID);
-												$lienMedia = get_field('id_bloc_media', $p->ID);
-												if( $lienMedia ){
-													if(get_field('calameo_media', $lienMedia->ID)){
-														echo '#calameo#'. get_field('calameo_media', $lienMedia->ID);
-													}
-													else if(get_field('video_media', $lienMedia->ID)){
-														echo '#video#'. get_field('video_media', $lienMedia->ID) . '#'. get_field('image_video_media', $lienMedia->ID)['url'];
-													}
-													else if(get_field('image_media', $lienMedia->ID)){
-														echo '#image#'. get_field('image_media', $lienMedia->ID)['url'];
-													}
-											} } ?>" class="bloc-small <?php echo get_field( 'bloc-theme', $p->ID ); ?>" >
-
-								<span class="categ-bloc">
-									<span class="container-fond-categ-bloc">
-										<span class="fond-categ-bloc"></span>
-									</span>
-									<span class="txt-categ-bloc"><?php echo get_the_title( $p->ID ); ?></span>
-								</span>
-								<span class="container-fond-bloc-deform">
-									<span class="fond-bloc-deform"></span>
-								</span>
-								<span class="txt-bloc-deform"><?php formatTexte(get_field( 'bloc-texte', $p->ID )); ?> <span class='link'><?php formatTexte(get_field( 'bloc-texte-lien', $p->ID )); ?></span></span>
-							</a><br />
-					<?php endforeach; ?>
-				</div>
-
-		<?php endif; ?>
-
 	</div><!-- #primary .content-area -->
 
 	</section>
 
-	<?php if($embed == false){ ?>
+	<?php /*if($embed == false){ ?>
 		<?php if( get_field('bloc_media')) {?>
 		<div class="bloc-content bloc-visu-content" id="visu-content">
 			<span class="shadow"></span>
@@ -203,12 +159,12 @@ $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 			</div>
 		</div>
 		<?php } ?>
-	<?php } ?>
+	<?php }*/ ?>
 
 </div>
 </section>
 
-	<?php if($embed == false){ ?>
+	<?php /*if($embed == false){ ?>
 		<div id="bloc-fond-visu">
 			<?php if( get_field('bloc_media') ):
 					$big = get_field('bloc_media')[0];
@@ -289,8 +245,8 @@ $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 					</div>
 				</aside>
 
-		<?php if( count($medias) <= 1 ) echo '</div>' ?>
-	<?php } ?>
+		<?php if( count($medias) <= 1 ) echo '</div>'  ?>
+	<?php }*/ ?>
 
 		<?php if( $int ){
 			foreach($int as $i) :?>
@@ -344,15 +300,15 @@ $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 
 		<?php include('includes/sitemap.php'); ?>
 
-		<?php if($embed == false){ ?>
+		<?php /*if($embed == false){ ?>
 			<div id="bloc-retour-video">
 				<a href="#" id="retour-video">
 					<span class="icon-retour"></span>
 				</a>
 			</div>
-		<?php }else{ ?>
+		<?php }else{*/ ?>
 			<div id="etiquette"></div>
-		<?php } ?>
+		<?php //} ?>
 
 	<?php endwhile; ?>
 

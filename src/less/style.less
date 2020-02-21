@@ -442,15 +442,15 @@ body {
 }
 
 #content {
-    width: 57%;
-    float: left;
+    //width: 57%;
+    //float: left;
     padding: 0 0 100px;
     margin: 0 0 80px;
 }
 
 .bloc-full {
     position: relative;
-    width: 620px;
+    //width: 620px;
     margin: 0 auto;
     padding: 0;
     z-index: 1;
@@ -695,7 +695,6 @@ body {
     .box-sizing(border-box);
     z-index: 2;
     .suite-bloc {
-        display: none;
         width: 100%;
         position: relative;
         overflow: hidden;
@@ -1221,9 +1220,15 @@ a {
 
 #header {
     margin: 0 0 40px 0;
-    nav {
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    background: #fff;
+
+    /*nav {
         position: relative;
-    }
+    }*/
     #label-menu {
         .dearJoe(1.4em);
         color: @bleuIMA;
@@ -1466,6 +1471,69 @@ a {
     }
 }
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    padding: 40px 0;
+    font-size: 14px;
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        box-shadow: none;
+        color: @bleuIMA;
+    }
+    li {
+        margin: 0 0 0 30px;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    .sub-menu {
+        display: flex;
+        justify-content: center;
+        padding: 24px 0;
+        margin: 1px 0 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        opacity: 0;
+        transform: scaleY(0);
+        &.on {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+}
+
+.logo {
+    width: 111px;
+    height: 18px;
+    background: url(../layoutImg/logo-imatech.png) no-repeat;
+    + div {
+        margin: 0 0 0 auto;
+    }
+}
+
+.link-search {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 0;
+    margin: 0 0 0 30px;
+    background: url(../layoutImg/loupe.svg) no-repeat;
+    &:focus {
+        outline: none;
+    }
+}
+
 /* @end */
 
 /* @group Footer */
@@ -1480,14 +1548,15 @@ a {
     background-color: @blanc;
     .opacity(0.8);
     z-index: 10;
-    .bandeau-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /*.bandeau-footer {
         width: 100%;
         height: 2px;
         background: url('../layoutImg/footer/bandeau-couleurs.png') repeat-x;
         position: absolute;
         top: -2px;
         left: 0;
-    }
+    }*/
     ul#footer-elements {
         text-align: center;
         margin: 0;
@@ -1668,7 +1737,7 @@ a {
     position: absolute;
     top: -17px;
     left: -25px;
-    .transform(rotate(-4deg));
+    //.transform(rotate(-4deg));
     z-index: 3;
     .fond-ribbon {
         width: 100%;
@@ -1716,7 +1785,7 @@ a {
     width: 40px;
     height: 40px;
     position: absolute;
-    bottom: -22px;
+    bottom: -20px;
     left: 8px;
     .rotate(25deg);
     &.ribbon-bleu {
@@ -3768,12 +3837,11 @@ a.bloc-small {
 }
 
 #fond-bloc-visu {
-    display: block;
     width: 100%;
-    height: 100%;
+    height: 300px;
     background: url('../layoutImg/visuels/visuel-1.png') no-repeat;
-    background-size: auto 100%;
-    position: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
     .juridique & {
         background: url('../layoutImg/visuels/visuel-activite-juridique.png')
             no-repeat;
@@ -5137,7 +5205,7 @@ a.bloc-small {
 form#search-sitemap {
     position: relative;
     display: block;
-    padding: 10px 0 40px 60px;
+    padding: 80px 0 0 60px;
     .box-sizing(border-box);
     input[type='text'].input-search-sitemap,
     input[type='search'].input-search-sitemap {
@@ -5281,7 +5349,7 @@ form#search-sitemap {
             vertical-align: top;
             width: 66%;
             height: auto;
-            padding: 90px 0 0 60px;
+            padding: 30px 0 0 60px;
             margin: 0;
             list-style: none;
             .box-sizing(border-box);
@@ -5876,10 +5944,10 @@ ul.slider-logos {
             padding: 0 200px 0 0;
         }
     }
-    .bloc-full {
+    /*.bloc-full {
         width: 100%;
         max-width: 620px;
-    }
+    }*/
     #header {
         #label-menu {
             left: 110px;
@@ -6681,10 +6749,10 @@ ul.slider-logos {
     #header {
         margin: 0 0 30px 0;
     }
-    .ribbon,
+    /*.ribbon,
     .ribbon-copie {
         .transform(rotate(-2deg));
-    }
+    }*/
     .content-actu {
         /*display: none;*/
         ul.liste-recherche & {

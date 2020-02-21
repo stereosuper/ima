@@ -384,7 +384,7 @@ function ima_scripts(){
 	wp_enqueue_script( 'ima-jqueryui', get_template_directory_uri() . '/js/libs/jquery-ui.min.js', array(), null, true );
 	wp_enqueue_script( 'ima-jquerycookie', get_template_directory_uri() . '/js/libs/jquery.cookie.js', array(), null, true );
 
-	wp_enqueue_script( 'ima-bezier', get_template_directory_uri() . '/js/libs/jsPlumb/jsBezier-0.6.js', array(), null, true );
+	/*wp_enqueue_script( 'ima-bezier', get_template_directory_uri() . '/js/libs/jsPlumb/jsBezier-0.6.js', array(), null, true );
 	wp_enqueue_script( 'ima-biltong', get_template_directory_uri() . '/js/libs/jsPlumb/biltong-0.2.js', array(), null, true );
 	wp_enqueue_script( 'ima-util', get_template_directory_uri() . '/js/libs/jsPlumb/util.js', array(), null, true );
 	wp_enqueue_script( 'ima-browserutil', get_template_directory_uri() . '/js/libs/jsPlumb/browser-util.js', array(), null, true );
@@ -400,7 +400,7 @@ function ima_scripts(){
 	wp_enqueue_script( 'ima-svg', get_template_directory_uri() . '/js/libs/jsPlumb/renderers-svg.js', array(), null, true );
 	wp_enqueue_script( 'ima-vml', get_template_directory_uri() . '/js/libs/jsPlumb/renderers-vml.js', array(), null, true );
 	wp_enqueue_script( 'ima-editors', get_template_directory_uri() . '/js/libs/jsPlumb/connector-editors.js', array(), null, true );
-	wp_enqueue_script( 'ima-adapter', get_template_directory_uri() . '/js/libs/jsPlumb/jquery.jsPlumb.js', array(), null, true );
+	wp_enqueue_script( 'ima-adapter', get_template_directory_uri() . '/js/libs/jsPlumb/jquery.jsPlumb.js', array(), null, true );*/
 
 	wp_enqueue_script( 'ima-tweenmax', get_template_directory_uri() . '/js/libs/greensock/TweenMax.min.js', array(), null, true );
 	wp_enqueue_script( 'ima-timeline', get_template_directory_uri() . '/js/libs/greensock/TimelineMax.min.js', array(), null, true );

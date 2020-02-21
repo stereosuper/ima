@@ -1,6 +1,9 @@
 <header id="header">
-	<nav>
-		<div id="label-menu">Nos métiers</div>
+	<nav class='container nav'>
+		<a class='logo' href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" id="circle-imatech" rel="home"></a>
+		<?php echo wp_nav_menu(array('theme_location' => 'primaryPlan', 'menu_id' => 'header-menu')); ?>
+		<button id='link-search' class='link-search'></button>
+		<!--<div id="label-menu">Nos métiers</div>
 		<div id="container-menu-wrapper">
 			<div id="menu-wrapper">
 				<div id="circle-dashed-container">
@@ -11,7 +14,7 @@
 				
 				<ul>
 					<?php
-					$menu_name = 'primary';
+					/*$menu_name = 'primary';
 					$locations = get_nav_menu_locations();
 					$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 					$menuitems = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) );
@@ -27,22 +30,22 @@
 						
 						$id = get_post_meta( $item->ID, '_menu_item_object_id', true );
 					    $page = get_page( $id );
-					    $link = get_page_link( $id );
+					    $link = get_page_link( $id );*/
 					?>
 
-					    <li class="<?php echo $classe; ?>">
-					        <a href="<?php echo $link; ?>">
+					    <li class="<?php //echo $classe; ?>">
+					        <a href="<?php //echo $link; ?>">
 					            <span class="txt-circle">
-					                <?php echo $page->post_title; ?>
+					                <?php //echo $page->post_title; ?>
 					            </span>
 					        </a>
 					    </li>
 
-					<?php endforeach; ?>
+					<?php //endforeach; ?>
 				</ul>
 
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" id="circle-imatech" rel="home"></a>
+				<a href="<?php //echo esc_url( home_url( '/' ) ); ?>" title="<?php //echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" id="circle-imatech" rel="home"></a>
 			</div>
-		</div>	
+		</div>	-->
 	</nav>						
 </header><!-- #masthead .site-header -->

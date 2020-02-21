@@ -6,6 +6,7 @@
 				<div class="fond-modal"><div class="cercle-sitemap"></div></div>
 			</div>
 			<div id="content-sitemap">
+				<?php get_search_form(); ?>
 				<ul id="menu-sitemap">
 					<?php
 
@@ -93,7 +94,6 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'secondaryPlan', 'container' => false, 'items_wrap' => '<ul id="autre-menu-big-sitemap">%3$s</ul>') ); ?>
 					<?php wp_nav_menu( array( 'theme_location' => 'smallPlan', 'container' => false, 'items_wrap' => '<ul id="autre-menu-small-sitemap">%3$s</ul>') ); ?>
 				</div>
-				<?php get_search_form(); ?>
 			</div>
 			<div class="titre-modal">
 				<div class="container-fond-titre-modal">

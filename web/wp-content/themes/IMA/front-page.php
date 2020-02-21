@@ -5,6 +5,11 @@ Template Name: Home
 
 get_header(); ?>
 	<div class="wrapper-blocs">
+		<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
+			style="background-image: url(<?php echo $thumb_url[0]; ?>);"
+ 			<?php } ?>>
+		</div>
+
 		<div class="bloc-full bloc-penche <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">
 
 				<div class="ribbon">
@@ -78,7 +83,7 @@ get_header(); ?>
 
 		</div>
 
-		<?php $blocs = get_field('blocs');
+		<?php /*$blocs = get_field('blocs');
 
 			if( $blocs ): $bloc = 0; ?>
 
@@ -161,43 +166,43 @@ get_header(); ?>
 					<?php endforeach; ?>
 				</div>
 
-		<?php endif; ?>
+		<?php endif;*/ ?>
 
 	</div><!-- #primary .content-area -->
 
 	</section>
 
-	<?php if( get_field('bloc_media')) {?>
-	<div class="bloc-content bloc-visu-content" id="visu-content">
-		<span class="shadow"></span>
-		<div class="bloc-btn-video">
-			<svg id="circle-dashed-video-svg" viewBox="0 0 85 85">
-				<circle class="circle-dashed-video" cx="42" cy="42" r="42"/>
-			</svg>
-			<div class="content-bloc-btn-video">
-				<a href="#" class="btn-video">
-					<div class="fond-btn-video"></div>
-					<span class="icon-play"></span>
-					<span class="bloc-txt-btn-video">
-						<span class="container-fond-txt-btn-video">
-							<span class="fond-txt-btn-video"></span>
+	<?php /*if( get_field('bloc_media')) {?>
+		<div class="bloc-content bloc-visu-content" id="visu-content">
+			<span class="shadow"></span>
+			<div class="bloc-btn-video">
+				<svg id="circle-dashed-video-svg" viewBox="0 0 85 85">
+					<circle class="circle-dashed-video" cx="42" cy="42" r="42"/>
+				</svg>
+				<div class="content-bloc-btn-video">
+					<a href="#" class="btn-video">
+						<div class="fond-btn-video"></div>
+						<span class="icon-play"></span>
+						<span class="bloc-txt-btn-video">
+							<span class="container-fond-txt-btn-video">
+								<span class="fond-txt-btn-video"></span>
+							</span>
+							<span class="txt-btn-video">Vidéo</span>
 						</span>
-						<span class="txt-btn-video">Vidéo</span>
-					</span>
-					<!--<span class="media-over m1">Vidéos</span>
-					<span class="media-over m2">Plaquettes</span>
-					<span class="media-over m3">Etc.</span>-->
-				</a>
+						<!--<span class="media-over m1">Vidéos</span>
+						<span class="media-over m2">Plaquettes</span>
+						<span class="media-over m3">Etc.</span>-->
+					</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<?php } ?>
+	<?php }*/ ?>
 
 </div>
 </section>
 
-		<div id="bloc-fond-visu">
-			<?php if( get_field('bloc_media') ):
+		<!--<div id="bloc-fond-visu">
+			<?php /* if( get_field('bloc_media') ):
 				$big = get_field('bloc_media')[0];
 				$idFirst = $big->ID;
 			?>
@@ -212,20 +217,20 @@ get_header(); ?>
 						<?php } ?>
 					</div>
 
-			<?php endif; ?>
+			<?php endif; */ ?>
 
 			<div id="fond-couleur-bloc-visu"></div>
 			<div class="container" id="container-bloc-visu-content">
 				<div class="bloc-content bloc-visu-content">
-					<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
+					<div id="fond-bloc-visu" <?php /*if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
 													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat left top; background-size: auto 100%;"
- 											 <?php } ?>>
+ 											 <?php }*/ ?>>
  					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 
-		<?php $medias = get_field('bloc_media');
+		<?php /*$medias = get_field('bloc_media');
 
 			if( count($medias) <= 1 ) echo '<div style="display:none;">' ?>
 				<aside id="bloc-autres-videos">
@@ -278,15 +283,15 @@ get_header(); ?>
 					</div>
 				</aside>
 
-		<?php if( count($medias) <= 1 ) echo '</div>' ?>
+		<?php if( count($medias) <= 1 ) echo '</div>'*/ ?>
 
 		<?php include('includes/sitemap.php'); ?>
 
-		<div id="bloc-retour-video">
+		<!--<div id="bloc-retour-video">
 			<a href="#" id="retour-video">
 				<span class="icon-retour"></span>
 			</a>
-		</div>
+		</div>-->
 
 
 <?php get_footer(); ?>

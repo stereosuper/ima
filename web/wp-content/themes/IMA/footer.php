@@ -1,5 +1,5 @@
 <footer id="footer">
-	<div class="bandeau-footer"></div>
+	<!--<div class="bandeau-footer"></div>-->
 		<div class="container">
 			<ul id="footer-elements">
 				<li class="padding-top-footer">

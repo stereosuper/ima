@@ -1,9 +1,9 @@
 'use strict';
 
 $(function(){
-	var tlMenuWrapper = new TimelineMax();
+	/*var tlMenuWrapper = new TimelineMax();
 	var tlCircleDashed = new TimelineMax();
-	var tlCircles = new TimelineMax();
+	var tlCircles = new TimelineMax();*/
 	var tlWrapperBlocs = new TimelineMax();
 
 	var player = 0;
@@ -16,6 +16,9 @@ $(function(){
 	var circleDashed = menuWrapper.find("#circle-dashed-container"), menuWrapperUl = menuWrapper.find("ul"), menuWrapperLi = menuWrapperUl.find('li');
 	var blocAutresVideos = $("#bloc-autres-videos"), blocBackVideo = $("#bloc-retour-video"), tlBlocVisuContentRetour;
 	var wrapperEmbed = $("#wrapper-embed"), wrapperBlocs = $(".wrapper-blocs");
+
+	var header = $('#header');
+	var menu = $('#header-menu');
 
 
 
@@ -60,7 +63,7 @@ $(function(){
 	function animer(){
 		requestAnimFrame(function(){
 			var scrollTop = $(window).scrollTop();
-			if (!htmlTag.hasClass("lt-ie9")){
+			/*if (!htmlTag.hasClass("lt-ie9")){
 				jsPlumb.setSuspendDrawing(false);
 			}
 			if(body.hasClass("has-bloc-small")){
@@ -69,8 +72,8 @@ $(function(){
 					jsPlumb.repaint($(this), { left:Math.round($(this).offset().left), top:Math.round($(this).offset().top)});
 				});*/
 				//jsPlumb.repaint(blocActus);
-			}
-			if (!htmlTag.hasClass("lt-ie9")){
+			//}
+			/*if (!htmlTag.hasClass("lt-ie9")){
 				if(body.hasClass("has-video") && (!etiquette.length)){
 					if ($(window).width()>=1250) {
 						if(!body.hasClass("accueil")){
@@ -98,8 +101,8 @@ $(function(){
 					//if(body.hasClass("recherche")  || body.hasClass("search")){
 					//	jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 					//}
-				}
-			}
+				}*/
+			//}
 			if(body.hasClass("rh-detail")){
 				if((scrollTop>blocActus.offset().top) && (scrollTop<(blocActus.offset().top+blocActus.height()-50))){
 					TweenMax.set($("a.btn-postuler"), {position: "fixed", "right": "inherit", "left": (blocActus.offset().left+blocActus.width()-25)+"px"});
@@ -114,7 +117,7 @@ $(function(){
 	////////////////////////////////////////////////////////////////////////////////
 	//////////// Fonction pour ouvrir le menu à l'ouvreture de la page /////////////
 	////////////////////////////////////////////////////////////////////////////////
-	function menuOuvertDefault(){
+	/*function menuOuvertDefault(){
 		if($(window).width()>1024 && $.cookie('cookieMenu') == null) {
 			$.cookie('cookieMenu', 'open');
 			ouvertureMenu();
@@ -210,7 +213,7 @@ $(function(){
 		var tlCircleDashed = new TimelineMax();
 		var tlCircles = new TimelineMax();
 		menuWrapper.hover(ouvertureMenu, fermetureMenu);
-	}
+	}*/
 
 	function updateUrlBlocVideo(){
 		var mediaActif = $("ul#autres-videos li.active"), data;
@@ -399,7 +402,7 @@ $(function(){
 	}
 
 	////////////////////// Fonction pour pencher les bloc content en fonction de leur hauteur ////////////////////////
-	function blocPenche(){
+	/*function blocPenche(){
 		if (!htmlTag.hasClass("lt-ie9") && !body.hasClass("actus") && !body.hasClass("blog") && !body.hasClass("category") && !body.hasClass("rh") && !body.hasClass("recherche") && !body.hasClass("search")) {
 			$(".bloc-penche").each(function(index){
 				var heightBlocPenche = $(this).height();
@@ -412,7 +415,7 @@ $(function(){
 				}
 			});
 		}
-	}
+	}*/
 
 	////////////////////// Fonction pour animer les svg du bloc Innovation ////////////////////////
 	function hoverBlocInnovation(){
@@ -443,21 +446,13 @@ $(function(){
 		}
 
 		TweenMax.set($("#sitemap-modal"), {y: 50});
-		$("a#lien-sitemap").on('click', function(e){
+		$("#lien-sitemap, #link-search, #menu-responsive").on('click', function(e){
 			e.preventDefault();
 			openModal();
 		});
-		$("#overlay").on('click', function(e){
+		$("#overlay, #lien-close-modal").on('click', function(e){
 			e.preventDefault();
 			closeModal();
-		});
-		$("#lien-close-modal").on('click', function(e){
-			e.preventDefault();
-			closeModal();
-		});
-		$("a#menu-responsive").on('click', function(e){
-			e.preventDefault();
-			openModal();
 		});
 	}
 
@@ -754,12 +749,12 @@ $(function(){
 	//dx and dy,which specify the orientation of the curve incident to the anchor
 	//,     [[0, 0.6, 0, 1], [1, 0.4, 0, 1]],     [[0, 0.8, 0, 1], [1, 0.2, 0, 1]],     [[0, 0.8, 0, 1], [0.5, 1, 0, 1]],     [[0.8, 0, 0, 1], [0, 0.6, 0, 1]]
 	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.4, 0, 1], [0.1, 0.7, 0.2, 0]],      [[0.51, 1, 0, 1], [0.7, 0.1, 0, 0]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[0.5, 0.9, -1, 1], [0.5, 0.2, 0, -1]]/**/,     [[1, 0.6, 0, 1], [1, 0.4, 0, 1]],     [[1, 0.8, 0, 1], [0, 0.2, 0, 1]],     [[0.6, 0.8, 0, 1], [0.5, 0, 0, 1]],     [[0.8, 0, 0, 1], [0, 0.6, 0, 1]]];
-	if (!htmlTag.hasClass("lt-ie9")){
+	/*if (!htmlTag.hasClass("lt-ie9")){
 		var jsPlumbBlocSmall = jsPlumb.getInstance();
 		jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
 		var jsPlumbFirstBloc = jsPlumb.getInstance();
 		jsPlumbFirstBloc.setContainer(wrapperBlocs);
-	}
+	}*/
 
 	if (window.history && window.history.pushState) {
 		$(window).on('popstate', function() {
@@ -767,28 +762,36 @@ $(function(){
 		});
 	}
 
+	menu.on('mouseenter', 'a', function(){
+		if ( !$(this).parent().find('.sub-menu').length ) return;
+		$(this).parent().find('.sub-menu').addClass('on').parent().siblings().find('.sub-menu').removeClass('on');
+	});
+	header.on('mouseleave', function(){
+		$(this).find('.sub-menu').removeClass('on');
+	})
+
 	checkMedia();
 	scanUrl();
 	animer();
-	if ($(window).width()>1024){
+	/*if ($(window).width()>1024){
 		setTimeout(function() {
 		      menuOuvertDefault();
 		}, 1000);
-	}
+	}*/
 	if (htmlTag.hasClass("lt-ie9")){
 		ordreBlocSmall();
 	}
 	isSafari();
-	hoverMenu();
+	//hoverMenu();
 	categBlocCopies();
-	blocPenche();
+	//blocPenche();
 	lienSitemap();
 	lienInterlocuteur();
 	initSitemapMobile();
 	liensSitemapMobile();
 	initVideo();
 	svgFallback();
-	clicLireLaSuite();
+	//clicLireLaSuite();
 	autresVideos();
 	btnCategoriesArticles();
 	preventEmptySearch();
@@ -805,7 +808,7 @@ $(function(){
 	}
 	$( window ).resize(function() {
 		initSitemapMobile();
-		if (!htmlTag.hasClass("lt-ie9")){
+		/*if (!htmlTag.hasClass("lt-ie9")){
 			if(body.hasClass("has-bloc-small")){
 				jsPlumbBlocSmall.repaint($(".bloc-small"));
 				jsPlumbFirstBloc.repaint(blocActus);
@@ -878,7 +881,7 @@ $(function(){
 					}
 				}
 			}
-		}
+		}*/
 		if($(window).width()>1024){
 			if (!htmlTag.hasClass("lt-ie9")) {
 				TweenMax.set(wrapperBlocs, {marginTop:"-90px"});
@@ -890,8 +893,8 @@ $(function(){
 		}
 	});
 
-	if (!htmlTag.hasClass("lt-ie9")){
-		jsPlumb.ready(function() {
+	//if (!htmlTag.hasClass("lt-ie9")){
+		/*jsPlumb.ready(function() {
 			isSafari();
 			if (!htmlTag.hasClass("lt-ie9")){
 				if(body.hasClass("has-bloc-small")){
@@ -988,9 +991,9 @@ $(function(){
 					}
 				}
 			}
-		});
-	}
-	$(document).scroll(function() {
+		});*/
+	//}
+	/*$(document).scroll(function() {
 		if (!htmlTag.hasClass("lt-ie9")){
 			if(body.hasClass("has-video") && (!etiquette.length)){
 				//bloc-btn-video
@@ -1002,10 +1005,10 @@ $(function(){
 				}
 			}
 		}
-	});
+	});*/
 
 	////////////////////// Fonction pour deployer / retracter le contenu au clic du bouton "Lire la suite" ////////////////////////
-	function clicLireLaSuite(){
+	/*function clicLireLaSuite(){
 		$("#zone-actus a.btn-bloc").click(function(e){
 			if(!$(this).hasClass("btn-actu") && !$(this).hasClass("ext-link")){
 				e.preventDefault();
@@ -1043,5 +1046,5 @@ $(function(){
 				});
 			}
 		});
-	}
+	}*/
 });
