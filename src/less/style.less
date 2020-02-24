@@ -4707,14 +4707,17 @@ a.bloc-small {
 }
 
 #bloc-menu-responsive {
-    width: auto;
+    /*width: auto;
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
     padding: 27px 0 0 27px;
-    margin: 0;
+    margin: 0;*/
+    display: none;
+    padding: 30px 0;
+    background: #fff;
     a#menu-responsive {
         .box-shadow(none);
         display: none;
@@ -4857,7 +4860,7 @@ a.bloc-small {
                     skewX(2deg) scale(1)
             );
             overflow: hidden;
-            .cercle-sitemap {
+            /*.cercle-sitemap {
                 .size(753px);
                 position: absolute;
                 top: -30px;
@@ -4865,7 +4868,7 @@ a.bloc-small {
                 background-color: #fbf9f7;
                 .border-radius(50%);
                 border: 1px dashed #c4c4c4;
-            }
+            }*/
         }
     }
     .titre-modal {
@@ -5256,7 +5259,7 @@ form#search-sitemap {
                     skewX(2deg) scale(1)
             );
             overflow: hidden;
-            .cercle-sitemap {
+            /*.cercle-sitemap {
                 .size(753px);
                 position: absolute;
                 top: -30px;
@@ -5264,7 +5267,7 @@ form#search-sitemap {
                 background-color: #fbf9f7;
                 .border-radius(50%);
                 border: 1px dashed #c4c4c4;
-            }
+            }*/
         }
     }
     .titre-modal {
@@ -5516,7 +5519,7 @@ form#search-sitemap {
             vertical-align: top;
             width: 33%;
             .box-sizing(border-box);
-            padding: 130px 0 0 140px;
+            padding: 130px 0 30px 140px;
             ul#autre-menu-big-sitemap {
                 display: block;
                 width: auto;
@@ -5925,9 +5928,9 @@ ul.slider-logos {
     .container {
         width: 90%;
     }
-    #bloc-menu-responsive {
-        padding: 27px 0 0;
-    }
+    //#bloc-menu-responsive {
+    //padding: 27px 0 0;
+    //}
     #header {
         #label-menu {
             left: 30px;
@@ -5936,14 +5939,11 @@ ul.slider-logos {
 }
 
 @media (max-width: 1150px) {
-    #content {
+    /*#content {
         width: 100%;
         .box-sizing(border-box);
-        padding: 0 150px 0 0;
-        .contact & {
-            padding: 0 200px 0 0;
-        }
-    }
+        padding: 0;
+    }*/
     /*.bloc-full {
         width: 100%;
         max-width: 620px;
@@ -5991,13 +5991,13 @@ ul.slider-logos {
     /* @group Sitemap modal */
     #sitemap-modal {
         width: 85%;
-        .container-fond-modal {
+        /* .container-fond-modal {
             .fond-modal {
                 .cercle-sitemap {
                     right: -470px;
                 }
             }
-        }
+        }*/
     }
     /* @end */
 
@@ -6114,15 +6114,16 @@ ul.slider-logos {
     #raccord-categories-articles {
         display: none;
     }
-    #content {
+    /*#content {
         margin-top: 130px;
-    }
+    }*/
     #svg-hamburger {
         width: 18px;
         height: 14px;
     }
     #bloc-menu-responsive {
-        margin-left: 0;
+        display: block;
+        //margin-left: 0;
         a#menu-responsive {
             display: block;
             #svg-logo-ima {
@@ -6234,7 +6235,7 @@ ul.slider-logos {
                 }
             }
         }
-        .container-fond-modal {
+        /*.container-fond-modal {
             .fond-modal {
                 .cercle-sitemap {
                     .size(2500px);
@@ -6244,7 +6245,7 @@ ul.slider-logos {
                     top: 440px;
                 }
             }
-        }
+        }*/
         #content-sitemap {
             overflow-y: auto;
             height: 98%;
@@ -6253,7 +6254,7 @@ ul.slider-logos {
                 width: 100%;
             }
             .autres-menus-sitemap {
-                padding: 50px 0 0 60px;
+                padding: 50px 0 30px 60px;
                 width: 100%;
                 ul#autre-menu-big-sitemap,
                 ul#autre-menu-small-sitemap {
@@ -6269,7 +6270,7 @@ ul.slider-logos {
     }
 
     form#search-sitemap {
-        padding: 20px 0 10px 60px;
+        padding: 80px 0 10px 60px;
     }
 
     /* @end */
@@ -6327,9 +6328,9 @@ ul.slider-logos {
         }
     }
 
-    #bloc-menu-responsive {
+    /*#bloc-menu-responsive {
         padding: 32px 0 0 27px;
-    }
+    }*/
 
     ul.breadcrumb {
         li {

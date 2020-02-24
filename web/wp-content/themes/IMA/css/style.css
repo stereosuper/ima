@@ -4634,14 +4634,17 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   margin: 0 8px 0 0;
 }
 #bloc-menu-responsive {
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  padding: 27px 0 0 27px;
-  margin: 0;
+  /*width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 27px 0 0 27px;
+    margin: 0;*/
+  display: none;
+  padding: 30px 0;
+  background: #fff;
 }
 #bloc-menu-responsive a#menu-responsive {
   box-shadow: none;
@@ -4788,21 +4791,15 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   -webkit-transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
   transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
   overflow: hidden;
-}
-#interlocuteur-modal .container-fond-modal .fond-modal .cercle-sitemap {
-  width: 753px;
-  height: 753px;
-  position: absolute;
-  top: -30px;
-  right: -412px;
-  background-color: #fbf9f7;
-  -webkit-border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50%;
-  -moz-background-clip: padding;
-  border-radius: 50%;
-  background-clip: padding-box;
-  border: 1px dashed #c4c4c4;
+  /*.cercle-sitemap {
+                .size(753px);
+                position: absolute;
+                top: -30px;
+                right: -412px;
+                background-color: #fbf9f7;
+                .border-radius(50%);
+                border: 1px dashed #c4c4c4;
+            }*/
 }
 #interlocuteur-modal .titre-modal {
   top: 170px;
@@ -5208,21 +5205,15 @@ form#search-sitemap button.btn-form {
   -webkit-transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
   transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
   overflow: hidden;
-}
-#sitemap-modal .container-fond-modal .fond-modal .cercle-sitemap {
-  width: 753px;
-  height: 753px;
-  position: absolute;
-  top: -30px;
-  right: -412px;
-  background-color: #fbf9f7;
-  -webkit-border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50%;
-  -moz-background-clip: padding;
-  border-radius: 50%;
-  background-clip: padding-box;
-  border: 1px dashed #c4c4c4;
+  /*.cercle-sitemap {
+                .size(753px);
+                position: absolute;
+                top: -30px;
+                right: -412px;
+                background-color: #fbf9f7;
+                .border-radius(50%);
+                border: 1px dashed #c4c4c4;
+            }*/
 }
 #sitemap-modal .titre-modal {
   padding: 20px 30px 5px 20px;
@@ -5489,7 +5480,7 @@ form#search-sitemap button.btn-form {
   vertical-align: top;
   width: 33%;
   box-sizing: border-box;
-  padding: 130px 0 0 140px;
+  padding: 130px 0 30px 140px;
 }
 #sitemap-modal #content-sitemap .autres-menus-sitemap ul#autre-menu-big-sitemap {
   display: block;
@@ -5905,22 +5896,16 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   .container {
     width: 90%;
   }
-  #bloc-menu-responsive {
-    padding: 27px 0 0;
-  }
   #header #label-menu {
     left: 30px;
   }
 }
 @media (max-width: 1150px) {
-  #content {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 150px 0 0;
-  }
-  .contact #content {
-    padding: 0 200px 0 0;
-  }
+  /*#content {
+        width: 100%;
+        .box-sizing(border-box);
+        padding: 0;
+    }*/
   /*.bloc-full {
         width: 100%;
         max-width: 620px;
@@ -5961,9 +5946,13 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   /* @group Sitemap modal */
   #sitemap-modal {
     width: 85%;
-  }
-  #sitemap-modal .container-fond-modal .fond-modal .cercle-sitemap {
-    right: -470px;
+    /* .container-fond-modal {
+            .fond-modal {
+                .cercle-sitemap {
+                    right: -470px;
+                }
+            }
+        }*/
   }
   /* @end */
   .rh #content-right {
@@ -6077,15 +6066,15 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   #raccord-categories-articles {
     display: none;
   }
-  #content {
-    margin-top: 130px;
-  }
+  /*#content {
+        margin-top: 130px;
+    }*/
   #svg-hamburger {
     width: 18px;
     height: 14px;
   }
   #bloc-menu-responsive {
-    margin-left: 0;
+    display: block;
   }
   #bloc-menu-responsive a#menu-responsive {
     display: block;
@@ -6174,20 +6163,23 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     left: 75px;
     bottom: 75px;
     right: 75px;
+    /*.container-fond-modal {
+            .fond-modal {
+                .cercle-sitemap {
+                    .size(2500px);
+                    right: auto;
+                    left: 50%;
+                    margin-left: -1250px;
+                    top: 440px;
+                }
+            }
+        }*/
   }
   #sitemap-modal .titre-modal .txt-titre-modal .titre-modal-large {
     display: none;
   }
   #sitemap-modal .titre-modal .txt-titre-modal .titre-modal-small {
     display: block;
-  }
-  #sitemap-modal .container-fond-modal .fond-modal .cercle-sitemap {
-    width: 2500px;
-    height: 2500px;
-    right: auto;
-    left: 50%;
-    margin-left: -1250px;
-    top: 440px;
   }
   #sitemap-modal #content-sitemap {
     overflow-y: auto;
@@ -6198,7 +6190,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     width: 100%;
   }
   #sitemap-modal #content-sitemap .autres-menus-sitemap {
-    padding: 50px 0 0 60px;
+    padding: 50px 0 30px 60px;
     width: 100%;
   }
   #sitemap-modal #content-sitemap .autres-menus-sitemap ul#autre-menu-big-sitemap,
@@ -6211,7 +6203,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     box-sizing: border-box;
   }
   form#search-sitemap {
-    padding: 20px 0 10px 60px;
+    padding: 80px 0 10px 60px;
   }
   /* @end */
   #content-right {
@@ -6264,9 +6256,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   .isSafari #visu-content {
     position: absolute;
   }
-  #bloc-menu-responsive {
-    padding: 32px 0 0 27px;
-  }
+  /*#bloc-menu-responsive {
+        padding: 32px 0 0 27px;
+    }*/
   ul.breadcrumb li:before,
   ul.breadcrumb li a {
     display: none;

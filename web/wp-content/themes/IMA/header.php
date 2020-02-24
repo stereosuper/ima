@@ -57,6 +57,6 @@
 <body <?php if( is_front_page() ) echo ' id="body-accueil" '; body_class( $theme ); if($embed) echo 'style="background:none;"' ?>>
 	<section id="wrapper-content">
     <?php include('includes/header.php'); ?>
+    <?php include('includes/burger.php'); ?>
 		<div class="container clearfix">
-			<?php include('includes/burger.php'); ?>
 			<section id="content">
