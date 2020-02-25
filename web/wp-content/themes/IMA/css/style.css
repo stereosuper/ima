@@ -1046,7 +1046,6 @@ a.btn-bloc:focus {
 }
 /* @group Header */
 #header {
-  margin: 0 0 40px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 10;
@@ -2601,10 +2600,10 @@ form button.btn-form:disabled:hover .txt-btn-form {
 .wrapper-blocs {
   display: block;
   position: relative;
-  margin-top: -90px;
-}
-.lt-ie9 .wrapper-blocs {
-  margin-top: -50px;
+  /*margin-top: -90px;
+    .lt-ie9 & {
+        margin-top: -50px;
+    }*/
 }
 #raccord-categories-articles {
   width: 30px;
@@ -6703,9 +6702,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 /* @end */
 /* @group Responsive vertical */
 @media (max-height: 800px) {
-  #header {
-    margin: 0 0 30px 0;
-  }
+  /*#header {
+        margin: 0 0 30px 0;
+    }*/
   /*.ribbon,
     .ribbon-copie {
         .transform(rotate(-2deg));

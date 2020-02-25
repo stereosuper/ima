@@ -882,7 +882,7 @@ $(function(){
 				}
 			}
 		}*/
-		if($(window).width()>1024){
+		/*if($(window).width()>1024){
 			if (!htmlTag.hasClass("lt-ie9")) {
 				TweenMax.set(wrapperBlocs, {marginTop:"-90px"});
 			}else{
@@ -890,7 +890,7 @@ $(function(){
 			}
 		}else{
 			TweenMax.set(wrapperBlocs, {marginTop:"0px"});
-		}
+		}*/
 	});
 
 	//if (!htmlTag.hasClass("lt-ie9")){
