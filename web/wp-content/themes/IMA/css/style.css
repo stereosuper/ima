@@ -187,7 +187,7 @@ body.contact {
   margin-bottom: 10px;
 }
 .container {
-  width: 1250px;
+  width: 1000px;
   position: relative;
   margin: 0 auto;
   z-index: 2;
@@ -1054,6 +1054,9 @@ a.btn-bloc:focus {
   /*nav {
         position: relative;
     }*/
+}
+#header .container {
+  width: 1200px;
 }
 #header #label-menu {
   font-family: 'dearJoe6', sans-serif;
