@@ -46,7 +46,8 @@
 	<div id="container-bg-map"><div id="bg-map"></div><div id="pin-map"></div></div>
 
 	<section id="wrapper-content">
+		<?php include('includes/header.php'); ?>
+		<?php include('includes/burger.php'); ?>
 		<div class="container clearfix">
-			<?php // include('includes/burger.php'); ?>
 			<section id="content">
-				<?php include('includes/header.php'); ?>
+				
