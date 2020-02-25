@@ -12,22 +12,29 @@ get_header(); ?>
 
 		<div class="bloc-full bloc-penche <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">
 
-				<div class="ribbon">
+				<!--<div class="ribbon">
 					<div class="fond-ribbon"></div>
 					<div class="ribbon-content">
-						<h1><?php the_field('titre-contenu'); ?></h1>
+						<h1><?php //the_field('titre-contenu'); ?></h1>
 					</div>
 				</div>
 
 				<div class="ribbon-copie">
 					<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
 					<div class="ribbon-content"></div>
-				</div>
+				</div>-->
 				<div class="fond-bloc"></div>
 
-				<div class="bloc-content bloc-content-home" id="bloc-actus">
-					<?php the_field('first_line'); ?>
-					<?php if( get_field('lien-savoir-plus')) {?>
+				<div class="bloc-content bloc-content-home intro-home small-padding-top" id="bloc-actus">
+					<div>
+						<?php the_content(); ?>
+
+						<?php if(get_field('btn')) : ?>
+							<a href='<?php echo get_field('btn')['url']; ?>' class='btn'><?php echo get_field('btn')['title']; ?></a>
+						<?php endif; ?>
+					</div>
+
+					<?php /*if( get_field('lien-savoir-plus')) {?>
 						<a href="<?php the_field('lien-savoir-plus'); ?>" class="btn-bloc ext-link">
 							<span class="container-fond-btn-bloc">
 								<span class="fond-btn-bloc"></span>
@@ -55,7 +62,7 @@ get_header(); ?>
 								<span class="txt-reduire-btn-bloc">Réduire</span>
 							</a>
 						<?php } ?>
-					<?php } ?>
+					<?php }*/ ?>
 					<?php
 					/*$loop = new WP_Query( array( 'post_type' => 'post', 'order' => 'DESC', 'posts_per_page' => 1 ) );
 					if ( $loop->have_posts() ) :
@@ -81,6 +88,45 @@ get_header(); ?>
 					<?php //endwhile; endif; wp_reset_query(); ?>
 				</div>
 
+		</div>
+
+		<?php if( get_field('numbers') ) : $numbers = get_field('numbers'); ?>
+			<div class="bloc-full">
+				<h2 class='bloc-full-title orange'><?php echo $numbers['title']; ?></h2>
+				<div class="bloc-content bloc-content-home with-bg bloc-flex bloc-numbers">
+					<div>
+						<?php echo wp_get_attachment_image($numbers['img1']); ?>
+						<strong><?php echo $numbers['text1']; ?></strong>
+					</div>
+					<div>
+						<?php echo wp_get_attachment_image($numbers['img2']); ?>
+						<strong><?php echo $numbers['text2']; ?></strong>
+					</div>
+					<div>
+						<?php echo wp_get_attachment_image($numbers['img3']); ?>
+						<strong><?php echo $numbers['text3']; ?></strong>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
+
+		<div class="bloc-full">
+			<h2 class='bloc-full-title'>Actualités</h2>
+			<div class="bloc-content bloc-content-home with-bg bloc-flex">
+				<?php $postsQuery = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 3)); ?>
+				<?php if( $postsQuery->have_posts() ) : while( $postsQuery->have_posts() ) : $postsQuery->the_post(); ?>
+					<div class='article'>
+						<div class="date-categ-actu">Le <span class="date-actu"><?php echo get_the_date(); ?></span> dans <?php foreach((get_the_category()) as $cat) { ?><a href="<?php echo get_category_link($cat->term_id) . ' ';  ?>" class="categ-actu"><?php echo $cat->cat_name . ' ';  ?></a><?php } ?> </div>
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<div class="content-actu">
+							<?php if(has_post_thumbnail()){ the_post_thumbnail(); }?>
+							<p>
+								<?php formatTexte(get_field('actus_fist_line')); ?>
+							</p>
+						</div>
+					</div>
+				<?php endwhile; endif; ?>
+			</div>
 		</div>
 
 		<?php /*$blocs = get_field('blocs');
