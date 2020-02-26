@@ -7772,6 +7772,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     left: 40px;
     bottom: 40px;
     right: 40px;
+    width: auto;
   }
   #interlocuteur-modal .titre-modal {
     top: -10px;
