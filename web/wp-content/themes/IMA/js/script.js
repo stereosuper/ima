@@ -763,8 +763,9 @@ $(function(){
 	}
 
 	menu.on('mouseenter', 'a', function(){
+        $(this).parent().siblings().find('.sub-menu').removeClass('on');
 		if ( !$(this).parent().find('.sub-menu').length ) return;
-		$(this).parent().find('.sub-menu').addClass('on').parent().siblings().find('.sub-menu').removeClass('on');
+		$(this).parent().find('.sub-menu').addClass('on')
 	});
 	header.on('mouseleave', function(){
 		$(this).find('.sub-menu').removeClass('on');
