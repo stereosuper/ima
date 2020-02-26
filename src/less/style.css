@@ -193,16 +193,14 @@ body.contact {
   z-index: 2;
 }
 #content {
+  width: 57%;
+  float: left;
   padding: 0 0 100px;
   margin: 0 0 80px;
 }
 #content.contact-content {
   width: 57%;
   float: left;
-  margin-top: 80px;
-}
-#content.contact-content .bloc-full {
-  width: 620px;
 }
 .bloc-full {
   position: relative;

@@ -49,5 +49,5 @@
 		<?php include('includes/header.php'); ?>
 		<?php include('includes/burger.php'); ?>
 		<div class="container clearfix">
-			<section id="content">
+			<section id="content" class='contact-content'>
 				
