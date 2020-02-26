@@ -7109,6 +7109,17 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
         width: 100%;
         max-width: 620px;
     }*/
+  #content.contact-content {
+    width: 100%;
+    padding: 0 200px 0 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #content.contact-content .bloc-full {
+    width: 100%;
+    max-width: 620px;
+  }
   .intro-home > div {
     width: 100%;
   }
@@ -7424,7 +7435,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   }
   /* @end */
   #content-right {
-    width: 210px;
+    width: 260px;
     position: relative;
     height: 400px;
     right: inherit;
@@ -7436,7 +7447,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     top: inherit;
     left: inherit;
     margin: 0;
-    width: 210px;
+    width: 260px;
     -webkit-transform: translate(0px, 0px);
     -moz-transform: translate(0px, 0px);
     -o-transform: translate(0px, 0px);
