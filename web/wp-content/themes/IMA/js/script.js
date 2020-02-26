@@ -487,17 +487,25 @@ $(function(){
 
 	////////////////////// Fonction pour déplier / replier les titres du menu / sitemap ////////////////////////
 	function liensSitemapMobile(){
-		$("a.circle-sitemap").click(function(e){
+
+        $("a.circle-sitemap").parent().each(function(){
+            if($(this).find('.liste-liens-sitemap').length){
+                $(this).find('.circle-responsive').addClass('has-submenu');
+            }
+        })
+
+		$("a.circle-sitemap .circle-responsive").click(function(e){
 			if ($(window).outerWidth() <= 767){
 				e.preventDefault();
-				$(this).toggleClass("open");
-				$("ul.liste-liens-sitemap", $(this).parent()).slideToggle();
+				$(this).parent().toggleClass("open");
+				$("ul.liste-liens-sitemap", $(this).parent().parent()).slideToggle();
 			}
 		});
 	}
 
 	function initSitemapMobile(){
-		$("a.circle-sitemap.open").removeClass("open");
+        $("a.circle-sitemap.open").removeClass("open");
+        
 		$(window).outerWidth() <= 767 ? $("ul.liste-liens-sitemap").hide() : $("ul.liste-liens-sitemap").show();
 	}
 
@@ -760,7 +768,7 @@ $(function(){
 		$(window).on('popstate', function() {
 		  scanUrl();
 		});
-	}
+    }
 
 	menu.on('mouseenter', 'a', function(){
         $(this).parent().siblings().find('.sub-menu').removeClass('on');

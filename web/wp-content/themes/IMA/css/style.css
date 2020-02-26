@@ -4,6 +4,10 @@
 /* @end */
 /* @group Boilerplate */
 html,
+body {
+  overflow-x: hidden;
+}
+html,
 button,
 input,
 select,
@@ -1553,6 +1557,18 @@ a.btn-bloc:focus {
 .nav li {
   margin: 0 0 0 30px;
 }
+.nav li.current-menu-item > a {
+  position: relative;
+}
+.nav li.current-menu-item > a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  border-bottom: 1px dashed #ab0464;
+}
 .nav ul {
   padding: 0;
   margin: 0;
@@ -1826,6 +1842,8 @@ a.btn-bloc:focus {
 .ribbon,
 .ribbon-copie {
   position: relative;
+  margin-bottom: 20px;
+  padding: 40px 70px 0;
   z-index: 3;
   color: #0f589f;
 }
@@ -1913,15 +1931,75 @@ ul.breadcrumb li {
   vertical-align: middle;
   margin: 0;
   padding: 0;
+  color: #0f589f;
+}
+.service-client ul.breadcrumb li {
+  color: #8eb4c7;
+}
+.service-client ul.breadcrumb li a,
+.service-client ul.breadcrumb li h1 {
+  color: #8eb4c7;
+}
+.service-client ul.breadcrumb li a {
+  -webkit-box-shadow: inset 0 -1px 0 #8eb4c7;
+  -moz-box-shadow: inset 0 -1px 0 #8eb4c7;
+  box-shadow: inset 0 -1px 0 #8eb4c7;
+}
+.pole-technique ul.breadcrumb li {
+  color: #ab0464;
+}
+.pole-technique ul.breadcrumb li a,
+.pole-technique ul.breadcrumb li h1 {
+  color: #ab0464;
+}
+.pole-technique ul.breadcrumb li a {
+  -webkit-box-shadow: inset 0 -1px 0 #ab0464;
+  -moz-box-shadow: inset 0 -1px 0 #ab0464;
+  box-shadow: inset 0 -1px 0 #ab0464;
+}
+.reflex ul.breadcrumb li {
+  color: #dd850c;
+}
+.reflex ul.breadcrumb li a,
+.reflex ul.breadcrumb li h1 {
+  color: #dd850c;
+}
+.reflex ul.breadcrumb li a {
+  -webkit-box-shadow: inset 0 -1px 0 #dd850c;
+  -moz-box-shadow: inset 0 -1px 0 #dd850c;
+  box-shadow: inset 0 -1px 0 #dd850c;
+}
+.accompagnement ul.breadcrumb li {
+  color: #c1c602;
+}
+.accompagnement ul.breadcrumb li a,
+.accompagnement ul.breadcrumb li h1 {
+  color: #c1c602;
+}
+.accompagnement ul.breadcrumb li a {
+  -webkit-box-shadow: inset 0 -1px 0 #c1c602;
+  -moz-box-shadow: inset 0 -1px 0 #c1c602;
+  box-shadow: inset 0 -1px 0 #c1c602;
+}
+.juridique ul.breadcrumb li {
+  color: #801a7a;
+}
+.juridique ul.breadcrumb li a,
+.juridique ul.breadcrumb li h1 {
+  color: #801a7a;
+}
+.juridique ul.breadcrumb li a {
+  -webkit-box-shadow: inset 0 -1px 0 #801a7a;
+  -moz-box-shadow: inset 0 -1px 0 #801a7a;
+  box-shadow: inset 0 -1px 0 #801a7a;
 }
 ul.breadcrumb li a {
-  color: #0f589f;
   font-family: 'open_sansregular', sans-serif;
   font-weight: normal;
   font-size: 0.875em;
-  -webkit-box-shadow: inset 0 -1px 0 #fff;
-  -moz-box-shadow: inset 0 -1px 0 #fff;
-  box-shadow: inset 0 -1px 0 #fff;
+  -webkit-box-shadow: inset 0 -1px 0 #0f589f;
+  -moz-box-shadow: inset 0 -1px 0 #0f589f;
+  box-shadow: inset 0 -1px 0 #0f589f;
   -webkit-transform: translateZ(1px);
   -moz-transform: translateZ(1px);
   -o-transform: translateZ(1px);
@@ -1932,24 +2010,12 @@ ul.breadcrumb li a {
   -o-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-.service-client ul.breadcrumb li a {
-  color: #8eb4c7;
-}
-.pole-technique ul.breadcrumb li a {
-  color: #ab0464;
-}
-.reflex ul.breadcrumb li a {
-  color: #dd850c;
-}
-.accompagnement ul.breadcrumb li a {
-  color: #c1c602;
-}
-.juridique ul.breadcrumb li a {
-  color: #801a7a;
+  color: #0f589f;
 }
 ul.breadcrumb li h1 {
   display: inline;
+  margin-left: 3px;
+  color: #0f589f;
 }
 /* @end */
 /* @group Content right */
@@ -6178,6 +6244,9 @@ form#search-sitemap input[type='search'].input-search-sitemap {
   width: 300px;
   padding: 8px;
 }
+form#search-sitemap > div {
+  display: flex;
+}
 form#search-sitemap button.btn-form {
   margin-left: 10px;
 }
@@ -6349,29 +6418,17 @@ form#search-sitemap button.btn-form {
   box-sizing: border-box;
 }
 #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap {
-  -webkit-border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50%;
-  -moz-background-clip: padding;
-  border-radius: 50%;
-  background-clip: padding-box;
   display: block;
-  width: 116px;
-  height: 116px;
   margin: 0;
   padding: 0;
-  font-family: 'open_sansregular', sans-serif;
+  font-family: 'open_sansbold', sans-serif;
   font-weight: normal;
-  font-size: 0.65em;
-  color: #fff;
-  text-transform: uppercase;
+  font-size: 14px;
+  color: #0f589f;
   text-decoration: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border-style: solid;
-  border-width: 0;
-  line-height: 116px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -6386,7 +6443,6 @@ form#search-sitemap button.btn-form {
   -o-transform: translateZ(0px);
   -ms-transform: translateZ(0px);
   transform: translateZ(0px);
-  text-align: center;
   -webkit-transition: 0.1s ease-in-out;
   -moz-transition: 0.1s ease-in-out;
   -o-transition: 0.1s ease-in-out;
@@ -6394,11 +6450,7 @@ form#search-sitemap button.btn-form {
   position: relative;
 }
 #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  filter: brightness(120%);
 }
 #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap.open .circle-responsive .icon-arrow-right {
   -webkit-transform: rotate(90deg);
@@ -6423,6 +6475,7 @@ form#search-sitemap button.btn-form {
   position: absolute;
   top: -3px;
   left: -38px;
+  background-color: #0f589f;
 }
 #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap .circle-responsive .icon-arrow-right {
   color: #fff;
@@ -6531,7 +6584,7 @@ form#search-sitemap button.btn-form {
 }
 #sitemap-modal #content-sitemap ul#menu-sitemap li ul.liste-liens-sitemap {
   display: block;
-  margin: -25px 0 0;
+  margin: 0;
   padding: 10px 0 0;
   background-color: #fff;
   position: relative;
@@ -6544,12 +6597,11 @@ form#search-sitemap button.btn-form {
   height: auto;
   margin: 0;
   padding: 0;
-  line-height: 1.1em;
 }
 #sitemap-modal #content-sitemap ul#menu-sitemap li ul.liste-liens-sitemap li a {
   font-family: 'open_sansitalic', sans-serif;
   font-weight: normal;
-  font-size: 0.75em;
+  font-size: 12px;
   color: #5e5e5e;
   text-decoration: none;
   -webkit-box-shadow: none;
@@ -7543,6 +7595,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     top: 0;
     left: 0;
     background-color: #c1c602;
+    border-radius: 15px 15px 0 0;
   }
   #sitemap-modal .container-fond-modal .fond-modal .cercle-sitemap {
     display: none;
@@ -7572,7 +7625,6 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     width: auto;
     height: auto;
     line-height: 1em;
-    color: #000;
     margin: 0;
     padding: 0;
     text-align: left;
@@ -7580,8 +7632,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     font-weight: normal;
     font-size: 1.125em;
     text-transform: none;
+    display: inline-block;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap .circle-responsive {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap .circle-responsive.has-submenu {
     display: block;
   }
   #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap br {
@@ -7661,8 +7714,14 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   #sitemap-modal #content-sitemap ul#menu-sitemap li ul.liste-liens-sitemap {
     background: none;
     margin: 0;
-    padding: 8px 0 0;
+    padding: 14px 0 0;
     min-height: inherit;
+  }
+  #sitemap-modal #content-sitemap ul#menu-sitemap li ul.liste-liens-sitemap li {
+    margin-bottom: 10px;
+  }
+  #sitemap-modal #content-sitemap ul#menu-sitemap li ul.liste-liens-sitemap li a {
+    font-size: 16px;
   }
   #sitemap-modal #content-sitemap .autres-menus-sitemap {
     padding: 30px 55px 0;
@@ -7677,6 +7736,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   }
   form#search-sitemap {
     padding: 20px 55px 10px;
+  }
+  form#search-sitemap > div {
+    flex-direction: column;
   }
   form#search-sitemap input[type='text'].input-search-sitemap,
   form#search-sitemap input[type='search'].input-search-sitemap {

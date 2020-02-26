@@ -23,28 +23,30 @@
 					foreach( $menuitems as $item ):
 
 					    $id = get_post_meta( $item->ID, '_menu_item_object_id', true );
-					    $page = get_page( $id );
-					    $link = get_page_link( $id );
+					    $title = $item->title;
+					    $link = $item->url;
 
 					    // item does not have a parent so menu_item_parent equals 0 (false)
 					    if ( !$item->menu_item_parent ):
 					        $parent_id = $item->ID;
-					    	$countParent ++;
-						    if($countParent == 1) $idlien = 'sitemap-service-client';
-						    if($countParent == 2) $idlien = 'sitemap-reflex';
-						    if($countParent == 3) $idlien = 'sitemap-accompagnement';
-						    if($countParent == 4) $idlien = 'sitemap-pole-technique';
-						    if($countParent == 5) $idlien = 'sitemap-conseil';
-						    if($countParent == 6) break;
+					    	// $countParent ++;
+						    // if($countParent == 1) $idlien = 'sitemap-service-client';
+						    // if($countParent == 2) $idlien = 'sitemap-reflex';
+						    // if($countParent == 3) $idlien = 'sitemap-accompagnement';
+						    // if($countParent == 4) $idlien = 'sitemap-pole-technique';
+						    // if($countParent == 5) $idlien = 'sitemap-conseil';
+						    // if($countParent == 6) break;
 					    	?>
 
 					    	<li>
-					            <a href="<?php echo $link; ?>" class="circle-sitemap" id="<?php echo $idlien; ?>">
-					            	<span class="circle-responsive"><span class="icon-arrow-right"></span></span><span class="txt-circle-sitemap">
-					                	<?php echo $page->post_title; ?>
+                                <a href="<?php echo $link; ?>" class="circle-sitemap">
+                                    <span class="circle-responsive"><span class="icon-arrow-right"></span></span>
+                                    <span class="txt-circle-sitemap">
+					                	<?php echo $title; ?>
 					                </span>
 					            </a>
-					    <?php endif;
+                        <?php 
+                        endif;
 
 
 						if ( $item->menu_item_parent ): 
@@ -56,7 +58,7 @@
 
 							<?php if($parent_id == $item->menu_item_parent) : ?>
 								<li>
-								    <a href="<?php echo $link; ?>"><?php echo $page->post_title; ?></a>
+								    <a href="<?php echo $link; ?>"><?php echo $title; ?></a>
 								    <?php $subSubmenu = wp_list_pages("title_li=&echo=0&child_of=".get_post_meta($item->ID, '_menu_item_object_id', true )); ?>
 								    <?php if($subSubmenu != '') : ?>
 									    <ul>
