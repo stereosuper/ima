@@ -1,23 +1,22 @@
 <?php get_header(); ?>
 
 	<div class="wrapper-blocs">
+		<div class="ribbon ribbon-bleu">
+			<div class="fond-ribbon"></div>
+			<div class="ribbon-content">
+				<ul class="breadcrumb">
+					<li><a href="<?php echo get_site_url(); ?>">IMATECH</a></li>
+					<li><a href="<?php echo get_home_url(); ?>/actualites/">Actualités</a></li>
+					<li><h1><?php single_cat_title( '', true ); ?></h1></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="ribbon-copie">
+			<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
+			<div class="ribbon-content"></div>
+		</div>
 		<div class="bloc-full bloc-categories-articles">
-
-				<div class="ribbon ribbon-bleu">
-					<div class="fond-ribbon"></div>
-					<div class="ribbon-content">
-						<ul class="breadcrumb">
-							<li><a href="<?php echo get_site_url(); ?>">IMATECH</a></li>
-							<li><a href="<?php echo get_home_url(); ?>/actualites/">Actualités</a></li>
-							<li><h1><?php single_cat_title( '', true ); ?></h1></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="ribbon-copie">
-					<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
-					<div class="ribbon-content"></div>
-				</div>
 				<div id="raccord-categories-articles"></div>
 				<div class="fond-bloc"></div>
 				<div class="bloc-content small-padding-top">

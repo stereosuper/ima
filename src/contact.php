@@ -126,20 +126,20 @@
 						</nav>
 					</header>
 					<div class="wrapper-blocs">
+						<div class="ribbon ribbon-bleu">
+							<div class="fond-ribbon"></div>
+							<div class="ribbon-content">
+								<ul class="breadcrumb">
+									<li><a href="#">IMATECH</a></li>
+									<li class="active"><h1>Contact</h1></li>
+								</ul>
+							</div>
+						</div>
+						<div class="ribbon-copie">
+							<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
+							<div class="ribbon-content"></div>
+						</div>
 						<div class="bloc-full bloc-penche" id="zone-actus">
-							<div class="ribbon ribbon-bleu">
-								<div class="fond-ribbon"></div>
-								<div class="ribbon-content">
-									<ul class="breadcrumb">
-										<li><a href="#">IMATECH</a></li>
-										<li class="active"><h1>Contact</h1></li>
-									</ul>
-								</div>
-							</div>
-							<div class="ribbon-copie">
-								<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
-								<div class="ribbon-content"></div>
-							</div>
 							<div class="fond-bloc"></div>
 							<div class="bloc-content" id="bloc-actus">
 								<p><strong>Et si... Nous parlions de vous ?</strong><br /> Vous pouvez nous contacter par email à <a class="btn-bleu" href="mailto:enchante@imatech.fr">enchante@imatech.fr</a> ou par téléphone au&nbsp;<strong>02&nbsp;51&nbsp;86&nbsp;62&nbsp;00</strong></p>

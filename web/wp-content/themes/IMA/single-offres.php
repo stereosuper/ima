@@ -7,12 +7,10 @@
 get_header('rh'); ?>
 
 	<div class="wrapper-blocs">
-		<div class="bloc-full" id="zone-actus">
-
+		
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
 				<div class="ribbon ribbon-bleu">
 					<div class="fond-ribbon"></div>
 					<div class="ribbon-content">
@@ -29,55 +27,58 @@ get_header('rh'); ?>
 					<div class="ribbon-content" style="height: 31px; width: 403px;"></div>
 				</div>
 
-				<?php
-					$ID = get_the_ID();
-					$current = get_permalink( $ID );
-				?>
+				<div class="bloc-full" id="zone-actus">
 
-				<a href="<?php echo get_home_url(); ?>/rh/offres-emploi/postuler?offre=<?php echo $ID; ?>" class="btn-postuler">
-					<span class="raccord"></span>
-					<span class="container-fond-btn-postuler">
-						<span class="fond-btn-postuler"></span>
-					</span>
-					<span class="txt-btn-postuler">-> Postuler</span>
-				</a>
-				<div class="container-fond-bloc">
-					<div class="fond-bloc"></div>
-				</div>
+					<?php
+						$ID = get_the_ID();
+						$current = get_permalink( $ID );
+					?>
 
-				<div class="bloc-content bloc-single" id="bloc-actus">
-
-					<div class="date-categ-actu">Le <span class="date-actu"><?php echo get_the_date(); ?></span></div>
-					<h2><?php the_title(); ?></h2>
-					<div class="content-single">
-						<ul class="details-annonce">
-							<div class="container-fond-details-annonce">
-								<div class="fond-details-annonce"></div>
-							</div>
-							<li><span class="titre-detail-annonce">Localisation : </span><span class="content-detail-annonce"><?php the_field('offre_localisation'); ?></span></li>
-							<li><span class="titre-detail-annonce">Référence : </span><span class="content-detail-annonce"><?php the_field('offre_ref'); ?></span></li>
-							<li><span class="titre-detail-annonce">Contrat : </span><span class="content-detail-annonce"><?php the_field('offre_contrat'); ?></span></li>
-							<li><span class="titre-detail-annonce">Salaire : </span><span class="content-detail-annonce"><?php the_field('offre_salaire'); ?></span></li>
-							<li><span class="titre-detail-annonce">Horaires - Temps de travail : </span><span class="content-detail-annonce"><?php the_field('offre_horaires'); ?></span></li>
-						</ul>
-						<?php the_content(); ?>
+					<a href="<?php echo get_home_url(); ?>/rh/offres-emploi/postuler?offre=<?php echo $ID; ?>" class="btn-postuler">
+						<span class="raccord"></span>
+						<span class="container-fond-btn-postuler">
+							<span class="fond-btn-postuler"></span>
+						</span>
+						<span class="txt-btn-postuler">-> Postuler</span>
+					</a>
+					<div class="container-fond-bloc">
+						<div class="fond-bloc"></div>
 					</div>
 
-						<div class="bloc-partage">
-							<div class="titre-modal">
-								<div class="container-fond-titre-modal">
-									<div class="fond-titre-modal"></div>
-								</div>
-								<div class="txt-titre-modal"><?php _e('Partager', 'ima'); ?><br /> <span><?php _e('cette offre', 'ima'); ?></span></div>
-							</div>
+					<div class="bloc-content bloc-single" id="bloc-actus">
 
-							<ul class="partage">
-								<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
-								<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
-								<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
+						<div class="date-categ-actu">Le <span class="date-actu"><?php echo get_the_date(); ?></span></div>
+						<h2><?php the_title(); ?></h2>
+						<div class="content-single">
+							<ul class="details-annonce">
+								<div class="container-fond-details-annonce">
+									<div class="fond-details-annonce"></div>
+								</div>
+								<li><span class="titre-detail-annonce">Localisation : </span><span class="content-detail-annonce"><?php the_field('offre_localisation'); ?></span></li>
+								<li><span class="titre-detail-annonce">Référence : </span><span class="content-detail-annonce"><?php the_field('offre_ref'); ?></span></li>
+								<li><span class="titre-detail-annonce">Contrat : </span><span class="content-detail-annonce"><?php the_field('offre_contrat'); ?></span></li>
+								<li><span class="titre-detail-annonce">Salaire : </span><span class="content-detail-annonce"><?php the_field('offre_salaire'); ?></span></li>
+								<li><span class="titre-detail-annonce">Horaires - Temps de travail : </span><span class="content-detail-annonce"><?php the_field('offre_horaires'); ?></span></li>
 							</ul>
+							<?php the_content(); ?>
 						</div>
 
+							<div class="bloc-partage">
+								<div class="titre-modal">
+									<div class="container-fond-titre-modal">
+										<div class="fond-titre-modal"></div>
+									</div>
+									<div class="txt-titre-modal"><?php _e('Partager', 'ima'); ?><br /> <span><?php _e('cette offre', 'ima'); ?></span></div>
+								</div>
+
+								<ul class="partage">
+									<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
+									<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
+									<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
+								</ul>
+							</div>
+
+					</div>
 				</div>
 
 				<?php endwhile; ?>
@@ -99,15 +100,17 @@ get_header('rh'); ?>
 							<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
 							<div class="ribbon-content"></div>
 						</div>
-						<div class="fond-bloc"></div>
+						<div class="bloc-full" id="zone-actus">
+							<div class="fond-bloc"></div>
 
-						<div class="bloc-content bloc-single" id="bloc-actus">
-							<h2>Cette offre n'existe plus ou a été déplaçée!</h2>
+							<div class="bloc-content bloc-single" id="bloc-actus">
+								<h2>Cette offre n'existe plus ou a été déplaçée!</h2>
+							</div>
 						</div>
 
 				<?php endif; ?>
 
-		</div>
+		
 
 	</div><!-- #primary .content-area -->
 
