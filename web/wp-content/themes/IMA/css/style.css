@@ -3983,8 +3983,12 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   z-index: 2;
 }
 #fond-bloc-visu {
-  width: 100%;
-  height: 300px;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-bottom: -167px;
+  width: 100vw;
+  height: 485px;
   background: url('../layoutImg/visuels/visuel-1.png') no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -6425,6 +6429,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   a.btn-postuler .raccord {
     display: none;
   }
+  #fond-bloc-visu {
+    height: 400px;
+  }
 }
 @media (max-width: 767px) {
   .bloc-full .bloc-content {
@@ -6750,6 +6757,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   /* @end */
   #visu-content .shadow {
     display: none;
+  }
+  #fond-bloc-visu {
+    height: 350px;
   }
 }
 @media (max-width: 570px) {

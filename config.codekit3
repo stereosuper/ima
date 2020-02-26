@@ -1735,7 +1735,7 @@
 		"sU": 0
 		},
 	"\/src\/less\/style.less": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
 		"ft": 1,
@@ -1743,8 +1743,8 @@
 		"iI": 0,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "\/web\/wp-content\/themes\/IMA\/css\/style.css",
-		"oF": 2,
+		"oAP": "\/src\/less\/style.css",
+		"oF": 0,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -45770,6 +45770,66 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/web\/wp-content\/uploads\/2018\/08\/01-31-18-imatech-300x600-56x112.gif": {
+		"ft": 4194304,
+		"iS": 5773,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2018\/08\/01-31-18-imatech-300x600-56x112.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/web\/wp-content\/uploads\/2018\/08\/01-31-18-imatech-300x600-90x110.gif": {
+		"ft": 4194304,
+		"iS": 8611,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2018\/08\/01-31-18-imatech-300x600-90x110.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/web\/wp-content\/uploads\/2018\/08\/01-31-18-imatech-300x600.gif": {
+		"ft": 4194304,
+		"iS": 99650,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2018\/08\/01-31-18-imatech-300x600.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/web\/wp-content\/uploads\/2018\/08\/ima-technologies-nantes-aout-2018-musique-1.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/2018\/08\/ima-technologies-nantes-aout-2018-musique-1.mp3",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/2018\/09\/dhu36urxkaave4q-150x72.jpg": {
+		"ft": 16384,
+		"iS": 3211,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2018\/09\/dhu36urxkaave4q-150x72.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/web\/wp-content\/uploads\/2018\/09\/dhu36urxkaave4q-90x110.jpg": {
+		"ft": 16384,
+		"iS": 3189,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2018\/09\/dhu36urxkaave4q-90x110.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/web\/wp-content\/uploads\/2018\/09\/dhu36urxkaave4q.jpg": {
+		"ft": 16384,
+		"iS": 28558,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2018\/09\/dhu36urxkaave4q.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/web\/wp-content\/uploads\/2019\/08\/bandeau-150x30.jpg": {
 		"ft": 16384,
 		"iS": 1508,
@@ -46291,6 +46351,39 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/web\/wp-content\/uploads\/2020\/02\/srco_banniere_inscrivez-vous-150x44.png": {
+		"ft": 32768,
+		"iS": 6435,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2020\/02\/srco_banniere_inscrivez-vous-150x44.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/web\/wp-content\/uploads\/2020\/02\/srco_banniere_inscrivez-vous-90x110.png": {
+		"ft": 32768,
+		"iS": 4685,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2020\/02\/srco_banniere_inscrivez-vous-90x110.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/web\/wp-content\/uploads\/2020\/02\/srco_banniere_inscrivez-vous.png": {
+		"ft": 32768,
+		"iS": 12554,
+		"oA": 0,
+		"oAP": "\/web\/wp-content\/uploads\/2020\/02\/srco_banniere_inscrivez-vous.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/.donotbackup": {
 		"ft": 8192,
 		"oA": 2,
@@ -46301,6 +46394,30 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/.htaccess",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_38drudpmp_2017-10-02_08-46-44.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_38drudpmp_2017-10-02_08-46-44.zip",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c201_2017-07-05_15-54-59.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c201_2017-07-05_15-54-59.zip",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c201_2017-08-03_09-06-42.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c201_2017-08-03_09-06-42.zip",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c201_2017-09-06_07-32-59.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c201_2017-09-06_07-32-59.zip",
 		"oF": 0
 		},
 	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c2_2016-11-30_11-34-47.zip": {
@@ -46331,6 +46448,24 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c2_2017-03-01_09-53-06.zip",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c2_2017-04-01_18-44-23.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c2_2017-04-01_18-44-23.zip",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c2_2017-05-03_18-47-42.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/backwpup_4b77c2_2017-05-03_18-47-42.zip",
+		"oF": 0
+		},
+	"\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/index.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/web\/wp-content\/uploads\/backwpup-4b77c2-backups\/index.php",
 		"oF": 0
 		},
 	"\/web\/wp-content\/uploads\/backwpup-4b77c2-logs\/.htaccess": {
@@ -52851,7 +52986,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -54237,7 +54372,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost",
+	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -54843,7 +54978,7 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"comparisons": {
