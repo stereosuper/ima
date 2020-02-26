@@ -469,10 +469,18 @@ body {
 }
 
 #content {
-    //width: 57%;
-    //float: left;
+    // width: 57%;
+    // float: left;
     padding: 0 0 100px;
     margin: 0 0 80px;
+    &.contact-content {
+        width: 57%;
+        float: left;
+        margin-top: 80px;
+        .bloc-full{
+            width: 620px;
+        }
+    }
 }
 
 .bloc-full {
@@ -1342,7 +1350,8 @@ a {
     background: #fff;
 
     .container {
-        width: 1200px;
+        max-width: 1200px;
+        width: 100%;
     }
 
     /*nav {
@@ -1626,9 +1635,9 @@ a {
     justify-content: space-between;
     align-items: center;
     position: static;
-    padding: 40px 0;
+    padding: 40px 20px;
     font-size: 14px;
-
+    box-sizing: border-box;
     .menu {
         display: flex;
         justify-content: space-between;
