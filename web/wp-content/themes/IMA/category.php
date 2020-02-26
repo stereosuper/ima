@@ -63,13 +63,11 @@
 								<?php formatTexte(get_field('actus_fist_line')); ?>
 							</p>
 						</div>
-
-						<a href="<?php the_permalink(); ?>" class="btn-bloc btn-actu ">
-							<span class="container-fond-btn-bloc">
-								<span class="fond-btn-bloc"></span>
-							</span>
-							<span class="txt-btn-bloc know-more">En savoir plus</span>
-						</a>
+						<div class="wrapper-btn-actu">
+							<a href="<?php the_permalink(); ?>" class="btn-actu">
+								<span>En savoir plus</span>
+							</a>
+						</div>
 							
 					</div>
 				</div>
