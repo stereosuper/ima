@@ -182,6 +182,12 @@ body {
 body.contact {
   height: auto;
 }
+.home-link {
+  display: inline-block;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 #wrapper-content {
   position: relative;
   z-index: 2;
@@ -4581,8 +4587,6 @@ a.bloc-small.bloc-7:hover .raccord-categ {
 /* @end */
 /* @group Bloc menu responsive */
 #svg-hamburger {
-  display: inline-block;
-  vertical-align: top;
   margin: 0 8px 0 0;
 }
 #bloc-menu-responsive {
@@ -4598,16 +4602,14 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   padding: 30px 0;
   background: #fff;
 }
-#bloc-menu-responsive a#menu-responsive {
-  box-shadow: none;
-  display: none;
-}
-#bloc-menu-responsive a#menu-responsive #svg-logo-ima {
-  display: none;
-  vertical-align: top;
+#bloc-menu-responsive #svg-logo-ima {
   width: 97px;
   height: 15px;
   fill: #0f589f;
+}
+#bloc-menu-responsive a#menu-responsive {
+  box-shadow: none;
+  display: none;
 }
 .lt-ie9 #bloc-menu-responsive a#menu-responsive {
   background: url('../layoutImg/hamburger-ie8.png') no-repeat 50% 50%;
@@ -6027,12 +6029,13 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     height: 14px;
   }
   #bloc-menu-responsive {
-    display: block;
+    display: flex;
+    align-items: center;
+  }
+  #bloc-menu-responsive #svg-logo-ima {
+    display: inline-block;
   }
   #bloc-menu-responsive a#menu-responsive {
-    display: block;
-  }
-  #bloc-menu-responsive a#menu-responsive #svg-logo-ima {
     display: inline-block;
   }
   .wrapper-blocs {
@@ -6467,6 +6470,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     left: 40px;
     bottom: 40px;
     right: 40px;
+    width: auto;
   }
   #interlocuteur-modal .titre-modal {
     top: -10px;

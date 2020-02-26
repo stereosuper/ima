@@ -456,6 +456,11 @@ body {
     }
 }
 
+.home-link{
+    display: inline-block;
+    .box-shadow(none);
+}
+
 #wrapper-content {
     position: relative;
     z-index: 2;
@@ -5295,8 +5300,8 @@ a.bloc-small {
 /* @group Bloc menu responsive */
 
 #svg-hamburger {
-    display: inline-block;
-    vertical-align: top;
+    // display: inline-block;
+    // vertical-align: top;
     margin: 0 8px 0 0;
 }
 
@@ -5313,17 +5318,18 @@ a.bloc-small {
     padding: 30px 0;
     background: #fff;
 
+    #svg-logo-ima {
+        // display: none;
+        // vertical-align: top;
+        width: 97px;
+        height: 15px;
+        fill: @bleuIMA;
+    }
+
     a#menu-responsive {
         .box-shadow(none);
         display: none;
 
-        #svg-logo-ima {
-            display: none;
-            vertical-align: top;
-            width: 97px;
-            height: 15px;
-            fill: @bleuIMA;
-        }
 
         .lt-ie9 & {
             background: url('../layoutImg/hamburger-ie8.png') no-repeat 50% 50%;
@@ -6911,15 +6917,16 @@ ul.slider-logos {
     }
 
     #bloc-menu-responsive {
-        display: block;
+        display: flex;
+        align-items: center;
 
         //margin-left: 0;
+        #svg-logo-ima {
+            display: inline-block;
+        }
         a#menu-responsive {
-            display: block;
+            display: inline-block;
 
-            #svg-logo-ima {
-                display: inline-block;
-            }
         }
     }
 
@@ -7449,6 +7456,7 @@ ul.slider-logos {
         left: 40px;
         bottom: 40px;
         right: 40px;
+        width: auto;
 
         .titre-modal {
             top: -10px;

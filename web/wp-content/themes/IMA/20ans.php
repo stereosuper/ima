@@ -217,7 +217,7 @@ get_header(); ?>
 			<div class="container" id="container-bloc-visu-content">
 				<div class="bloc-content bloc-visu-content">
 					<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
-													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat left top; background-size: auto 100%;"
+													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat center center; background-size: auto 100%;"
  											 <?php } ?>>
  					</div>
 				</div>
