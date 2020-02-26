@@ -115,10 +115,7 @@ get_header('contact'); ?>
                             <p class='under-form'><?php the_field('contact_under') ?></p>
                         </fieldset><br/>
 						<button class="btn-form" name="submitted" <?php if($message_status == 'Demande envoyée'){ echo 'disabled';}?>>
-							<span class="container-fond-btn-form">
-								<span class="fond-btn-form"></span>
-							</span>
-							<span class="txt-btn-form"><span class="icon-arrow-right"></span> Envoyer</span>
+							<span class="txt-btn-form">Envoyer</span>
 						</button>
 						<?php if($message_status == 'Demande envoyée'){ ?>
 						<div class="bloc-message recu">
