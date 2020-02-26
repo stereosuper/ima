@@ -473,11 +473,13 @@ body {
     // float: left;
     padding: 0 0 100px;
     margin: 0 0 80px;
+
     &.contact-content {
         width: 57%;
         float: left;
         margin-top: 80px;
-        .bloc-full{
+
+        .bloc-full {
             width: 620px;
         }
     }
@@ -1638,6 +1640,7 @@ a {
     padding: 40px 20px;
     font-size: 14px;
     box-sizing: border-box;
+
     .menu {
         display: flex;
         justify-content: space-between;
@@ -1927,6 +1930,8 @@ a {
     // left: -25px;
     //.transform(rotate(-4deg));
     position: relative;
+    margin-bottom: 20px;
+    padding: 40px 70px 0;
     z-index: 3;
     color: @bleuIMA;
 
@@ -2053,39 +2058,85 @@ ul.breadcrumb {
         vertical-align: middle;
         margin: 0;
         padding: 0;
+        color: @bleuIMA;
 
-        a {
+        .service-client & {
+            color: @bleucielIMA;
 
-            color: @bleuIMA;
-
-            .service-client & {
+            a,
+            h1 {
                 color: @bleucielIMA;
             }
 
-            .pole-technique & {
+            a {
+                .box-shadow(inset 0 -1px 0 @bleucielIMA);
+            }
+        }
+
+        .pole-technique & {
+            color: @roseIMA;
+
+            a,
+            h1 {
                 color: @roseIMA;
             }
 
-            .reflex & {
+            a {
+                .box-shadow(inset 0 -1px 0 @roseIMA);
+            }
+        }
+
+        .reflex & {
+            color: @orangeIMA;
+
+            a,
+            h1 {
                 color: @orangeIMA;
             }
 
-            .accompagnement & {
+            a {
+                .box-shadow(inset 0 -1px 0 @orangeIMA);
+            }
+        }
+
+        .accompagnement & {
+            color: @vertIMA;
+
+            a,
+            h1 {
                 color: @vertIMA;
             }
 
-            .juridique & {
+            a {
+                .box-shadow(inset 0 -1px 0 @vertIMA);
+            }
+        }
+
+        .juridique & {
+            color: @violetIMA;
+
+            a,
+            h1 {
                 color: @violetIMA;
             }
 
+            a {
+                .box-shadow(inset 0 -1px 0 @violetIMA);
+            }
+        }
+
+        a {
             .opensans(0.875em);
-            .box-shadow(inset 0 -1px 0 @blanc);
+            .box-shadow(inset 0 -1px 0 @bleuIMA);
             .transform(translateZ(1px));
             .backface-visibility(hidden);
+            color: @bleuIMA;
         }
 
         h1 {
             display: inline;
+            margin-left: 3px;
+            color: @bleuIMA;
         }
     }
 }

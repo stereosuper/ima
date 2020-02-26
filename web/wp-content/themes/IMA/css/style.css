@@ -196,6 +196,14 @@ body.contact {
   padding: 0 0 100px;
   margin: 0 0 80px;
 }
+#content.contact-content {
+  width: 57%;
+  float: left;
+  margin-top: 80px;
+}
+#content.contact-content .bloc-full {
+  width: 620px;
+}
 .bloc-full {
   position: relative;
   margin: 0 auto;
@@ -1055,7 +1063,8 @@ a.btn-bloc:focus {
     }*/
 }
 #header .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
 }
 #header #label-menu {
   font-family: 'dearJoe6', sans-serif;
@@ -1304,8 +1313,9 @@ a.btn-bloc:focus {
   -webkit-box-align: center;
           align-items: center;
   position: static;
-  padding: 40px 0;
+  padding: 40px 20px;
   font-size: 14px;
+  box-sizing: border-box;
 }
 .nav .menu {
   display: -webkit-box;
@@ -1561,6 +1571,8 @@ a.btn-bloc:focus {
 .ribbon,
 .ribbon-copie {
   position: relative;
+  margin-bottom: 20px;
+  padding: 40px 70px 0;
   z-index: 3;
   color: #0f589f;
 }
@@ -1643,35 +1655,73 @@ ul.breadcrumb li {
   vertical-align: middle;
   margin: 0;
   padding: 0;
+  color: #0f589f;
+}
+.service-client ul.breadcrumb li {
+  color: #8eb4c7;
+}
+.service-client ul.breadcrumb li a,
+.service-client ul.breadcrumb li h1 {
+  color: #8eb4c7;
+}
+.service-client ul.breadcrumb li a {
+  box-shadow: inset 0 -1px 0 #8eb4c7;
+}
+.pole-technique ul.breadcrumb li {
+  color: #ab0464;
+}
+.pole-technique ul.breadcrumb li a,
+.pole-technique ul.breadcrumb li h1 {
+  color: #ab0464;
+}
+.pole-technique ul.breadcrumb li a {
+  box-shadow: inset 0 -1px 0 #ab0464;
+}
+.reflex ul.breadcrumb li {
+  color: #dd850c;
+}
+.reflex ul.breadcrumb li a,
+.reflex ul.breadcrumb li h1 {
+  color: #dd850c;
+}
+.reflex ul.breadcrumb li a {
+  box-shadow: inset 0 -1px 0 #dd850c;
+}
+.accompagnement ul.breadcrumb li {
+  color: #c1c602;
+}
+.accompagnement ul.breadcrumb li a,
+.accompagnement ul.breadcrumb li h1 {
+  color: #c1c602;
+}
+.accompagnement ul.breadcrumb li a {
+  box-shadow: inset 0 -1px 0 #c1c602;
+}
+.juridique ul.breadcrumb li {
+  color: #801a7a;
+}
+.juridique ul.breadcrumb li a,
+.juridique ul.breadcrumb li h1 {
+  color: #801a7a;
+}
+.juridique ul.breadcrumb li a {
+  box-shadow: inset 0 -1px 0 #801a7a;
 }
 ul.breadcrumb li a {
-  color: #0f589f;
   font-family: 'open_sansregular', sans-serif;
   font-weight: normal;
   font-size: 0.875em;
-  box-shadow: inset 0 -1px 0 #fff;
+  box-shadow: inset 0 -1px 0 #0f589f;
   -webkit-transform: translateZ(1px);
   transform: translateZ(1px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-.service-client ul.breadcrumb li a {
-  color: #8eb4c7;
-}
-.pole-technique ul.breadcrumb li a {
-  color: #ab0464;
-}
-.reflex ul.breadcrumb li a {
-  color: #dd850c;
-}
-.accompagnement ul.breadcrumb li a {
-  color: #c1c602;
-}
-.juridique ul.breadcrumb li a {
-  color: #801a7a;
+  color: #0f589f;
 }
 ul.breadcrumb li h1 {
   display: inline;
+  margin-left: 3px;
+  color: #0f589f;
 }
 /* @end */
 /* @group Content right */
