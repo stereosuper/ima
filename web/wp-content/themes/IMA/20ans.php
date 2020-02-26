@@ -6,19 +6,20 @@ Template Name: 20 ans
 
 get_header(); ?>
 	<div class="wrapper-blocs 20ans">
+		<div class="ribbon">
+			<div class="fond-ribbon"></div>
+			<div class="ribbon-content">
+				<h1><?php the_field('titre-contenu'); ?></h1>
+			</div>
+		</div>
+
+		<div class="ribbon-copie">
+			<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
+			<div class="ribbon-content"></div>
+		</div>
 		<div class="bloc-full bloc-penche <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">
 
-				<div class="ribbon">
-					<div class="fond-ribbon"></div>
-					<div class="ribbon-content">
-						<h1><?php the_field('titre-contenu'); ?></h1>
-					</div>
-				</div>
-
-				<div class="ribbon-copie">
-					<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
-					<div class="ribbon-content"></div>
-				</div>
+				
 				<div class="fond-bloc"></div>
 
 				<div class="bloc-content bloc-content-home" id="bloc-actus">

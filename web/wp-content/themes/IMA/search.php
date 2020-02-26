@@ -5,22 +5,22 @@ Template Name: Search Page
 get_header(); ?>
 
 	<div class="wrapper-blocs">
+		<div class="ribbon ribbon-bleu">
+			<div class="fond-ribbon"></div>
+			<div class="ribbon-content">
+				<ul class="breadcrumb">
+					<li><a href="<?php echo get_site_url(); ?>">IMATECH</a></li>
+					<li><h1>Résultats de la recherche</h1></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="ribbon-copie">
+			<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
+			<div class="ribbon-content"></div>
+		</div>
 		<div class="bloc-full bloc-categories-articles">
-
-				<div class="ribbon ribbon-bleu">
-					<div class="fond-ribbon"></div>
-					<div class="ribbon-content">
-						<ul class="breadcrumb">
-							<li><a href="<?php echo get_site_url(); ?>">IMATECH</a></li>
-							<li><h1>Résultats de la recherche</h1></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="ribbon-copie">
-					<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
-					<div class="ribbon-content"></div>
-				</div>
+				
 				<div class="fond-bloc"></div>
 
 					<?php $posts = query_posts($query_string . '&posts_per_page=-1'); ?> 

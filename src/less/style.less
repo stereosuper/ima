@@ -1920,56 +1920,79 @@ a {
 
 .ribbon,
 .ribbon-copie {
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: -17px;
-    left: -25px;
+    // width: auto;
+    // height: auto;
+    // position: absolute;
+    // top: -17px;
+    // left: -25px;
     //.transform(rotate(-4deg));
+    position: relative;
     z-index: 3;
+    color: @bleuIMA;
+
+    &.service-client {
+        color: @bleucielIMA;
+    }
+
+    &.pole-technique {
+        color: @roseIMA;
+    }
+
+    &.reflex {
+        color: @orangeIMA;
+    }
+
+    &.accompagnement {
+        color: @vertIMA;
+    }
+
+    &.juridique {
+        color: @violetIMA;
+    }
 
     .fond-ribbon {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        .border-radius(3px);
-        .transform(skew(-8deg, 0deg) rotate(0deg));
-        background-color: @bleuIMA;
+        display: none;
+        // width: 100%;
+        // height: 100%;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // .border-radius(3px);
+        // .transform(skew(-8deg, 0deg) rotate(0deg));
+        // background-color: @bleuIMA;
 
-        .service-client & {
-            background-color: @bleucielIMA;
-        }
+        // .service-client & {
+        //     background-color: @bleucielIMA;
+        // }
 
-        .pole-technique & {
-            background-color: @roseIMA;
-        }
+        // .pole-technique & {
+        //     background-color: @roseIMA;
+        // }
 
-        .reflex & {
-            background-color: @orangeIMA;
-        }
+        // .reflex & {
+        //     background-color: @orangeIMA;
+        // }
 
-        .accompagnement & {
-            background-color: @vertIMA;
-        }
+        // .accompagnement & {
+        //     background-color: @vertIMA;
+        // }
 
-        .juridique & {
-            background-color: @violetIMA;
-        }
+        // .juridique & {
+        //     background-color: @violetIMA;
+        // }
     }
 
     .ribbon-content {
-        position: relative;
-        display: block;
-        .box-sizing(border-box);
-        padding: 5px 30px 5px 13px;
+        // position: relative;
+        // display: block;
+        // .box-sizing(border-box);
+        // padding: 5px 30px 5px 13px;
         color: @blanc;
     }
 }
 
 .ribbon-copie {
-    display: none;
+    display: none !important;
     z-index: 1;
 
     .fond-ribbon {
@@ -2032,8 +2055,30 @@ ul.breadcrumb {
         padding: 0;
 
         a {
+
+            color: @bleuIMA;
+
+            .service-client & {
+                color: @bleucielIMA;
+            }
+
+            .pole-technique & {
+                color: @roseIMA;
+            }
+
+            .reflex & {
+                color: @orangeIMA;
+            }
+
+            .accompagnement & {
+                color: @vertIMA;
+            }
+
+            .juridique & {
+                color: @violetIMA;
+            }
+
             .opensans(0.875em);
-            color: @blanc;
             .box-shadow(inset 0 -1px 0 @blanc);
             .transform(translateZ(1px));
             .backface-visibility(hidden);

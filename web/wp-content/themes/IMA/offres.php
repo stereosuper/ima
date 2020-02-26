@@ -5,7 +5,6 @@ Template Name: Offres
 
 get_header( 'rh' ); ?>
 	<div class="wrapper-blocs">
-	<div class="bloc-full bloc-categories-articles">
 		<div class="ribbon">
 			<div class="fond-ribbon"></div>
 			<div class="ribbon-content">
@@ -24,15 +23,14 @@ get_header( 'rh' ); ?>
 				?>
 			</div>
 		</div>
-		<?php query_posts( array( 'post_type' => 'offres', 'posts_per_page' => - 1 ) ); ?>
-
-
 		<div class="ribbon-copie">
 			<div class="fond-ribbon">
 				<div class="ribbon-join ribbon-bleu"></div>
 			</div>
 			<div class="ribbon-content"></div>
 		</div>
+	<div class="bloc-full bloc-categories-articles">
+		<?php query_posts( array( 'post_type' => 'offres', 'posts_per_page' => - 1 ) ); ?>
 
 		<div class="container-fond-bloc">
 			<div class="fond-bloc"></div>

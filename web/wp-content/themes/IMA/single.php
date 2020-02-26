@@ -7,7 +7,7 @@
 get_header(); ?>
 
 	<div class="wrapper-blocs">
-		<div class="bloc-full" id="zone-actus">
+		
 
 			<?php global $query_string; query_posts( $query_string . '&post_type=post' ); if ( have_posts() ) : ?>
 
@@ -28,42 +28,44 @@ get_header(); ?>
 					<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
 					<div class="ribbon-content"></div>
 				</div>
-				<div class="container-fond-bloc">
-					<div class="fond-bloc"></div>
-				</div>
-
-				<div class="bloc-content bloc-single" id="bloc-actus">
-					
-					<div class="date-categ-actu">Le <span class="date-actu"><?php echo get_the_date(); ?></span> dans <?php foreach((get_the_category()) as $cat) { ?><a href="<?php echo get_category_link($cat->term_id) . ' ';  ?>" class="categ-actu"><?php echo $cat->cat_name . ' ';  ?></a><?php } ?> </div>
-					<h2><?php the_title(); ?></h2>
-					<div class="content-single">
-						<?php if(has_post_thumbnail()){ the_post_thumbnail(); }?>
-						<p>
-							<?php formatTexte(get_field('actus_fist_line')); ?>
-						</p>
-						<?php the_content(); ?>
+				<div class="bloc-full" id="zone-actus">
+					<div class="container-fond-bloc">
+						<div class="fond-bloc"></div>
 					</div>
 
-					<?php 
-						$ID = get_the_ID(); 
-						$current = get_permalink( $ID );
-					?>
-						<div class="bloc-partage">
-							<div class="titre-modal">
-								<div class="container-fond-titre-modal">
-									<div class="fond-titre-modal"></div>
-								</div>
-								<div class="txt-titre-modal"><?php _e('Partager', 'ima'); ?><br /> <span><?php _e('cette actu', 'ima'); ?></span></div>
-							</div>
-
-							<ul class="partage">
-								<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
-								<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
-								<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
-								<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
-							</ul>
-						</div>
+					<div class="bloc-content bloc-single" id="bloc-actus">
 						
+						<div class="date-categ-actu">Le <span class="date-actu"><?php echo get_the_date(); ?></span> dans <?php foreach((get_the_category()) as $cat) { ?><a href="<?php echo get_category_link($cat->term_id) . ' ';  ?>" class="categ-actu"><?php echo $cat->cat_name . ' ';  ?></a><?php } ?> </div>
+						<h2><?php the_title(); ?></h2>
+						<div class="content-single">
+							<?php if(has_post_thumbnail()){ the_post_thumbnail(); }?>
+							<p>
+								<?php formatTexte(get_field('actus_fist_line')); ?>
+							</p>
+							<?php the_content(); ?>
+						</div>
+
+						<?php 
+							$ID = get_the_ID(); 
+							$current = get_permalink( $ID );
+						?>
+							<div class="bloc-partage">
+								<div class="titre-modal">
+									<div class="container-fond-titre-modal">
+										<div class="fond-titre-modal"></div>
+									</div>
+									<div class="txt-titre-modal"><?php _e('Partager', 'ima'); ?><br /> <span><?php _e('cette actu', 'ima'); ?></span></div>
+								</div>
+
+								<ul class="partage">
+									<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
+									<li class="twitter"><a href="http://twitter.com/intent/tweet/?url=<?php echo $current; ?>&text=<?php the_field('titre-contenu'); ?>&via=IMAtech" target="_blank"><span class="icon-twitter"></span></a></li>
+									<li class="scoopit"><a href="https://www.scoop.it/bookmarklet?url=<?php echo $current; ?>" target="_blank"><span class="icon-scoopit"></span></a></li>
+									<li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $current; ?>&title=<?php the_field('titre-contenu'); ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
+								</ul>
+							</div>
+							
+					</div>
 				</div>
 
 				<?php endwhile; ?>
@@ -85,11 +87,13 @@ get_header(); ?>
 							<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
 							<div class="ribbon-content"></div>
 						</div>
+						<div class="bloc-full" id="zone-actus">
 						<div class="fond-bloc"></div>
 
 						<div class="bloc-content bloc-single" id="bloc-actus">
 							<h2>Désolé, cet article n'existe plus ou a été déplacé!</h2>
 						</div>
+				</div>
 
 				<?php endif; ?>
 
@@ -101,7 +105,7 @@ get_header(); ?>
 		?>
 
 
-	</div><!-- #primary .content-area -->
+	<!-- #primary .content-area -->
 
 	</section>
 
