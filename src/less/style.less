@@ -6605,17 +6605,19 @@ ul.slider-logos {
 }
 
 // Template secteurs
-.list-subpage{
+.list-subpage {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 50px 0;
-    > a {
+
+    >a {
         height: 125px;
         flex: 1 1 ~"calc(25% - 60px)";
         margin: 0 30px 40px;
         .box-shadow(none);
     }
+
     div {
         height: 100%;
         width: 100%;
@@ -6630,6 +6632,7 @@ ul.slider-logos {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
     .secteur-image {
         flex: 1 0 30%;
         width: 30%;
@@ -6638,45 +6641,53 @@ ul.slider-logos {
         background-repeat: no-repeat;
         background-position: center center;
     }
-    .secteur-text{
+
+    .secteur-text {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         width: 66%;
         padding: 20px 0;
+
         p {
             font-size: 14px;
             line-height: 1;
         }
     }
-    h2{
+
+    h2 {
         width: 100%;
     }
-    &:nth-child(even){
+
+    &:nth-child(even) {
         flex-direction: row-reverse;
-        .secteur-image{
+
+        .secteur-image {
             margin-right: 0;
             margin-left: 50px;
         }
     }
 }
 
-.clients{
+.clients {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 0 55px;
-    > div {
+
+    >div {
         flex: 0 1 ~"calc(16.666% - 50px)";
         margin: 0 25px 25px;
     }
+
     img {
         width: 100%;
         height: auto;
     }
 }
-.titre-clients{
+
+.titre-clients {
     margin: 75px 0 55px;
     text-align: center;
     .opensans-bold(27px);
@@ -7224,9 +7235,11 @@ ul.slider-logos {
             }
         }
     }
-    .list-subpage{
+
+    .list-subpage {
         padding: 40px 35px 0;
-        > a {
+
+        >a {
             flex: 1 1 ~"calc(33% - 30px)";
             margin: 0 15px 40px;
         }
@@ -7234,7 +7247,8 @@ ul.slider-logos {
 
     .clients {
         padding: 0 25px;
-        > div {
+
+        >div {
             flex: 0 1 ~"calc(33% - 50px)";
         }
     }
@@ -7692,27 +7706,29 @@ ul.slider-logos {
         }
     }
 
-    .list-subpage{
-        > a {
+    .list-subpage {
+        >a {
             flex: 1 1 ~"calc(100% - 30px)";
         }
     }
 
     .clients {
-        > div {
+        >div {
             flex: 0 1 ~"calc(50% - 50px)";
         }
     }
 
     .secteur-item {
         flex-direction: column !important;
-        .secteur-image{
+
+        .secteur-image {
             flex: 1 0 auto;
             width: 100%;
             height: 200px;
             margin-left: 0 !important;
             margin-right: 0 !important;
         }
+
         .secteur-text {
             width: 100%;
         }

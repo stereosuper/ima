@@ -5,6 +5,10 @@ Page des articles: Actualites
 
 get_header(); ?>
 	<div class="wrapper-blocs">
+		<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
+			style="background-image: url(<?php echo $thumb_url[0]; ?>);"
+ 			<?php } ?>>
+		</div>
 		<div class="ribbon">
 			<div class="fond-ribbon"></div>
 			<div class="ribbon-content">
@@ -104,40 +108,40 @@ get_header(); ?>
 
 </div>
 </section>
-
-		<?php if($embed == false){ ?>
+<!-- 
+		<?php //if($embed == false){ ?>
 		<div id="bloc-fond-visu">
-			<?php if( get_field('bloc_media') ):
-					$big = get_field('bloc_media')[0];
-					$idFirst = $big->ID;
+			<?php //if( get_field('bloc_media') ):
+					//$big = get_field('bloc_media')[0];
+					//$idFirst = $big->ID;
 			?>
 
 					<div id="wrapper-embed">
-						<?php if(get_field('video_media', $big->ID)){ ?>
-							<video id="id-video-js" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="<?php echo get_field('image_video_media', $big->ID)['url']; ?>" src="<?php echo get_field('video_media', $big->ID); ?>"></video>
-						<?php } if(get_field('calameo_media', $big->ID)){ ?>
-							<iframe class='calameo-iframe' src='//v.calameo.com/?bkcode=<?php echo get_field('calameo_media', $big->ID); ?>' width='300' height='194' frameborder='0' scrolling='no' allowtransparency allowfullscreen style='margin:0 auto;'></iframe>
-						<?php } if(get_field('image_media', $big->ID)){ ?>
-							<div class='wrapper-img'><img src='<?php echo get_field('image_media', $big->ID)['url']; ?>'></div>
-						<?php } ?>
+						<?php //if(get_field('video_media', $big->ID)){ ?>
+							<video id="id-video-js" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="<?php //echo get_field('image_video_media', $big->ID)['url']; ?>" src="<?php //echo get_field('video_media', $big->ID); ?>"></video>
+						<?php //} if(get_field('calameo_media', $big->ID)){ ?>
+							<iframe class='calameo-iframe' src='//v.calameo.com/?bkcode=<?php //echo get_field('calameo_media', $big->ID); ?>' width='300' height='194' frameborder='0' scrolling='no' allowtransparency allowfullscreen style='margin:0 auto;'></iframe>
+						<?php //} if(get_field('image_media', $big->ID)){ ?>
+							<div class='wrapper-img'><img src='<?php //echo get_field('image_media', $big->ID)['url']; ?>'></div>
+						<?php //} ?>
 					</div>
 
-			<?php endif; ?>
+			<?php //endif; ?>
 			
 			<div id="fond-couleur-bloc-visu"></div>
 			<div class="container" id="container-bloc-visu-content">
 				<div class="bloc-content bloc-visu-content">
-					<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?> 
-													style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat center center; background-size: cover;" 
- 											 <?php } ?>>
+					<div id="fond-bloc-visu" <?php //if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?> 
+													style="background: url(<?php //echo $thumb_url[0]; ?>) no-repeat center center; background-size: cover;" 
+ 											 <?php //} ?>>
  					</div>
 				</div>
 			</div>
 		</div>
 		
-		<?php $medias = get_field('bloc_media');
+		<?php //$medias = get_field('bloc_media');
 
-			if( count($medias) <= 1 ) echo '<div style="display:none;">' ?>
+			//if( count($medias) <= 1 ) echo '<div style="display:none;">' ?>
 				<aside id="bloc-autres-videos">
 					<div id="container-btn-plus">
 						<a href="#" class="btn-icon-plus" id="plus-autres-videos"><span class="icon-plus"></span></a>
@@ -147,26 +151,26 @@ get_header(); ?>
 							<div id="wrapper-autres-videos">
 								<ul id="autres-videos">
 
-									<?php foreach( $medias as $p ): ?>
+									<?php //foreach( $medias as $p ): ?>
 
-									<?php if(get_field('video_media', $p->ID)){ ?>
-										<li class="<?php if($p->ID == $idFirst){ echo 'active '; } echo 'has-video'; ?>" <?php echo 'data-url-video="'.get_field('video_media', $p->ID).'" data-poster-name="'.get_field('image_video_media', $p->ID)['url'].'"'; ?>>
+									<?php //if(get_field('video_media', $p->ID)){ ?>
+										<li class="<?php //if($p->ID == $idFirst){ echo 'active '; } echo 'has-video'; ?>" <?php echo 'data-url-video="'.get_field('video_media', $p->ID).'" data-poster-name="'.get_field('image_video_media', $p->ID)['url'].'"'; ?>>
 											<a href="#" class="lien-autre-video">
 												<span class="container-fond-autre-video">
-													<span class="fond-autre-video"><img src="<?php echo get_field('image_video_media', $p->ID)['sizes']['medium']; ?>" alt="<?php echo get_field('image_video_media', $p->ID)['alt']; ?>" /></span>
+													<span class="fond-autre-video"><img src="<?php //echo get_field('image_video_media', $p->ID)['sizes']['medium']; ?>" alt="<?php //echo get_field('image_video_media', $p->ID)['alt']; ?>" /></span>
 									
-									<?php } if(get_field('calameo_media', $p->ID)){ ?>
-										<li class="<?php if($p->ID == $idFirst){ echo 'active '; } echo 'has-calameo'; ?>" <?php echo 'data-id-calameo="'.get_field('calameo_media', $p->ID).'"'; ?>>
+									<?php //} if(get_field('calameo_media', $p->ID)){ ?>
+										<li class="<?php //if($p->ID == $idFirst){ echo 'active '; } echo 'has-calameo'; ?>" <?php //echo 'data-id-calameo="'.get_field('calameo_media', $p->ID).'"'; ?>>
 											<a href="#" class="lien-autre-video">
 												<span class="container-fond-autre-video">
-													<span class="fond-autre-video"><img src="<?php echo get_field('image_calameo_media', $p->ID)['sizes']['medium']; ?>" alt="<?php echo get_field('image_calameo_media', $p->ID)['alt']; ?>" /></span>
+													<span class="fond-autre-video"><img src="<?php //echo get_field('image_calameo_media', $p->ID)['sizes']['medium']; ?>" alt="<?php //echo get_field('image_calameo_media', $p->ID)['alt']; ?>" /></span>
 									
-									<?php } if(get_field('image_media', $p->ID)){ ?>
-										<li class="<?php if($p->ID == $idFirst){ echo 'active '; } echo 'has-image'; ?>" <?php echo 'data-image-name="'.get_field('image_media', $p->ID)['url'].'"'; ?>>
+									<?php //} if(get_field('image_media', $p->ID)){ ?>
+										<li class="<?php //if($p->ID == $idFirst){ echo 'active '; } echo 'has-image'; ?>" <?php //echo 'data-image-name="'.get_field('image_media', $p->ID)['url'].'"'; ?>>
 											<a href="#" class="lien-autre-video">
 												<span class="container-fond-autre-video">
-													<span class="fond-autre-video"><img src="<?php echo get_field('image_media', $p->ID)['sizes']['medium']; ?>" alt="<?php echo get_field('image_media', $p->ID)['alt']; ?>" /></span>
-									<?php } ?>
+													<span class="fond-autre-video"><img src="<?php //echo get_field('image_media', $p->ID)['sizes']['medium']; ?>" alt="<?php //echo get_field('image_media', $p->ID)['alt']; ?>" /></span>
+									<?php //} ?>
 
 												</span>
 												<span class="autre-video-icon-play"><span class="icon-play"></span></span>
@@ -174,11 +178,11 @@ get_header(); ?>
 													<span class="container-fond-titre-video">
 														<span class="fond-titre-video"></span>
 													</span>
-													<span class="txt-titre-video"><?php echo get_the_title( $p->ID ); ?></span>
+													<span class="txt-titre-video"><?php //echo get_the_title( $p->ID ); ?></span>
 												</span>
 											</a>
 										</li>
-									<?php endforeach; ?>
+									<?php //endforeach; ?>
 
 								</ul>
 							</div>
@@ -186,11 +190,11 @@ get_header(); ?>
 					</div>
 				</aside>
 
-		<?php if( count($medias) <= 1 ) echo '</div>' ?>
-	<?php } ?>
+		<?php //if( count($medias) <= 1 ) echo '</div>' ?>
+	<?php //} ?>
 
-		<?php if( $int ){ 
-			foreach($int as $i) :?>
+		<?php //if( $int ){ 
+			//foreach($int as $i) :?>
 
 				<div id="wrapper-interlocuteur-modal">
 					<div id="wrapper-relative-interlocuteur-modal">
@@ -201,19 +205,19 @@ get_header(); ?>
 							</div>
 							<div id="content-interlocuteur">
 								<div class="bloc-gauche-content-interlocuteur">
-									<div class="container-photo-interlocuteur"><div class="fond-photo-interlocuteur"><?php if( get_field('interlocuteur_img', $i->ID) ) { ?><img src="<?php echo get_field('interlocuteur_img', $i->ID)['sizes']['thumbnail']; ?>" alt="<?php echo get_field('interlocuteur_img', $i->ID)['alt']; ?>"/><?php } ?></div></div>
+									<div class="container-photo-interlocuteur"><div class="fond-photo-interlocuteur"><?php //if( get_field('interlocuteur_img', $i->ID) ) { ?><img src="<?php //echo get_field('interlocuteur_img', $i->ID)['sizes']['thumbnail']; ?>" alt="<?php //echo get_field('interlocuteur_img', $i->ID)['alt']; ?>"/><?php //} ?></div></div>
 								</div><div class="bloc-droite-content-interlocuteur">
-									<h3><?php the_field('interlocuteur_nom', $i->ID); ?></h3>
-									<?php if(get_field('interlocuteur_devise', $i->ID)) echo "<blockquote>". get_field('interlocuteur_devise', $i->ID) ."</blockquote>"; ?>
+									<h3><?php //the_field('interlocuteur_nom', $i->ID); ?></h3>
+									<?php //if(get_field('interlocuteur_devise', $i->ID)) echo "<blockquote>". get_field('interlocuteur_devise', $i->ID) ."</blockquote>"; ?>
 									<ul class="contact-interlocuteur">
-										<?php if( get_field('interlocuteur_tel', $i->ID) ) { ?><li class="has-icon"><div class="icon-telephone"></div><?php the_field('interlocuteur_tel', $i->ID); ?></li><?php } ?>
-										<?php if( get_field('interlocuteur_mail', $i->ID) ) { ?><li class="has-icon"><div class="icon-mail"></div><a href="mailto:<?php the_field('interlocuteur_mail', $i->ID); ?>"><?php the_field('interlocuteur_mail', $i->ID); ?></a></li><?php } ?>
+										<?php //if( get_field('interlocuteur_tel', $i->ID) ) { ?><li class="has-icon"><div class="icon-telephone"></div><?php //the_field('interlocuteur_tel', $i->ID); ?></li><?php //} ?>
+										<?php //if( get_field('interlocuteur_mail', $i->ID) ) { ?><li class="has-icon"><div class="icon-mail"></div><a href="mailto:<?php //the_field('interlocuteur_mail', $i->ID); ?>"><?php //the_field('interlocuteur_mail', $i->ID); ?></a></li><?php //} ?>
 										<li>
 											<ul class="social-interlocuteur">
-												<?php if( get_field('interlocuteur_twitter', $i->ID) ){ ?><li class="twitter"><a href="<?php the_field('interlocuteur_twitter', $i->ID); ?>" target="_blank"><span class="icon-twitter"></span></a></li><?php } ?>
-												<?php if( get_field('interlocuteur_linkedin', $i->ID) ){ ?><li class="linkedin"><a href="<?php the_field('interlocuteur_linkedin', $i->ID); ?>" target="_blank"><span class="icon-linkedin"></span></a></li><?php } ?>
-												<?php if( get_field('interlocuteur_fb', $i->ID) ){ ?><li class="facebook"><a href="<?php the_field('interlocuteur_fb', $i->ID); ?>" target="_blank"><span class="icon-facebook"></span></a></li><?php } ?>
-												<?php if( get_field('interlocuteur_viadeo', $i->ID) ){ ?><li class="viadeo"><a href="<?php the_field('interlocuteur_viadeo', $i->ID); ?>" target="_blank"><span class="icon-viadeo"></span></a></li><?php } ?>
+												<?php //if( get_field('interlocuteur_twitter', $i->ID) ){ ?><li class="twitter"><a href="<?php //the_field('interlocuteur_twitter', $i->ID); ?>" target="_blank"><span class="icon-twitter"></span></a></li><?php //} ?>
+												<?php //if( get_field('interlocuteur_linkedin', $i->ID) ){ ?><li class="linkedin"><a href="<?php //the_field('interlocuteur_linkedin', $i->ID); ?>" target="_blank"><span class="icon-linkedin"></span></a></li><?php //} ?>
+												<?php //if( get_field('interlocuteur_fb', $i->ID) ){ ?><li class="facebook"><a href="<?php //the_field('interlocuteur_fb', $i->ID); ?>" target="_blank"><span class="icon-facebook"></span></a></li><?php //} ?>
+												<?php //if( get_field('interlocuteur_viadeo', $i->ID) ){ ?><li class="viadeo"><a href="<?php //the_field('interlocuteur_viadeo', $i->ID); ?>" target="_blank"><span class="icon-viadeo"></span></a></li><?php //} ?>
 											</ul>
 										</li>
 									</ul>
@@ -234,8 +238,8 @@ get_header(); ?>
 						</nav>
 					</div>
 				</div>
-			<?php endforeach;
-		} ?>
+			<?php // endforeach;
+		//} ?> -->
 
 
 		<?php include('includes/sitemap.php'); ?>
