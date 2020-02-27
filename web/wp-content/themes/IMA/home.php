@@ -72,12 +72,11 @@ get_header(); ?>
 						</div>
 						
 						<?php if(get_the_content() != ''){ ?>
-							<a href="<?php the_permalink(); ?>" class="btn-bloc btn-actu">
-								<span class="container-fond-btn-bloc">
-									<span class="fond-btn-bloc"></span>
-								</span>
-								<span class="txt-btn-bloc know-more">En savoir plus</span>
-							</a>
+							<div class="wrapper-btn-actu">
+								<a href="<?php the_permalink(); ?>" class="btn-actu">
+									<span>En savoir plus</span>
+								</a>
+							</div>
 						<?php } ?>
 							
 					</div>
