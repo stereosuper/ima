@@ -57,7 +57,7 @@ get_header();
             $image = get_sub_field('image');
         ?>
             <a href='<?php the_sub_field('lien'); ?>'>
-                <div class='small-image' style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
+                <div style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
             </a>
 
         <?php endwhile; ?>
@@ -76,12 +76,11 @@ get_header();
         <?php while ( have_rows('subpages') ) : the_row();
             $image = get_sub_field('image');
         ?>
-            <div>
-                <div>
+            <div class="secteur-item">
+                <div class="secteur-image" style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
+                <div class="secteur-text">
                     <h2><?php the_sub_field('titre'); ?></h2>
-                    <div>
-                        <?php the_sub_field('texte'); ?>
-                    </div>
+                    <?php the_sub_field('texte'); ?>
                     <a href='<?php the_sub_field('lien'); ?>' class='btn-actu'><span>En savoir plus</span></a>
                 </div>
             </div>
@@ -89,6 +88,21 @@ get_header();
             </div>
         </div>
 
+        <?php endif; ?>
+
+        <h2 class="titre-clients"><?php the_field('titre_clients'); ?></h2>
+
+        <?php 
+            // check if the repeater field has rows of data
+            if( have_rows('clients') ):
+        ?>
+        <div class="clients">
+        <?php while ( have_rows('clients') ) : the_row();?>
+            <div class="logo-client">
+                <?php echo wp_get_attachment_image( get_sub_field('logo'), 'full' ); ?>
+            </div>
+        <?php endwhile; ?>
+        </div>
         <?php endif; ?>
 
 
