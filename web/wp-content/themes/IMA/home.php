@@ -27,21 +27,21 @@ get_header(); ?>
 		<?php global $query_string; query_posts( $query_string . '&post_type=post' ); if ( have_posts() ) :  ?>
 		<div class="bloc-full bloc-categories-articles">
 
-				<div id="raccord-categories-articles"></div>
+				<!-- <div id="raccord-categories-articles"></div> -->
 				<div class="container-fond-bloc"><div class="fond-bloc"></div></div>
 				<div class="bloc-content small-padding-top">
 						<div class="nb-actualites"><strong><?php echo wp_count_posts('post')->publish; ?> actualités</strong> classées par catégories</div>
 						
 						<a href="#" id="btn-categories-articles">
-							<span class="container-fond-categories-articles">
+							<!-- <span class="container-fond-categories-articles">
 								<span class="fond-categories-articles"></span>
-							</span>
+							</span> -->
 							<span class="txt-btn-categories-articles">Choisissez une catégorie <span class="icon-arrow-right"></span></span>
 						</a>
 						<ul id="categories-articles">
-							<div class="container-fond-categories-articles">
+							<!-- <div class="container-fond-categories-articles">
 								<div class="fond-categories-articles"></div>
-							</div>
+							</div> -->
 							<li><a href="<?php echo get_home_url(); ?>/actualites/">— Toutes les catégories</a></li>
 							<?php 
 								$args = array( 'hierarchical' => 0 ); 
