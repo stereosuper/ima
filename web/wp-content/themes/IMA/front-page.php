@@ -95,16 +95,16 @@ get_header(); ?>
 				<h2 class='bloc-full-title orange'><?php echo $numbers['title']; ?></h2>
 				<div class="bloc-content bloc-content-home with-bg bloc-flex bloc-numbers">
 					<div>
-						<?php echo wp_get_attachment_image($numbers['img1']); ?>
-						<strong><?php echo $numbers['text1']; ?></strong>
+						<?php echo wp_get_attachment_image($numbers['img1'], 'full'); ?>
+						<?php echo $numbers['text1']; ?>
 					</div>
 					<div>
-						<?php echo wp_get_attachment_image($numbers['img2']); ?>
-						<strong><?php echo $numbers['text2']; ?></strong>
+						<?php echo wp_get_attachment_image($numbers['img2'], 'full'); ?>
+						<?php echo $numbers['text2']; ?>
 					</div>
 					<div>
-						<?php echo wp_get_attachment_image($numbers['img3']); ?>
-						<strong><?php echo $numbers['text3']; ?></strong>
+						<?php echo wp_get_attachment_image($numbers['img3'], 'full'); ?>
+						<?php echo $numbers['text3']; ?>
 					</div>
 				</div>
 			</div>
