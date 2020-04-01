@@ -95,17 +95,17 @@ get_header(); ?>
 
 		<?php if( get_field('numbers') ) : $numbers = get_field('numbers'); ?>
 			<div class="bloc-full c-home__key-numbers">
-				<h2 class='bloc-full-title orange'><?php echo $numbers['title']; ?></h2>
-				<div class="bloc-content bloc-content-home with-bg bloc-flex bloc-numbers">
-					<div>
+				<h2 class='bloc-full-title orange c-home__key-numbers-title'><?php echo $numbers['title']; ?></h2>
+				<div class="bloc-content bloc-content-home with-bg bloc-flex bloc-numbers c-home__key-numbers-items">
+					<div class="c-home__key-numbers-item">
 						<?php echo wp_get_attachment_image($numbers['img1'], 'full'); ?>
 						<?php echo $numbers['text1']; ?>
 					</div>
-					<div>
+					<div class="c-home__key-numbers-item">
 						<?php echo wp_get_attachment_image($numbers['img2'], 'full'); ?>
 						<?php echo $numbers['text2']; ?>
 					</div>
-					<div>
+					<div class="c-home__key-numbers-item">
 						<?php echo wp_get_attachment_image($numbers['img3'], 'full'); ?>
 						<?php echo $numbers['text3']; ?>
 					</div>

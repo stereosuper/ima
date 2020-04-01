@@ -6762,6 +6762,11 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   border-radius: 0;
   font-size: 22px;
 }
+.o-h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
 .home {
   background: #fff;
 }
@@ -6771,6 +6776,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-home .c-home__key-numbers .with-bg,
 #c-home .c-home__news .with-bg {
   box-shadow: none;
+  background: none;
 }
 #c-home .c-home__promise {
   margin: 55px 0;
@@ -6781,9 +6787,12 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-home .c-home__promise .c-home__promise-title {
   font-size: 36px;
   font-weight: 700;
+  text-align: center;
+  padding: 0 45px;
   color: #015d80;
 }
 #c-home .c-home__promise .c-home__promise-content {
+  padding: 0 45px;
   margin: 77px 0 64px;
   font-size: 22px;
 }
@@ -6795,6 +6804,50 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   padding: 17px 45px;
   border-radius: 0;
   font-size: 22px;
+}
+#c-home .c-home__key-numbers {
+  position: relative;
+  padding: 43px 0 86px;
+}
+#c-home .c-home__key-numbers::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  width: 101vw;
+  background: #015d80;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+#c-home .c-home__key-numbers .c-home__key-numbers-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 45px;
+  color: #fff;
+}
+#c-home .c-home__key-numbers .c-home__key-numbers-items {
+  padding: 0 45px;
+  margin-top: 128px;
+}
+#c-home .c-home__key-numbers .c-home__key-numbers-item {
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  width: 320px;
+  margin: 0 100px 0 0;
+}
+#c-home .c-home__key-numbers .c-home__key-numbers-item:last-child {
+  margin-right: 0;
+}
+#c-home .c-home__key-numbers .c-home__key-numbers-item img {
+  width: 175px;
+}
+#c-home .c-home__key-numbers .c-home__key-numbers-item p {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
 }
 /* ==|== print styles =======================================================
    ========================================================================== */
