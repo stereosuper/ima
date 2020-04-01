@@ -4,13 +4,13 @@ Template Name: Home
 */
 
 get_header(); ?>
-	<div class="wrapper-blocs">
-		<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
+	<div id="c-home" class="wrapper-blocs">
+		<div id="fond-bloc-visu" class="c-home__hero-image" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
 			style="background-image: url(<?php echo $thumb_url[0]; ?>);"
  			<?php } ?>>
 		</div>
 
-		<div class="bloc-full bloc-penche <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">
+		<div class="bloc-full bloc-penche c-home__promise <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">
 
 				<!--<div class="ribbon">
 					<div class="fond-ribbon"></div>
@@ -23,14 +23,17 @@ get_header(); ?>
 					<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
 					<div class="ribbon-content"></div>
 				</div>-->
-				<div class="fond-bloc"></div>
+				<!-- <div class="fond-bloc"></div> -->
 
 				<div class="bloc-content bloc-content-home intro-home small-padding-top" id="bloc-actus">
 					<div>
-						<?php the_content(); ?>
+						<h1 class="c-home__promise-title"><?php the_title(); ?></h1>
+						<div class="c-home__promise-content">
+							<?php the_content(); ?>
+						</div>
 
 						<?php if(get_field('btn')) : ?>
-							<a href='<?php echo get_field('btn')['url']; ?>' class='btn'><?php echo get_field('btn')['title']; ?></a>
+							<a href='<?php echo get_field('btn')['url']; ?>' class='btn c-home__promise-button'><?php echo get_field('btn')['title']; ?></a>
 						<?php endif; ?>
 					</div>
 
@@ -91,7 +94,7 @@ get_header(); ?>
 		</div>
 
 		<?php if( get_field('numbers') ) : $numbers = get_field('numbers'); ?>
-			<div class="bloc-full">
+			<div class="bloc-full c-home__key-numbers">
 				<h2 class='bloc-full-title orange'><?php echo $numbers['title']; ?></h2>
 				<div class="bloc-content bloc-content-home with-bg bloc-flex bloc-numbers">
 					<div>
@@ -110,7 +113,7 @@ get_header(); ?>
 			</div>
 		<?php endif; ?>
 
-		<div class="bloc-full">
+		<div class="bloc-full c-home__news">
 			<h2 class='bloc-full-title'>Actualités</h2>
 			<div class="bloc-content bloc-content-home with-bg bloc-flex">
 				<?php $postsQuery = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 3)); ?>
