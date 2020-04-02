@@ -113,8 +113,12 @@ get_header(); ?>
 			</div>
 		<?php endif; ?>
 
+		
+
 		<div class="bloc-full c-home__news">
+			<?php if (get_field('affichage_titre_actu')): ?>
 			<h2 class='bloc-full-title c-home__news-title'>Actualités</h2>
+			<?php endif; ?>
 			<div class="bloc-content bloc-content-home with-bg bloc-flex c-home__news-items">
 				<?php $postsQuery = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 3)); ?>
 				<?php if( $postsQuery->have_posts() ) : while( $postsQuery->have_posts() ) : $postsQuery->the_post(); ?>
