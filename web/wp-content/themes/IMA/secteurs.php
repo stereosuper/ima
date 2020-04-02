@@ -6,23 +6,22 @@
 get_header();
 
 ?>
-	<div class="wrapper-blocs">
-			<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true); ?>
+	<div id="c-secteurs" class="wrapper-blocs">
+			<div id="fond-bloc-visu" class="c-secteurs__hero-image" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true); ?>
 		style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat center center; background-size: cover;"
- 		<?php } ?>>
- 	</div>
-		<div class="ribbon ribbon-bleu">
+ 		<?php } ?>></div>
+		<!-- <div class="ribbon ribbon-bleu">
 			<div class="fond-ribbon"></div>
 			<div class="ribbon-content">
 				<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-						$breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
-						$cleanBreadcrumbs = str_replace('<span prefix="v: http://rdf.data-vocabulary.org/#">', ' ', $breadcrumbs);
-						str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
-						$breadLi = str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
-						$breadSpan = str_replace( '<span typeof="v:Breadcrumb">', ' ', str_replace( '</span>', ' ', $breadLi ) );
-						echo str_replace( 'strong', 'h1', $breadSpan );
-					}
+					// if ( function_exists('yoast_breadcrumb') ) {
+					// 	$breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
+					// 	$cleanBreadcrumbs = str_replace('<span prefix="v: http://rdf.data-vocabulary.org/#">', ' ', $breadcrumbs);
+					// 	str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
+					// 	$breadLi = str_replace( '</span> › <span typeof="v:Breadcrumb">', '</li><li>', $cleanBreadcrumbs );
+					// 	$breadSpan = str_replace( '<span typeof="v:Breadcrumb">', ' ', str_replace( '</span>', ' ', $breadLi ) );
+					// 	echo str_replace( 'strong', 'h1', $breadSpan );
+					// }
 				?>
 			</div>
 		</div>
@@ -30,7 +29,7 @@ get_header();
 		<div class="ribbon-copie">
 			<div class="fond-ribbon"><div class="ribbon-join ribbon-bleu"></div></div>
 			<div class="ribbon-content"></div>
-		</div>
+		</div> -->
 
 
         <div class="bloc-full bloc-penche" id="zone-actus">
@@ -38,10 +37,11 @@ get_header();
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="fond-bloc"></div>
+				<!-- <div class="fond-bloc"></div> -->
 
-				<div class="bloc-content intro-home">
-                    <div>
+				<div class="bloc-content intro-home c-secteurs__promise">
+                    <h1 class="c-secteurs__promise-title"><?php the_title(); ?></h1>
+                    <div class="c-secteurs__promise-content">
                         <?php the_field('intro');?>
                     </div>
                 </div>
