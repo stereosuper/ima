@@ -42613,6 +42613,39 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/web/wp-content/uploads/2020/04/home-event-150x112.png": {
+		"ft": 32768,
+		"iS": 25400,
+		"oA": 0,
+		"oAP": "/web/wp-content/uploads/2020/04/home-event-150x112.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/web/wp-content/uploads/2020/04/home-event-90x110.png": {
+		"ft": 32768,
+		"iS": 17548,
+		"oA": 0,
+		"oAP": "/web/wp-content/uploads/2020/04/home-event-90x110.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/web/wp-content/uploads/2020/04/home-event.png": {
+		"ft": 32768,
+		"iS": 263932,
+		"oA": 0,
+		"oAP": "/web/wp-content/uploads/2020/04/home-event.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/web/wp-content/uploads/2020/04/home-hero-image-1024x399.png": {
 		"ft": 32768,
 		"iS": 582702,

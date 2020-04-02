@@ -6760,7 +6760,8 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 .o-button {
   padding: 17px 45px;
   border-radius: 0;
-  font-size: 22px;
+  font-size: 20px;
+  background: #a02e59;
 }
 .o-h2 {
   font-size: 36px;
@@ -6807,7 +6808,8 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-home .c-home__promise .c-home__promise-button {
   padding: 17px 45px;
   border-radius: 0;
-  font-size: 22px;
+  font-size: 20px;
+  background: #a02e59;
 }
 #c-home .c-home__key-numbers {
   position: relative;
@@ -6854,8 +6856,43 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   color: #fff;
   font-weight: 700;
 }
-#c-home .c-home__news {
+#c-home .c-home__event {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: end;
+          align-items: flex-end;
   margin: 0 0 150px;
+}
+#c-home .c-home__event .c-home__event-media,
+#c-home .c-home__event .c-home__event-content {
+  padding: 0 45px;
+}
+#c-home .c-home__event .c-home__event-media {
+  width: 66.666666%;
+}
+#c-home .c-home__event .c-home__event-content {
+  width: 33.333333%;
+}
+#c-home .c-home__event .c-content .c-content__title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 30px;
+  color: #a02e59;
+}
+#c-home .c-home__event .c-content .c-content__text {
+  font-size: 16px;
+  line-height: 28px;
+}
+#c-home .c-home__event .c-content .c-content__button {
+  padding: 17px 45px;
+  border-radius: 0;
+  font-size: 20px;
+  background: #a02e59;
+  margin: 40px 0 26px;
 }
 #c-home .c-home__news .c-home__news-title {
   font-size: 36px;
@@ -6863,6 +6900,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   text-align: center;
   padding: 0 45px;
   margin: 0;
+  color: #a02e59;
 }
 #c-home .c-home__news .c-home__news-items {
   -webkit-box-orient: vertical;
@@ -6876,6 +6914,10 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   display: flex;
   width: 100%;
   padding: 0 45px;
+  margin: 0 0 75px;
+}
+#c-home .c-home__post:last-child {
+  margin: 0;
 }
 #c-home .c-home__post .c-home__post-media,
 #c-home .c-home__post .c-home__post-content {
@@ -6907,6 +6949,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 }
 #c-home .c-home__post .c-home__post-content .c-post-title {
   font-size: 22px;
+  color: #a02e59;
 }
 #c-home .c-home__post .c-home__post-content .c-post-content p {
   font-size: 16px;

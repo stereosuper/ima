@@ -113,7 +113,30 @@ get_header(); ?>
 			</div>
 		<?php endif; ?>
 
-		
+		<?php if( $event_groupe = get_field('evenementiel') ): ?>
+			<div class="c-home__event">
+				<?php if ($event_groupe['image']): ?>
+					<figure class="c-home__event-media">
+						<?php echo wp_get_attachment_image($event_groupe['image'], 'full'); ?>
+					</figure>
+				<?php endif; ?>
+				<div class="c-home__event-content c-content">
+					<?php if ($event_groupe['image']): ?>
+						<h2 class="c-content__title"><?php echo $event_groupe['titre'] ?></h2>
+					<?php endif; ?>
+					<?php if ($event_groupe['texte']): ?>
+						<div class="c-content__texte">
+							<?php echo $event_groupe['texte'] ?>
+						</div>
+					<?php endif; ?>
+					<?php if($event_groupe['bouton']) : ?>
+						<a href="<?php echo $event_groupe['bouton']['url']; ?>" class="btn c-content__button">
+							<?php echo $event_groupe['bouton']['title']; ?>
+						</a>
+					<?php endif; ?>
+				</div>
+			</div>
+		<?php endif; ?>
 
 		<div class="bloc-full c-home__news">
 			<?php if (get_field('affichage_titre_actu')): ?>
