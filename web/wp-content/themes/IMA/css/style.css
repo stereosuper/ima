@@ -6986,6 +6986,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   #c-home .c-home__key-numbers .c-home__key-numbers-item {
     margin: 0 0 50px 0;
   }
+  #c-home .c-home__key-numbers .c-home__key-numbers-item:last-child {
+    margin-bottom: 0;
+  }
   #c-home .c-home__event {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -7041,6 +7044,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   }
 }
 @media (max-width: 580px) {
+  #c-home .c-home__key-numbers .c-home__key-numbers-items {
+    margin-top: 50px;
+  }
   #c-home .c-home__post .c-home__post-media {
     width: 100%;
   }

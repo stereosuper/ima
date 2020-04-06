@@ -214,6 +214,9 @@
             }
             .c-home__key-numbers-item {
                 margin: 0 0 50px 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
         .c-home__event {
@@ -271,6 +274,11 @@
 
 @media (max-width: @u-phone) {
     #c-home {
+        .c-home__key-numbers {
+            .c-home__key-numbers-items {
+                margin-top: 50px;
+            }
+        }
         .c-home__post {
             .c-home__post-media {
                 width: 100%;
