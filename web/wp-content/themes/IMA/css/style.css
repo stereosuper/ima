@@ -6967,6 +6967,131 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-secteurs .c-secteurs__hero-image {
   margin-bottom: 0;
 }
+#c-secteurs .c-secteurs__promise {
+  margin: 55px 0 100px;
+}
+#c-secteurs .c-secteurs__promise .intro-home {
+  padding: 0;
+}
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 45px;
+  color: #015d80;
+}
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content {
+  padding: 0 45px;
+}
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content strong {
+  font-weight: 700;
+}
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--first-part {
+  margin: 77px 0 0;
+}
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--first-part p,
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--first-part span,
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--first-part ul,
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--first-part ol {
+  font-size: 22px;
+}
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--second-part {
+  margin: 0 0 64px;
+}
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--second-part p,
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--second-part span,
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--second-part ul,
+#c-secteurs .c-secteurs__promise .c-secteurs__promise-content--second-part ol {
+  font-size: 18px;
+}
+#c-secteurs .c-secteurs__thumbnails {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 0 100px;
+}
+#c-secteurs .c-thumbnail__link {
+  width: calc(33.333333% -  45px * 2);
+  margin: 0 45px 90px;
+}
+#c-secteurs .c-thumbnail__link::before {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+}
+#c-secteurs .c-thumbnail__link:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+#c-secteurs .c-thumbnail__link .c-thumbnail__link-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#c-secteurs .c-secteurs__sections .with-bg {
+  box-shadow: none;
+  background: none;
+}
+#c-secteurs .c-secteurs__section {
+  position: relative;
+  padding: 40px 0 80px;
+}
+#c-secteurs .c-secteurs__section:nth-child(odd)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  background: #015d80;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+#c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-image {
+  left: calc(-50vw + 500px);
+}
+#c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-content {
+  margin-left: 33.333333%;
+}
+#c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-title,
+#c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-text {
+  color: #fff;
+}
+#c-secteurs .c-secteurs__section .c-secteurs__section-image {
+  position: absolute;
+  top: 140px;
+  left: 66.666666%;
+  bottom: 0;
+  width: calc(33.333333% + 50vw - 500px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#c-secteurs .c-secteurs__section .c-secteurs__section-content {
+  width: 66.666666%;
+  padding: 0 45px;
+  box-sizing: border-box;
+}
+#c-secteurs .c-secteurs__section .c-secteurs__section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #015d80;
+}
+#c-secteurs .c-secteurs__section .c-secteurs__section-text p,
+#c-secteurs .c-secteurs__section .c-secteurs__section-text span,
+#c-secteurs .c-secteurs__section .c-secteurs__section-text ul,
+#c-secteurs .c-secteurs__section .c-secteurs__section-text ol {
+  font-size: 16px;
+  line-height: 28px;
+}
 /* ==|== print styles =======================================================
    ========================================================================== */
 @media print {

@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5e5785000cf7e",
-            "label": "Intro",
-            "name": "intro",
+            "label": "Intro partie 1",
+            "name": "intro_first_part",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -20,6 +20,102 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_5e85f06bf5e0a",
+            "label": "Intro partie 2",
+            "name": "intro_second_part",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5e8b08d6b2973",
+            "label": "Vignettes",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e8b08feb2974",
+            "label": "Liste vignettes",
+            "name": "liste_vignettes",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5e8b093bb2975",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5e8b0953b2976",
+                    "label": "Lien",
+                    "name": "lien",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
         },
         {
             "key": "field_5e579848d54b5",
@@ -40,7 +136,7 @@
         },
         {
             "key": "field_5e57886879a7d",
-            "label": "Sous catégories",
+            "label": "Sections",
             "name": "subpages",
             "type": "repeater",
             "instructions": "",
@@ -118,28 +214,6 @@
                     "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 0
-                },
-                {
-                    "key": "field_5e5788e679a80",
-                    "label": "Lien",
-                    "name": "lien",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "100",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "page",
-                        "post"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
                 }
             ]
         },
@@ -242,5 +316,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1585834948
+    "modified": 1586170218
 }

@@ -32,62 +32,55 @@ get_header();
 		</div> -->
 
 
-        <div class="bloc-full bloc-penche" id="zone-actus">
-			<?php if ( have_posts() ) : ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
+        <div class="bloc-full bloc-penche c-secteurs__promise" id="zone-actus">
+			<?php //if ( have_posts() ) : ?>
+				<?php //while ( have_posts() ) : the_post(); ?>
 				<!-- <div class="fond-bloc"></div> -->
 
-				<div class="bloc-content intro-home c-secteurs__promise">
+				<div class="bloc-content intro-home">
                     <h1 class="c-secteurs__promise-title"><?php the_title(); ?></h1>
-                    <div class="c-secteurs__promise-content">
-                        <?php the_field('intro');?>
+                    <div class="c-secteurs__promise-content c-secteurs__promise-content--first-part">
+                        <?php the_field('intro_first_part');?>
+                    </div>
+                    <div class="c-secteurs__promise-content c-secteurs__promise-content--second-part">
+                        <?php the_field('intro_second_part');?>
                     </div>
                 </div>
-
         </div>
 
-        <?php 
-            // check if the repeater field has rows of data
-            if( have_rows('subpages') ):
-        ?>
-        <div class="list-subpage">
-        <?php while ( have_rows('subpages') ) : the_row();
-            $image = get_sub_field('image');
-        ?>
-            <a href='<?php the_sub_field('lien'); ?>'>
-                <div style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
-            </a>
-
-        <?php endwhile; ?>
-
-        
-        </div>
+        <?php if( have_rows('liste_vignettes') ): ?>
+            <div class="c-secteurs__thumbnails">
+                <?php while ( have_rows('liste_vignettes') ) : the_row();
+                    $image = get_sub_field('image');
+                    $lien = get_sub_field('lien');
+                ?>
+                    <a class="c-thumbnail__link" href='<?php echo $lien['url']; ?>'>
+                        <div class="c-thumbnail__link-image" style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
+                    </a>
+                <?php endwhile; ?>
+            </div>
         <?php endif; ?>
 
-
-        <?php 
-            // check if the repeater field has rows of data
-            if( have_rows('subpages') ):
-        ?>
-        <div class="bloc-full">
-            <div class="bloc-content with-bg">
-        <?php while ( have_rows('subpages') ) : the_row();
-            $image = get_sub_field('image');
-        ?>
-            <div class="secteur-item">
-                <div class="secteur-image" style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
-                <div class="secteur-text">
-                    <h2><?php the_sub_field('titre'); ?></h2>
-                    <?php the_sub_field('texte'); ?>
-                    <a href='<?php the_sub_field('lien'); ?>' class='btn-actu'><span>En savoir plus</span></a>
-                </div>
+        <?php if(have_rows('subpages')): ?>
+            <div class="bloc-full c-secteurs__sections">
+                <!-- <div class="bloc-content with-bg"> -->
+                <?php 
+                    while (have_rows('subpages')) : the_row();
+                    $image = get_sub_field('image');
+                ?>
+                    <div class="c-secteurs__section">
+                        <div class="secteur-image c-secteurs__section-image" style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
+                        <div class="secteur-text c-secteurs__section-content">
+                            <h2 class="c-secteurs__section-title"><?php the_sub_field('titre'); ?></h2>
+                            <div class="c-secteurs__section-text">
+                                <?php the_sub_field('texte'); ?>
+                            </div>
+                            <!-- <a href='<?php // the_sub_field('lien'); ?>' class='btn-actu'><span>En savoir plus</span></a> -->
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <!-- </div> -->
             </div>
-        <?php endwhile; ?>
-            </div>
-        </div>
-
         <?php endif; ?>
 
         <h2 class="titre-clients"><?php the_field('titre_clients'); ?></h2>
@@ -115,9 +108,9 @@ get_header();
 		<?php include('includes/sitemap.php'); ?>
 
 
-	<?php endwhile; ?>
+	<?php //endwhile; ?>
 
-<?php endif; ?>
+<?php //endif; ?>
 
 
 <?php get_footer(); ?>
