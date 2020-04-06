@@ -25,11 +25,13 @@
         }
         .c-secteurs__promise-title {
             .o-h2();
-            padding: 0 @gutter;
+            padding: 0 @u-gutter;
             color: @u-blue;
+            box-sizing: border-box;
         }
         .c-secteurs__promise-content {
-            padding: 0 @gutter;
+            padding: 0 @u-gutter;
+            box-sizing: border-box;
             strong {
                 font-weight: 700;
             }
@@ -60,8 +62,8 @@
         margin: 0 0 100px;
     }
     .c-thumbnail__link {
-        width: calc(~'33.333333% - ' @gutter * 2);
-        margin: 0 @gutter 90px;
+        width: calc(~'33.333333% - ' @u-gutter * 2);
+        margin: 0 @u-gutter 90px;
         &::before {
             content: '';
             display: block;
@@ -125,7 +127,7 @@
         }
         .c-secteurs__section-content {
             width: 66.666666%;
-            padding: 0 @gutter;
+            padding: 0 @u-gutter;
             box-sizing: border-box;
         }
         .c-secteurs__section-title {
