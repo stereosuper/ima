@@ -17,6 +17,39 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
+	"/node_modules/smoothscroll-polyfill/dist/smoothscroll.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/smoothscroll-polyfill/dist/smoothscroll-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -631,6 +664,17 @@
 		"oA": 2,
 		"oAP": "/src/index.html",
 		"oF": 0
+		},
+	"/src/js/components/secteurs.js": {
+		"bF": 2,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/web/wp-content/themes/IMA/js/build/secteurs-min.js",
+		"oF": 2,
+		"sC": 0,
+		"tS": 1
 		},
 	"/src/js/iframe.dev.js": {
 		"bF": 0,
@@ -36387,6 +36431,25 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/web/wp-content/themes/IMA/index.php",
+		"oF": 0
+		},
+	"/web/wp-content/themes/IMA/js/build/secteurs-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/web/wp-content/themes/IMA/js/build/secteurs-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/web/wp-content/themes/IMA/js/build/secteurs-min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/wp-content/themes/IMA/js/build/secteurs-min.js.map",
 		"oF": 0
 		},
 	"/web/wp-content/themes/IMA/js/iframe.dev.js": {

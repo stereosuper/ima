@@ -54,7 +54,7 @@ get_header();
                     $image = get_sub_field('image');
                     $lien = get_sub_field('lien');
                 ?>
-                    <a class="c-thumbnail__link" href='<?php echo $lien['url']; ?>'>
+                    <a class="c-thumbnail__link js-thumbnail" href='<?php echo $lien['url']; ?>'>
                         <div class="c-thumbnail__link-image" style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
                     </a>
                 <?php endwhile; ?>
@@ -67,8 +67,9 @@ get_header();
                 <?php 
                     while (have_rows('subpages')) : the_row();
                     $image = get_sub_field('image');
+                    $section_anchor = get_sub_field('section_anchor');
                 ?>
-                    <div class="c-secteurs__section">
+                    <div class="c-secteurs__section <?php echo $section_anchor ?>">
                         <div class="secteur-image c-secteurs__section-image" style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
                         <div class="secteur-text c-secteurs__section-content">
                             <h2 class="c-secteurs__section-title"><?php the_sub_field('titre'); ?></h2>

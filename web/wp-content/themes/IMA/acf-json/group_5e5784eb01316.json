@@ -214,6 +214,25 @@
                     "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 0
+                },
+                {
+                    "key": "field_5e8bb20dd8afa",
+                    "label": "Ancre de la section",
+                    "name": "section_anchor",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -316,5 +335,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586170218
+    "modified": 1586213424
 }
