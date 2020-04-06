@@ -83,7 +83,7 @@ get_header();
             </div>
         <?php endif; ?>
 
-        <h2 class="titre-clients"><?php the_field('titre_clients'); ?></h2>
+        <h2 class="titre-clients c-secteurs__clients-title"><?php the_field('titre_clients'); ?></h2>
 
         <?php 
             // check if the repeater field has rows of data

@@ -7188,6 +7188,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   font-size: 16px;
   line-height: 28px;
 }
+#c-secteurs .c-secteurs__clients-title {
+  color: #a02e59;
+}
 @media (max-width: 1250px) {
   #c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-image {
     left: -10%;
