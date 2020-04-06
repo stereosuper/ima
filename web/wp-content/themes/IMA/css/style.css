@@ -6795,11 +6795,13 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   text-align: center;
   padding: 0 45px;
   color: #015d80;
+  box-sizing: border-box;
 }
 #c-home .c-home__promise .c-home__promise-content {
   padding: 0 45px;
   margin: 77px 0 64px;
   font-size: 22px;
+  box-sizing: border-box;
 }
 #c-home .c-home__promise .c-home__promise-content strong {
   font-weight: 700;
@@ -6834,10 +6836,12 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   text-align: center;
   padding: 0 45px;
   color: #fff;
+  box-sizing: border-box;
 }
 #c-home .c-home__key-numbers .c-home__key-numbers-items {
   padding: 0 45px;
   margin-top: 128px;
+  box-sizing: border-box;
 }
 #c-home .c-home__key-numbers .c-home__key-numbers-item {
   -webkit-box-pack: start;
@@ -6869,6 +6873,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-home .c-home__event .c-home__event-media,
 #c-home .c-home__event .c-home__event-content {
   padding: 0 45px;
+  box-sizing: border-box;
 }
 #c-home .c-home__event .c-home__event-media {
   width: 66.666666%;
@@ -6901,6 +6906,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   padding: 0 45px;
   margin: 0;
   color: #a02e59;
+  box-sizing: border-box;
 }
 #c-home .c-home__news .c-home__news-items {
   -webkit-box-orient: vertical;
@@ -6915,6 +6921,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   width: 100%;
   padding: 0 45px;
   margin: 0 0 75px;
+  box-sizing: border-box;
 }
 #c-home .c-home__post:last-child {
   margin: 0;
@@ -6922,6 +6929,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-home .c-home__post .c-home__post-media,
 #c-home .c-home__post .c-home__post-content {
   padding: 0 45px;
+  box-sizing: border-box;
 }
 #c-home .c-home__post .c-home__post-media {
   width: 33.333333%;
@@ -6954,6 +6962,24 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-home .c-home__post .c-home__post-content .c-post-content p {
   font-size: 16px;
   line-height: 28px;
+}
+@media (max-width: 1150px) {
+  #c-home .c-home__key-numbers .c-home__key-numbers-items {
+    display: -webkit-box;
+    display: flex;
+  }
+}
+@media (max-width: 960px) {
+  #c-home .c-home__key-numbers .c-home__key-numbers-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  #c-home .c-home__key-numbers .c-home__key-numbers-item {
+    margin: 0 0 50px 0;
+  }
 }
 /**
  * NOTE: Scope elements with an id in order to surchage old styles.
