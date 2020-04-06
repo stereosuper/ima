@@ -7188,6 +7188,14 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   font-size: 16px;
   line-height: 28px;
 }
+@media (max-width: 1250px) {
+  #c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-image {
+    left: -10%;
+  }
+  #c-secteurs .c-secteurs__section .c-secteurs__section-image {
+    width: calc(33.333333% + 50vw - 45%);
+  }
+}
 @media (max-width: 1150px) {
   #c-secteurs .c-thumbnail__link {
     width: calc(33.333333% -  45px);
@@ -7205,6 +7213,17 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   }
   #c-secteurs .c-thumbnail__link:nth-last-child(-n + 2) {
     margin-bottom: 0px;
+  }
+}
+@media (max-width: 768px) {
+  #c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-content {
+    margin-left: 0;
+  }
+  #c-secteurs .c-secteurs__section .c-secteurs__section-image {
+    display: none;
+  }
+  #c-secteurs .c-secteurs__section .c-secteurs__section-content {
+    width: 100%;
   }
 }
 @media (max-width: 580px) {
