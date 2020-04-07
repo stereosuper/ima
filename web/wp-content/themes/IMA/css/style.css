@@ -7156,6 +7156,12 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 #c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-text {
   color: #fff;
 }
+#c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-title a,
+#c-secteurs .c-secteurs__section:nth-child(odd) .c-secteurs__section-text a {
+  color: #fff;
+  text-decoration: underline;
+  box-shadow: none;
+}
 #c-secteurs .c-secteurs__section .c-secteurs__section-image {
   position: absolute;
   top: 140px;

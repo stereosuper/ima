@@ -1935,24 +1935,6 @@
 		"sI": 0,
 		"sU": 0
 		},
-	"/src/less/components/search.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/src/less/components/search-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/src/less/components/search.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/src/less/components/search.css.map",
-		"oF": 0
-		},
 	"/src/less/components/search.less": {
 		"aP": 0,
 		"bl": 0,
