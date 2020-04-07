@@ -142,25 +142,31 @@ get_header(); ?>
 			<?php if (get_field('affichage_titre_actu')): ?>
 			<h2 class='bloc-full-title c-home__news-title'>Actualités</h2>
 			<?php endif; ?>
-			<div class="bloc-content bloc-content-home with-bg bloc-flex c-home__news-items">
-				<?php $postsQuery = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 3)); ?>
-				<?php if( $postsQuery->have_posts() ) : while( $postsQuery->have_posts() ) : $postsQuery->the_post(); ?>
-					<div class='article c-home__post'>
-						<figure class="c-home__post-media">
-							<?php if(has_post_thumbnail()){ the_post_thumbnail(); }?>
-						</figure>
-						<div class="c-home__post-content">
-							<div class="date-categ-actu c-post-info">Le <span class="date-actu"><?php echo get_the_date(); ?></span> dans <?php foreach((get_the_category()) as $cat) { ?><a href="<?php echo get_category_link($cat->term_id) . ' ';  ?>" class="categ-actu"><?php echo $cat->cat_name . ' ';  ?></a><?php } ?> </div>
-							<h2 class="c-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<div class="content-actu c-post-content">
-								<p>
-									<?php formatTexte(get_field('actus_fist_line')); ?>
-								</p>
+			<?php if( have_rows('actus') ): ?>
+				<div class="bloc-content bloc-content-home with-bg bloc-flex c-home__news-items">
+					<?php
+						while ( have_rows('actus') ) : the_row();
+						$article_url = get_sub_field('article');
+						$article_id = url_to_postid($article_url);
+						$article = get_post($article_id);
+					?>
+						<div class='article c-home__post'>
+							<figure class="c-home__post-media">
+								<?php if(has_post_thumbnail($article_id)){ echo get_the_post_thumbnail($article_id); }?>
+							</figure>
+							<div class="c-home__post-content">
+								<div class="date-categ-actu c-post-info">Le <span class="date-actu"><?php echo get_the_date('', $article_id); ?></span> dans <?php foreach((get_the_category($article_id)) as $cat) { ?><a href="<?php echo get_category_link($cat->term_id) . ' ';  ?>" class="categ-actu"><?php echo $cat->cat_name . ' ';  ?></a><?php } ?> </div>
+								<h2 class="c-post-title"><a href="<?php the_permalink($article_id); ?>"><?php echo get_the_title($article_id); ?></a></h2>
+								<div class="content-actu c-post-content">
+									<p>
+										<?php formatTexte(get_field('actus_fist_line', $article_id)); ?>
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				<?php endwhile; endif; ?>
-			</div>
+					<?php endwhile; ?>
+				</div>
+			<?php endif; ?>
 		</div>
 
 		<?php /*$blocs = get_field('blocs');

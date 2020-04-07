@@ -294,6 +294,48 @@
             "ui": 1,
             "ui_on_text": "Affiché",
             "ui_off_text": "Caché"
+        },
+        {
+            "key": "field_5e8cb948d80fb",
+            "label": "Actus",
+            "name": "actus",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 3,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5e8cb972d80fc",
+                    "label": "Article",
+                    "name": "article",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -313,5 +355,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1585830024
+    "modified": 1586280912
 }
