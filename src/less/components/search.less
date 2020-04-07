@@ -1,0 +1,67 @@
+/**
+ * NOTE: Scope elements with an id in order to surchage old styles.
+ * We're using the BEMIT naming convention for more clarity.
+ * SEE: https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
+ * SEE: https://gist.github.com/stephenway/a6145d9b4430e8c55a77
+ */
+
+@import '../constants/index.less';
+@import '../global/index.less';
+
+#c-search {
+    position: relative;
+    #wrapper-relative-sitemap-modal {
+        &::before {
+            content: none;
+        }
+    }
+    #sitemap-modal {
+        top: 175px;
+        border-radius: 0;
+    }
+    #search-sitemap {
+        padding: 0;
+        .input-search-sitemap,
+        .btn-form {
+            border-radius: 0;
+        }
+        .input-search-sitemap {
+            width: 100%;
+            padding: 25px 40px;
+        }
+        .btn-form {
+            .o-button();
+            margin: 0;
+        }
+    }
+    #lien-close-modal {
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        text-decoration: underline;
+        color: @blanc;
+        box-shadow: none;
+        transform: translate(-50%, -100%);
+    }
+}
+
+@media (max-width: 979px) {
+    #sitemap-modal {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        #content-sitemap {
+            overflow-y: initial;
+        }
+    }
+}
+
+@media (max-width: @u-tablet) {
+    #sitemap-modal {
+        #content-sitemap {
+            margin: 0;
+        }
+    }
+}
