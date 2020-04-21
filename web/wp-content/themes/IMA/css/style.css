@@ -7046,7 +7046,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   margin-right: 0;
 }
 #c-home .c-home__key-numbers .c-home__key-numbers-item img {
-  width: 175px;
+  width: auto;
 }
 #c-home .c-home__key-numbers .c-home__key-numbers-item p {
   font-size: 15px;
