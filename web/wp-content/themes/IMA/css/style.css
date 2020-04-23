@@ -7389,9 +7389,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
 }
 #c-secteurs .c-secteurs__section .c-secteurs__section-image {
   position: absolute;
-  top: 140px;
+  top: 70px;
   left: 66.666666%;
-  bottom: 0;
+  bottom: 70px;
   width: calc(33.333333% + 50vw - 500px);
   background-size: cover;
   background-repeat: no-repeat;
