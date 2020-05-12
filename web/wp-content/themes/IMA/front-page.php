@@ -5,9 +5,8 @@ Template Name: Home
 
 get_header(); ?>
 	<div id="c-home" class="wrapper-blocs">
-		<div id="fond-bloc-visu" class="c-home__hero-image" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true);?>
-			style="background-image: url(<?php echo $thumb_url[0]; ?>);"
- 			<?php } ?>>
+		<div id="fond-bloc-visu" class="c-home__hero-image" >
+ 			<?php the_post_thumbnail('full'); ?>
 		</div>
 
 		<div class="bloc-full bloc-penche c-home__promise <?php if( get_field('lien_externe')) { echo 'external-page-link'; }?>" id="zone-actus">

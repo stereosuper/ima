@@ -9,9 +9,9 @@ get_header();
 $embed = isset($_GET['embed']) && $_GET['embed'] === true ? true : false;
 ?>
 	<div class="wrapper-blocs">
-			<div id="fond-bloc-visu" <?php if ( has_post_thumbnail() ) { $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id, 'full', true); ?>
-		style="background: url(<?php echo $thumb_url[0]; ?>) no-repeat center center; background-size: cover;"
- 		<?php } ?>>
+			<div id="fond-bloc-visu">
+				<?php the_post_thumbnail('full'); ?>
+			</div>
  	</div>
 		<div class="ribbon ribbon-bleu">
 			<div class="fond-ribbon"></div>
