@@ -181,6 +181,9 @@ body {
 body.contact {
   height: auto;
 }
+.main-container {
+  padding-top: 130px;
+}
 .home-link {
   display: inline-block;
   box-shadow: none;
@@ -899,8 +902,11 @@ a.btn-bloc:focus {
 }
 /* @group Header */
 #header {
+  width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
   background: #fff;
   /*nav {
@@ -5542,6 +5548,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   .container {
     width: 90%;
   }
+  .main-container {
+    padding-top: 109px;
+  }
   #header #label-menu {
     left: 30px;
   }
@@ -5733,6 +5742,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   #header,
   #raccord-categories-articles {
     display: none;
+  }
+  .main-container {
+    padding-top: 0;
   }
   /*#content {
         margin-top: 130px;

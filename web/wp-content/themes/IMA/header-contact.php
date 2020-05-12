@@ -48,6 +48,6 @@
 	<section id="wrapper-content">
 		<?php include('includes/header.php'); ?>
 		<?php include('includes/burger.php'); ?>
-		<div class="container clearfix">
+		<div class="main-container container clearfix">
 			<section id="content" class='contact-content'>
 				

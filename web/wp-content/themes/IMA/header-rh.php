@@ -44,7 +44,7 @@
 
 <body <?php body_class( 'rh rh-detail' ); ?>>
 	<section id="wrapper-content">
-		<div class="container clearfix">
+		<div class="main-container container clearfix">
 			<?php // include('includes/burger.php'); ?>
 			<section id="content">
 				<?php include('includes/header.php'); ?>
