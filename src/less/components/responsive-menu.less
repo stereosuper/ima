@@ -1,0 +1,85 @@
+/**
+ * NOTE: Scope elements with an id in order to surchage old styles.
+ * We're using the BEMIT naming convention for more clarity.
+ * SEE: https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
+ * SEE: https://gist.github.com/stephenway/a6145d9b4430e8c55a77
+ */
+
+@import '../constants/index.less';
+
+html {
+    &.no-scroll {
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+}
+
+#bloc-menu-responsive {
+    position: relative;
+    // Header is z-index: 10
+    z-index: 11;
+    .c-menu__container {
+        display: flex;
+        align-items: center;
+    }
+    .c-menu__search-button {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    #header {
+        display: block;
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        right: 0;
+        bottom: 100vh;
+        transition: transform 0.3s ease-in;
+        overflow: hidden;
+        &.open-responsive-menu {
+            transform: translate3d(0, 100vh, 0);
+            transition: transform 0.3s ease-out;
+        }
+        .c-menu__nav {
+            height: 100%;
+            padding: 90px @u-gutter @u-gutter;
+            overflow-y: auto;
+        }
+        .c-menu__logo,
+        .c-menu__search-button {
+            display: none;
+        }
+        .menu-plan-du-site-principal-container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            li {
+                margin: 0;
+            }
+            > li {
+                margin-bottom: 30px;
+                > a {
+                    font-size: 1.5em;
+                }
+            }
+        }
+        .sub-menu {
+            position: relative;
+            flex-direction: column;
+            padding: 0;
+            margin-top: 10px;
+            transform: scaleY(1);
+            opacity: 1;
+            > li {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

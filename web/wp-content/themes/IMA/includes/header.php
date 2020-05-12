@@ -1,8 +1,8 @@
 <header id="header">
-	<nav class='container nav'>
-		<a class='logo' href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" id="circle-imatech" rel="home"></a>
+	<nav class='container nav c-menu__nav'>
+		<a class='logo c-menu__logo' href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" id="circle-imatech" rel="home"></a>
 		<?php echo wp_nav_menu(array('theme_location' => 'primaryPlan', 'menu_id' => 'header-menu')); ?>
-		<button id='link-search' class='link-search'></button>
+		<button id='link-search' class='link-search c-menu__search-button'></button>
 		<!--<div id="label-menu">Nos métiers</div>
 		<div id="container-menu-wrapper">
 			<div id="menu-wrapper">
