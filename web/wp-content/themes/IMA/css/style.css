@@ -184,6 +184,11 @@ body.contact {
 .home-link {
   display: inline-block;
   box-shadow: none;
+  max-width: 130px;
+}
+.home-link img {
+  width: 100%;
+  height: auto;
 }
 #wrapper-content {
   position: relative;
