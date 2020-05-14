@@ -7,7 +7,7 @@ get_header();
 
 ?>
 	<div id="c-secteurs" class="wrapper-blocs">
-			<div id="fond-bloc-visu" class="c-secteurs__hero-image">
+			<div id="fond-bloc-visu" class="c-secteurs__hero-image <?php if(!has_post_thumbnail()) echo "no-img"; ?>">
                 <?php the_post_thumbnail('full'); ?>
             </div>
 		<!-- <div class="ribbon ribbon-bleu">

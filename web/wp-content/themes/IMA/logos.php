@@ -86,7 +86,7 @@ if(isset($_GET['embed']) && $_GET['embed'] == true){ $embed = true; }else{ $embe
 			<div id="fond-couleur-bloc-visu"></div>
 			<div class="container" id="container-bloc-visu-content">
 				<div class="bloc-content bloc-visu-content">
-					<div id="fond-bloc-visu">
+					<div id="fond-bloc-visu"  <?php if(!has_post_thumbnail()) echo "class='no-img'"; ?>>
 						<?php the_post_thumbnail('full'); ?>
  					</div>
 				</div>

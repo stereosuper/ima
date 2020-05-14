@@ -208,129 +208,7 @@
 				</div>
 			</section>
 		</section>
-		<div id="bloc-fond-visu">
-			<div id="wrapper-embed">
-					<video id="id-video-js" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="img/videos/posters/poster-video-1.jpg" src="https://www.youtube.com/watch?v=zsxQdkbek_4"></video>
-			</div>
-			
-			<div id="fond-couleur-bloc-visu"></div>
-			<div class="container" id="container-bloc-visu-content">
-				<div class="bloc-content bloc-visu-content">
-					<div id="fond-bloc-visu"></div>
-				</div>
-			</div>
-		</div>
-		<aside id="bloc-autres-videos">
-			<div id="container-btn-plus">
-				<a href="#" class="btn-icon-plus" id="plus-autres-videos"><span class="icon-plus"></span></a>
-			</div>
-			<div id="scroll-container-autres-videos">
-			<div id="container-autres-videos">
-				<div id="wrapper-autres-videos">
-					<ul id="autres-videos">
-						<li class="active has-video" data-url-video="https://www.youtube.com/watch?v=zsxQdkbek_4" data-poster-name="img/videos/posters/poster-video-1.jpg">
-							<a href="#" class="lien-autre-video">
-								<span class="container-fond-autre-video">
-									<span class="fond-autre-video"><img src="img/videos/locaux.png" alt="" /></span>
-								</span>
-								<span class="autre-video-icon-play"><span class="icon-play"></span></span>
-								<span class="titre-video">
-									<span class="container-fond-titre-video">
-										<span class="fond-titre-video"></span>
-									</span>
-									<span class="txt-titre-video">relation client</span>
-								</span>
-							</a>
-						</li>
-						<li class="has-calameo" data-id-calameo="00224528101a4985cfc4d">
-							<a href="#" class="lien-autre-video">
-								<span class="container-fond-autre-video">
-									<span class="fond-autre-video"><img src="img/videos/locaux.png" alt="" /></span>
-								</span>
-								<span class="autre-video-icon-play"><span class="icon-play"></span></span>
-								<span class="titre-video">
-									<span class="container-fond-titre-video">
-										<span class="fond-titre-video"></span>
-									</span>
-									<span class="txt-titre-video">les locaux</span>
-								</span>
-							</a>
-						</li>
-						<li class="has-image" data-image-name="img/images/ima_technologies_plateau.jpg">
-							<a href="#" class="lien-autre-video">
-								<span class="container-fond-autre-video">
-									<span class="fond-autre-video"><img src="img/videos/album-photo.png" alt="" /></span>
-								</span>
-								<span class="autre-video-icon-play"><span class="icon-play"></span></span>
-								<span class="titre-video">
-									<span class="container-fond-titre-video">
-										<span class="fond-titre-video"></span>
-									</span>
-									<span class="txt-titre-video">Album photo</span>
-								</span>
-							</a>
-						</li>
-						<li class="has-video" data-url-video="https://www.youtube.com/watch?v=TmGh5Kadwuo" data-poster-name="poster-video-2.jpg">
-							<a href="#" class="lien-autre-video">
-								<span class="container-fond-autre-video">
-									<span class="fond-autre-video"><img src="img/videos/entreprise.png" alt="" /></span>
-								</span>
-								<span class="autre-video-icon-play"><span class="icon-play"></span></span>
-								<span class="titre-video">
-									<span class="container-fond-titre-video">
-										<span class="fond-titre-video"></span>
-									</span>
-									<span class="txt-titre-video">l'entreprise</span>
-								</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			</div>
-		</aside>
-		<div id="wrapper-interlocuteur-modal">
-			<div id="wrapper-relative-interlocuteur-modal">
-				<div id="overlay-interlocuteur"></div>
-				<nav id="interlocuteur-modal">
-					<div class="container-fond-modal">
-						<div class="fond-modal"></div>
-					</div>
-					<div id="content-interlocuteur">
-						<div class="bloc-gauche-content-interlocuteur">
-							<div class="container-photo-interlocuteur"><div class="fond-photo-interlocuteur"><img src="layoutImg/interlocuteurs/interlocuteur-1.jpg"></div></div>
-						</div><div class="bloc-droite-content-interlocuteur">
-							<h3>Jean-Philippe Cornet</h3>
-							<blockquote>Une devise courte</blockquote>
-							<ul class="contact-interlocuteur">
-								<li class="has-icon"><div class="icon-telephone"></div>02 51 86 62 81</li>
-								<li class="has-icon"><div class="icon-mail"></div><a href="mailto:jp.cornet@imatechnologies.fr">jp.cornet@imatechnologies.fr</a></li>
-								<li>
-									<ul class="social-interlocuteur">
-										<li class="twitter"><a href="#"><span class="icon-twitter"></span></a></li>
-										<li class="linkedin"><a href="#"><span class="icon-linkedin"></span></a></li>
-										<li class="facebook"><a href="#"><span class="icon-facebook"></span></a></li>
-										<li class="viadeo"><a href="#"><span class="icon-viadeo"></span></a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="titre-modal">
-						<div class="container-fond-titre-modal">
-							<div class="fond-titre-modal"></div>
-						</div>
-						<div class="txt-titre-modal">Votre<br /> interlocuteur</div>
-					</div>
-					<div class="close-modal">
-						<div class="container-fond-close-modal">
-							<div class="fond-close-modal"></div>
-						</div>
-						<a href="#" id="lien-close-interlocuteur-modal"><span class="icon-close"></span></a>
-					</div>
-				</nav>
-			</div>
-		</div>
+
 		<div id="wrapper-sitemap-modal">
 			<div id="wrapper-relative-sitemap-modal">
 				<div id="overlay"></div>
@@ -432,13 +310,7 @@
 		        
 			</a>
 		</div>
-		<div id="bloc-retour-video">
-			<a href="#" id="retour-video">
-				<span class="picto-retour-video">
-					<span class="icon-arrow-left"></span>
-				</span>
-			</a>
-		</div>
+
 	  	<footer>
 	  		<div class="bandeau-footer"></div>
 	  		<div class="container">

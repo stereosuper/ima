@@ -5,7 +5,7 @@ Template Name: Home
 
 get_header(); ?>
 	<div id="c-home" class="wrapper-blocs">
-		<div id="fond-bloc-visu" class="c-home__hero-image" >
+		<div id="fond-bloc-visu" class="c-home__hero-image  <?php if(!has_post_thumbnail()) echo "no-img"; ?>" >
  			<?php the_post_thumbnail('full'); ?>
 		</div>
 

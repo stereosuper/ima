@@ -294,15 +294,6 @@ get_header('rh'); ?>
 
 </section>
 
-		<div id="bloc-fond-visu">
-			<div id="fond-couleur-bloc-visu"></div>
-			<div class="container" id="container-bloc-visu-content">
-				<div class="bloc-content bloc-visu-content">
-					<div id="fond-bloc-visu"></div>
-				</div>
-			</div>
-		</div>
-
 		<?php include('includes/sitemap.php'); ?>
 		
 		<?php if( get_field('interlocuteur_nom') ){ ?>

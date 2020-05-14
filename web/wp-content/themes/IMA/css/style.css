@@ -3573,6 +3573,8 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   margin-left: -50vw;
   margin-bottom: -167px;
   width: 100vw;
+}
+#fond-bloc-visu.no-img {
   min-height: 180px;
 }
 #fond-bloc-visu img {
