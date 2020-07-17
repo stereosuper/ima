@@ -1169,6 +1169,9 @@ a.btn-bloc:focus {
 .nav .menu > li {
   position: relative;
 }
+.nav .menu > li:last-child a {
+  color: #a02e59;
+}
 .nav a {
   box-shadow: none;
   color: #0f589f;
