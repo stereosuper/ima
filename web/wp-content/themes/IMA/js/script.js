@@ -455,7 +455,7 @@ $(function(){
 			closeModal();
 		});
 	}
-
+	
 	////////////////////// Fonction pour gérer l'apparition du menu mobile ////////////////////////
 	
 	function openResponsiveMenu() {
@@ -794,7 +794,7 @@ $(function(){
 		$(this).parent().find('.sub-menu').addClass('on')
 	});
 	header.on('mouseleave', function(){
-		// $(this).find('.sub-menu').removeClass('on');
+		$(this).find('.sub-menu').removeClass('on');
 	})
 
 	checkMedia();
