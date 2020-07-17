@@ -1166,6 +1166,9 @@ a.btn-bloc:focus {
   justify-content: space-between;
   align-items: center;
 }
+.nav .menu > li {
+  position: relative;
+}
 .nav a {
   box-shadow: none;
   color: #0f589f;
@@ -1191,20 +1194,29 @@ a.btn-bloc:focus {
 }
 .nav .sub-menu {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   padding: 24px 0;
   margin: 1px 0 0;
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
   background: #fff;
   opacity: 0;
   transform: scaleY(0);
 }
 .nav .sub-menu.on {
   opacity: 1;
-  transform: scaleY(1);
+  transform: scaleY(1) translateY(54px);
+}
+.nav .sub-menu > li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 30px;
+  margin-bottom: 15px;
+}
+.nav .sub-menu > li:last-child {
+  margin-bottom: 0;
 }
 .logo {
   width: 217px;

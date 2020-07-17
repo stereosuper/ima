@@ -446,7 +446,7 @@ $(function(){
 		}
 
 		TweenMax.set($("#sitemap-modal"), {y: 50});
-		$("#lien-sitemap, #link-search, #menu-responsive").on('click', function(e){
+		$("#lien-sitemap, #link-search").on('click', function(e){
 			e.preventDefault();
 			openModal();
 		});
@@ -454,6 +454,24 @@ $(function(){
 			e.preventDefault();
 			closeModal();
 		});
+	}
+
+	////////////////////// Fonction pour gérer l'apparition du menu mobile ////////////////////////
+	
+	function openResponsiveMenu() {
+		const burgerMenu = document.getElementById('menu-responsive');
+		const header = document.getElementById('header');
+		// Early return if no burger menu
+		if (!burgerMenu || !header) return;
+
+		const toggleResponsiveMenu = () => {
+			// const scrollY = window.scrollY || window.pageYOffset;
+			document.documentElement.style.top = '0px';
+			document.documentElement.classList.toggle('no-scroll');
+			header.classList.toggle('open-responsive-menu');
+		};
+		
+		burgerMenu.addEventListener('click', toggleResponsiveMenu, false)
 	}
 
 	////////////////////// Fonction pour gérer l'apparition de l'interlocuteur ////////////////////////
@@ -776,7 +794,7 @@ $(function(){
 		$(this).parent().find('.sub-menu').addClass('on')
 	});
 	header.on('mouseleave', function(){
-		$(this).find('.sub-menu').removeClass('on');
+		// $(this).find('.sub-menu').removeClass('on');
 	})
 
 	checkMedia();
@@ -795,6 +813,7 @@ $(function(){
 	categBlocCopies();
 	//blocPenche();
 	lienSitemap();
+	openResponsiveMenu();
 	lienInterlocuteur();
 	initSitemapMobile();
 	liensSitemapMobile();
