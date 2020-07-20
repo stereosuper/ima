@@ -7017,6 +7017,18 @@ html.no-scroll {
     margin-bottom: 5px;
   }
 }
+/**
+ * NOTE: Scope elements with an id in order to surchage old styles.
+ * We're using the BEMIT naming convention for more clarity.
+ * SEE: https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
+ * SEE: https://gist.github.com/stephenway/a6145d9b4430e8c55a77
+ */
+.btn-cta {
+  padding: 17px 45px;
+  border-radius: 0;
+  font-size: 20px;
+  background: #a02e59;
+}
 /* ==|== print styles =======================================================
    ========================================================================== */
 @media print {

@@ -1,6 +1,6 @@
 <?php
 
-define( 'IMA_VERSION', 1.17 );
+define( 'IMA_VERSION', 1.18 );
 
 /*-----------------------------------------------------------------------------------*/
 /* General
@@ -335,10 +335,30 @@ function ima_right_now_custom_post() {
 }
 add_action( 'dashboard_glance_items', 'ima_right_now_custom_post' );
 
+// Add new styles to wysiwyg
+function ima_button( $buttons ){
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+add_filter( 'mce_buttons_2', 'ima_button' );
+
+function ima_init_editor_styles(){
+    add_editor_style('css/editor-style.css');
+}
+add_action( 'after_setup_theme', 'ima_init_editor_styles' );
+
 // Customize a bit the wysiwyg editor
 function ima_mce_before_init( $styles ){
+	$style_formats = array(
+        array(
+            'title' => 'Button',
+            'selector' => 'a',
+            'classes' => 'btn btn-cta'
+        )
+    );
+    $styles['style_formats'] = json_encode( $style_formats );
     // Remove h1 and code
-    $styles['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6';
+	$styles['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6';
     return $styles;
 }
 add_filter( 'tiny_mce_before_init', 'ima_mce_before_init' );
