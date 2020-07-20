@@ -5608,6 +5608,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   #header #label-menu {
     left: 110px;
   }
+  .nav .sub-menu.on {
+    transform: scaleY(1) translateY(43px);
+  }
   #visu-content {
     position: fixed;
     top: 0;
@@ -5755,7 +5758,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     background-size: 100%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   #header,
   #raccord-categories-articles {
     display: none;
@@ -6962,7 +6965,7 @@ html.no-scroll {
 #bloc-menu-responsive .c-menu__search-button {
   margin-left: auto;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   #header {
     display: block;
     position: fixed;
