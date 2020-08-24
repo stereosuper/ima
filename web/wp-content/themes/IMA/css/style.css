@@ -3395,6 +3395,19 @@ a.bloc-small.bloc-7:hover .raccord-categ {
 }
 /* @end */
 /* @group Bloc Video */
+.iframe-wrapper {
+  width: 100%;
+  height: 0;
+  padding: 0 0 60%;
+  position: relative;
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
 #bloc-fond-visu {
   width: 100%;
   height: 100%;

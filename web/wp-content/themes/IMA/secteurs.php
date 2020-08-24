@@ -40,10 +40,18 @@ get_header();
 				<div class="bloc-content intro-home">
                     <h1 class="c-secteurs__promise-title"><?php the_title(); ?></h1>
                     <div class="c-secteurs__promise-content c-secteurs__promise-content--first-part">
-                        <?php the_field('intro_first_part');?>
+                        <?php
+                            $intro1 = get_field('intro_first_part', false, false); 
+                            $intro1 = apply_filters('the_content', $intro1);
+                            echo $intro1;
+                        ?>
                     </div>
                     <div class="c-secteurs__promise-content c-secteurs__promise-content--second-part">
-                        <?php the_field('intro_second_part');?>
+                        <?php
+                            $intro2 = get_field('intro_second_part', false, false); 
+                            $intro2 = apply_filters('the_content', $intro2);
+                            echo $intro2;
+                        ?>
                     </div>
                 </div>
         </div>
@@ -67,6 +75,7 @@ get_header();
                 <?php 
                     while (have_rows('subpages')) : the_row();
                     $image = get_sub_field('image');
+                    $video = get_sub_field('video');
                     $section_anchor = get_sub_field('section_anchor');
                 ?>
                     <div class="c-secteurs__section <?php echo $section_anchor ?>">

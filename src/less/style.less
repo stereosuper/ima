@@ -1708,7 +1708,6 @@ a {
         }
     }
 
-
     a {
         box-shadow: none;
         color: @bleuIMA;
@@ -4248,6 +4247,20 @@ a.bloc-small {
 /* @end */
 
 /* @group Bloc Video */
+
+.iframe-wrapper {
+    width: 100%;
+    height: 0;
+    padding: 0 0 60%;
+    position: relative;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
 
 #bloc-fond-visu {
     width: 100%;
@@ -6906,7 +6919,7 @@ ul.slider-logos {
     }
 
     .nav {
-        .sub-menu{
+        .sub-menu {
             &.on {
                 transform: scaleY(1) translateY(43px);
             }
