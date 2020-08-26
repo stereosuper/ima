@@ -74,10 +74,27 @@ get_header();
                 <!-- <div class="bloc-content with-bg"> -->
                 <?php 
                     while (have_rows('subpages')) : the_row();
+                    $section_video = get_sub_field('section_video');
                     $image = get_sub_field('image');
                     $video = get_sub_field('video');
                     $section_anchor = get_sub_field('section_anchor');
+
+                    if($section_video): 
                 ?>
+                    <div class="c-secteurs__section <?php echo $section_anchor ?>">
+                        <h2 class="c-secteurs__section-title"><?php the_sub_field('titre'); ?></h2>
+                        <div class="c-secteur__video-wrapper">
+                            <div class="c-secteur__video-text">
+                                <div class="c-secteurs__section-text"><?php the_sub_field('texte'); ?></div>
+                            </div>
+                            <div class="c-secteur__video-iframe">
+                                <div class="iframe-wrapper">
+                                    <iframe src="<?php echo $video; ?>" frameborder=0></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php else: ?>
                     <div class="c-secteurs__section <?php echo $section_anchor ?>">
                         <div class="secteur-image c-secteurs__section-image" style='background-image: url(<?php echo esc_url($image['url']); ?>)'></div>
                         <div class="secteur-text c-secteurs__section-content">
@@ -88,7 +105,7 @@ get_header();
                             <!-- <a href='<?php // the_sub_field('lien'); ?>' class='btn-actu'><span>En savoir plus</span></a> -->
                         </div>
                     </div>
-                <?php endwhile; ?>
+                <?php endif; endwhile; ?>
                 <!-- </div> -->
             </div>
         <?php endif; ?>

@@ -103,7 +103,7 @@
                 z-index: -1;
             }
             .c-secteurs__section-image {
-                left: calc(~"-50vw + 500px");
+                left: calc(~'-50vw + 500px');
             }
             .c-secteurs__section-content {
                 margin-left: 33.333333%;
@@ -117,13 +117,16 @@
                     box-shadow: none;
                 }
             }
+            .c-secteur__video-text {
+                order: 2;
+            }
         }
         .c-secteurs__section-image {
             position: absolute;
             top: 70px;
             left: 66.666666%;
             bottom: 70px;
-            width: calc(~"33.333333% + 50vw - 500px");
+            width: calc(~'33.333333% + 50vw - 500px');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
@@ -146,6 +149,18 @@
             }
         }
     }
+    .c-secteur__video-wrapper {
+        display: flex;
+        .c-secteur__video-text {
+            padding: 0 45px;
+            box-sizing: border-box;
+        }
+        .c-secteur__video-iframe {
+            width: 66%;
+            flex-shrink: 0;
+            margin: 1em 0 0;
+        }
+    }
     .c-secteurs__clients-title {
         color: @u-purple;
     }
@@ -160,7 +175,7 @@
                 }
             }
             .c-secteurs__section-image {
-                width: calc(~"33.333333% + 50vw - 45%");
+                width: calc(~'33.333333% + 50vw - 45%');
             }
         }
     }
@@ -178,12 +193,17 @@
 
 @media (max-width: @u-desktop-small) {
     #c-secteurs {
-        .c-secteurs__thumbnails{
+        .c-secteurs__thumbnails {
             margin-bottom: 30px;
         }
         .c-thumbnail__link {
             width: calc(~'50% - ' @u-gutter);
             margin-bottom: 50px;
+        }
+        .c-secteur__video-wrapper {
+            .c-secteur__video-iframe {
+                width: 50%;
+            }
         }
     }
 }
@@ -200,6 +220,12 @@
                 display: none;
             }
             .c-secteurs__section-content {
+                width: 100%;
+            }
+        }
+        .c-secteur__video-wrapper {
+            display: block;
+            .c-secteur__video-iframe {
                 width: 100%;
             }
         }
