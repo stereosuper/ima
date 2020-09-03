@@ -5,9 +5,9 @@ Page des articles: Actualites
 
 get_header(); ?>
 	<div class="wrapper-blocs">
-		<div id="fond-bloc-visu" <?php if(!has_post_thumbnail()) echo "class='no-img'"; ?>>
-			<?php the_post_thumbnail('full'); ?>
-		</div>
+		<!--<div id="fond-bloc-visu" <?php //if(!has_post_thumbnail()) echo "class='no-img'"; ?>>
+			<?php //the_post_thumbnail('full'); ?>
+		</div>-->
 		<div class="ribbon">
 			<div class="fond-ribbon"></div>
 			<div class="ribbon-content">
