@@ -17,7 +17,7 @@ if(isset($_POST['tel'])){ $tel = strip_tags($_POST['tel']); }else{ $tel = ''; }
 if(isset($_POST['message'])){ $message = strip_tags($_POST['message']); }else{ $message = ''; }
 
 // MAIL DE DESTINATION //////////////////////////////////////
-$mailto = get_field('contact_mail');;
+$mailto = get_field('contact_mail');
 
 if(isset($_POST['submitted'])) {
 	if(empty($nom)) {
@@ -43,12 +43,13 @@ if(isset($_POST['submitted'])) {
 	}
 	if($erreurNom == '' && $erreurSociete == '' && $erreurMail == '' && $erreurMessage == ''){ 
 		$subject = "Nouvelle demande de contact provenant de imatechnologies.fr";
-		$headers = 'De: '. $nom ."\r\n" .
+		$body = 'De: '. $nom ."\r\n" .
 					'Société: '. $societe . "\r\n" .
 					'Email: ' . $mail . "\r\n" .
 					'Tél: '. $tel . "\r\n" .
 					'Message: '. $message . "\r\n";
-		$sent = mail( $mailto, $subject, $headers );
+		$sent = wp_mail( $mailto, $subject, $body );
+
 		if($sent) {
 			$message_status = "Demande envoyée";
 		}
